@@ -1,0 +1,38 @@
+{
+  "lang": "en",
+  "dir": "ltr",
+  "name": "Fair & Glorious",
+  "description": "An Atlanta based street wear brand.",
+  "short_name": "F+G",
+  "icons": [{
+    "src": "http://chrisbbenyard.github.io/fngappicon.png",
+    "sizes": "64x64",
+    "type": "image/webp"
+  },{
+    "src": "http://chrisbbenyard.github.io/fngappicon.png",
+    "sizes": "64x64"
+  }, {
+    "src": "http://chrisbbenyard.github.io/fngappicon.png",
+    "sizes": "128x128"
+  }],
+  "scope": "/racer/",
+  "start_url": "/home.html",
+  "display": "fullscreen",
+  "orientation": "landscape",
+  "theme_color": "grey",
+  "background_color": "#757575",
+  "serviceworker": {
+    "src": "sw.js",
+    "scope": "/racer/",
+    "use_cache": false
+  },
+  "screenshots": [{
+    "src": "screenshots/in-game-1x.jpg",
+    "sizes": "640x480",
+    "type": "image/jpeg"
+  },{
+    "src": "screenshots/in-game-2x.jpg",
+    "sizes": "1280x920",
+    "type": "image/jpeg"
+  }]
+}
