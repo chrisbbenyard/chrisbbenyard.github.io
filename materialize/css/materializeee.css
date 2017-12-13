@@ -4353,17 +4353,6 @@ small {
   border-radius: 0 0 2px 2px;
 }
 
-.card .card-action a:not(.btn):not(.btn-large):not(.btn-large):not(.btn-floating) {
-  color: #ffab40;
-  margin-right: 24px;
-  -webkit-transition: color .3s ease;
-  transition: color .3s ease;
-  text-transform: uppercase;
-}
-
-.card .card-action a:not(.btn):not(.btn-large):not(.btn-large):not(.btn-floating):hover {
-  color: #ffd8a6;
-}
 
 .card .card-reveal {
   padding: 24px;
@@ -4536,7 +4525,7 @@ small {
   overflow: hidden;
   left: 0;
   top: 0;
-  pointer-events: none;
+  pointer-events: auto;
   visibility: hidden;
 }
 
@@ -4553,18 +4542,6 @@ small {
   visibility: hidden;
 }
 
-.btn, .btn-large,
-.btn-flat {
-  border: none;
-  border-radius: 2px;
-  display: inline-block;
-  height: 36px;
-  line-height: 36px;
-  padding: 0 2rem;
-  text-transform: uppercase;
-  vertical-align: middle;
-  -webkit-tap-highlight-color: transparent;
-}
 
 .dropdown-content {
   background-color: #fff;
@@ -5181,7 +5158,7 @@ textarea.materialize-textarea {
   text-align: initial;
   -webkit-transform: translateY(12px);
           transform: translateY(12px);
-  pointer-events: none;
+  pointer-events: auto;
 }
 
 .input-field label:not(.label-icon).active {
@@ -5329,7 +5306,7 @@ textarea.materialize-textarea.validate + label:not(.label-icon).active {
 [type="radio"]:checked {
   position: absolute;
   opacity: 0;
-  pointer-events: none;
+  pointer-events: auto;
 }
 
 [type="radio"]:not(:checked) + label,
@@ -5463,7 +5440,7 @@ form p:last-child {
 [type="checkbox"]:checked {
   position: absolute;
   opacity: 0;
-  pointer-events: none;
+  pointer-events: auto;
 }
 
 [type="checkbox"] {
@@ -5777,7 +5754,7 @@ select {
   display: block;
   position: absolute;
   width: 0;
-  pointer-events: none;
+  pointer-events: auto;
   height: 0;
   top: 0;
   left: 0;
@@ -5795,7 +5772,7 @@ select {
 .select-wrapper.valid + label,
 .select-wrapper.invalid + label {
   width: 100%;
-  pointer-events: none;
+  pointer-events: auto;
 }
 
 .select-wrapper input.select-dropdown {
@@ -6236,7 +6213,7 @@ input[type=range]:focus::-ms-fill-upper {
 
 .side-nav .subheader {
   cursor: initial;
-  pointer-events: none;
+  pointer-events: auto;
   color: rgba(0, 0, 0, 0.54);
   font-size: 14px;
   font-weight: 500;
@@ -7012,8 +6989,8 @@ input[type=range]:focus::-ms-fill-upper {
 
 .carousel .carousel-item {
   display: none;
-  width: 200px;
-  height: 200px;
+  width: 250px;
+  height: 250px;
   position: absolute;
   top: 0;
   left: 0;
@@ -7050,8 +7027,8 @@ input[type=range]:focus::-ms-fill-upper {
 }
 
 .carousel.scrolling .carousel-item .materialboxed,
-.carousel .carousel-item:not(.active) .materialboxed {
-  pointer-events: none;
+.carousel .materialboxed {
+  pointer-events: auto;
 }
 
 .tap-target-wrapper {
