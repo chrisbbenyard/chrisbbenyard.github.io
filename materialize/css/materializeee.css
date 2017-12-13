@@ -2914,10 +2914,6 @@ video.responsive-video {
   background-color: #ee6e73;
 }
 
-.pagination li.disabled a {
-  cursor: default;
-  color: #999;
-}
 
 .pagination li i {
   font-size: 2rem;
@@ -3314,7 +3310,7 @@ td, th {
   color: #26a69a;
 }
 
-.collection a.collection-item:not(.active):hover {
+.collection a.collection-item:.active:hover {
   background-color: #ddd;
 }
 
@@ -4437,11 +4433,7 @@ small {
   background-color: transparent;
 }
 
-.tabs.tabs-transparent .tab a,
-.tabs.tabs-transparent .tab.disabled a,
-.tabs.tabs-transparent .tab.disabled a:hover {
-  color: rgba(255, 255, 255, 0.7);
-}
+
 
 .tabs.tabs-transparent .tab a:hover,
 .tabs.tabs-transparent .tab a.active {
@@ -4492,12 +4484,6 @@ small {
 .tabs .tab a:hover, .tabs .tab a.active {
   background-color: transparent;
   color: #ee6e73;
-}
-
-.tabs .tab.disabled a,
-.tabs .tab.disabled a:hover {
-  color: rgba(238, 110, 115, 0.7);
-  cursor: default;
 }
 
 .tabs .indicator {
@@ -5393,35 +5379,6 @@ textarea.materialize-textarea.validate + label:not(.label-icon).active {
           box-shadow: 0 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-/* Disabled Radio With gap */
-[type="radio"].with-gap:disabled:checked + label:before {
-  border: 2px solid rgba(0, 0, 0, 0.42);
-}
-
-[type="radio"].with-gap:disabled:checked + label:after {
-  border: none;
-  background-color: rgba(0, 0, 0, 0.42);
-}
-
-/* Disabled style */
-[type="radio"]:disabled:not(:checked) + label:before,
-[type="radio"]:disabled:checked + label:before {
-  background-color: transparent;
-  border-color: rgba(0, 0, 0, 0.42);
-}
-
-[type="radio"]:disabled + label {
-  color: rgba(0, 0, 0, 0.42);
-}
-
-[type="radio"]:disabled:not(:checked) + label:before {
-  border-color: rgba(0, 0, 0, 0.42);
-}
-
-[type="radio"]:disabled:checked + label:after {
-  background-color: rgba(0, 0, 0, 0.42);
-  border-color: #949494;
-}
 
 /* Checkboxes
    ========================================================================== */
@@ -5483,10 +5440,6 @@ form p:last-child {
           transform: scale(0);
 }
 
-[type="checkbox"]:not(:checked):disabled + label:before {
-  border: none;
-  background-color: rgba(0, 0, 0, 0.42);
-}
 
 [type="checkbox"].tabbed:focus + label:after {
   -webkit-transform: scale(1);
@@ -5515,10 +5468,6 @@ form p:last-child {
           transform-origin: 100% 100%;
 }
 
-[type="checkbox"]:checked:disabled + label:before {
-  border-right: 2px solid rgba(0, 0, 0, 0.42);
-  border-bottom: 2px solid rgba(0, 0, 0, 0.42);
-}
 
 /* Indeterminate checkbox */
 [type="checkbox"]:indeterminate + label:before {
@@ -5538,10 +5487,7 @@ form p:last-child {
           transform-origin: 100% 100%;
 }
 
-[type="checkbox"]:indeterminate:disabled + label:before {
-  border-right: 2px solid rgba(0, 0, 0, 0.42);
-  background-color: transparent;
-}
+
 
 [type="checkbox"].filled-in + label:after {
   border-radius: 2px;
@@ -5615,24 +5561,6 @@ form p:last-child {
   border-color: #26a69a;
 }
 
-[type="checkbox"].filled-in:disabled:not(:checked) + label:before {
-  background-color: transparent;
-  border: 2px solid transparent;
-}
-
-[type="checkbox"].filled-in:disabled:not(:checked) + label:after {
-  border-color: transparent;
-  background-color: #949494;
-}
-
-[type="checkbox"].filled-in:disabled:checked + label:before {
-  background-color: transparent;
-}
-
-[type="checkbox"].filled-in:disabled:checked + label:after {
-  background-color: #949494;
-  border-color: #949494;
-}
 
 /* Switch
    ========================================================================== */
@@ -5707,29 +5635,7 @@ form p:last-child {
           box-shadow: 0px 3px 1px -2px rgba(0, 0, 0, 0.2), 0px 2px 2px 0px rgba(0, 0, 0, 0.14), 0px 1px 5px 0px rgba(0, 0, 0, 0.12);
 }
 
-input[type=checkbox]:checked:not(:disabled) ~ .lever:active::before,
-input[type=checkbox]:checked:not(:disabled).tabbed:focus ~ .lever::before {
-  -webkit-transform: scale(2.4);
-          transform: scale(2.4);
-  background-color: rgba(38, 166, 154, 0.15);
-}
 
-input[type=checkbox]:not(:disabled) ~ .lever:active:before,
-input[type=checkbox]:not(:disabled).tabbed:focus ~ .lever::before {
-  -webkit-transform: scale(2.4);
-          transform: scale(2.4);
-  background-color: rgba(0, 0, 0, 0.08);
-}
-
-.switch input[type=checkbox][disabled] + .lever {
-  cursor: default;
-  background-color: rgba(0, 0, 0, 0.12);
-}
-
-.switch label input[type=checkbox][disabled] + .lever:after,
-.switch label input[type=checkbox][disabled]:checked + .lever:after {
-  background-color: #949494;
-}
 
 /* Select Field
    ========================================================================== */
@@ -5813,34 +5719,16 @@ select {
   font-size: 0.8rem;
 }
 
-select:disabled {
+select:active {
   color: rgba(0, 0, 0, 0.42);
 }
 
-.select-wrapper.disabled span.caret,
-.select-wrapper.disabled + label {
-  color: rgba(0, 0, 0, 0.42);
-}
 
-.select-wrapper input.select-dropdown:disabled {
-  color: rgba(0, 0, 0, 0.42);
-  cursor: default;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
-}
 
 .select-wrapper i {
   color: rgba(0, 0, 0, 0.3);
 }
 
-.select-dropdown li.disabled,
-.select-dropdown li.disabled > span,
-.select-dropdown li.optgroup {
-  color: rgba(0, 0, 0, 0.3);
-  background-color: transparent;
-}
 
 .select-dropdown.dropdown-content li.active {
   background-color: transparent;
@@ -6938,99 +6826,6 @@ input[type=range]:focus::-ms-fill-upper {
   background-color: #4CAF50;
 }
 
-.carousel {
-  overflow: hidden;
-  position: relative;
-  width: 100%;
-  height: 400px;
-  -webkit-perspective: 500px;
-          perspective: 500px;
-  -webkit-transform-style: preserve-3d;
-          transform-style: preserve-3d;
-  -webkit-transform-origin: 0% 50%;
-          transform-origin: 0% 50%;
-}
-
-.carousel.carousel-slider {
-  top: 0;
-  left: 0;
-}
-
-.carousel.carousel-slider .carousel-fixed-item {
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: 20px;
-  z-index: 1;
-}
-
-.carousel.carousel-slider .carousel-fixed-item.with-indicators {
-  bottom: 68px;
-}
-
-.carousel.carousel-slider .carousel-item {
-  width: 100%;
-  height: 100%;
-  min-height: 400px;
-  position: absolute;
-  top: 0;
-  left: 0;
-}
-
-.carousel.carousel-slider .carousel-item h2 {
-  font-size: 24px;
-  font-weight: 500;
-  line-height: 32px;
-}
-
-.carousel.carousel-slider .carousel-item p {
-  font-size: 15px;
-}
-
-.carousel .carousel-item {
-  display: none;
-  width: 250px;
-  height: 250px;
-  position: absolute;
-  top: 0;
-  left: 0;
-}
-
-.carousel .carousel-item > img {
-  width: 100%;
-}
-
-.carousel .indicators {
-  position: absolute;
-  text-align: center;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  margin: 0;
-}
-
-.carousel .indicators .indicator-item {
-  display: inline-block;
-  position: relative;
-  cursor: pointer;
-  height: 8px;
-  width: 8px;
-  margin: 24px 4px;
-  background-color: rgba(255, 255, 255, 0.5);
-  -webkit-transition: background-color .3s;
-  transition: background-color .3s;
-  border-radius: 50%;
-}
-
-.carousel .indicators .indicator-item.active {
-  background-color: #fff;
-}
-
-.carousel.scrolling .carousel-item .materialboxed,
-.carousel .materialboxed {
-  pointer-events: auto;
-}
-
 .tap-target-wrapper {
   width: 800px;
   height: 800px;
@@ -7469,15 +7264,7 @@ input[type=range]:focus::-ms-fill-upper {
   padding-left: 1.25em;
 }
 
-.picker__nav--disabled,
-.picker__nav--disabled:hover,
-.picker__nav--disabled:before,
-.picker__nav--disabled:before:hover {
-  cursor: default;
-  background: none;
-  border-right-color: #f5f5f5;
-  border-left-color: #f5f5f5;
-}
+
 
 /**
  * The calendar table of dates
@@ -7532,9 +7319,7 @@ input[type=range]:focus::-ms-fill-upper {
   border: 1px solid transparent;
 }
 
-.picker__day--disabled:before {
-  border-top-color: #aaaaaa;
-}
+
 
 .picker__day--infocus:hover {
   cursor: pointer;
@@ -7569,19 +7354,6 @@ input[type=range]:focus::-ms-fill-upper {
   color: #ffffff;
 }
 
-.picker__day--disabled,
-.picker__day--disabled:hover,
-.picker--focused .picker__day--disabled {
-  background: #f5f5f5;
-  border-color: #f5f5f5;
-  color: #dddddd;
-  cursor: default;
-}
-
-.picker__day--highlighted.picker__day--disabled,
-.picker__day--highlighted.picker__day--disabled:hover {
-  background: #bbbbbb;
-}
 
 /**
  * The footer containing the "today", "clear", and "close" buttons.
@@ -7656,17 +7428,6 @@ input[type=range]:focus::-ms-fill-upper {
   color: #777777;
 }
 
-.picker__button--today[disabled],
-.picker__button--today[disabled]:hover {
-  background: #f5f5f5;
-  border-color: #f5f5f5;
-  color: #dddddd;
-  cursor: default;
-}
-
-.picker__button--today[disabled]:before {
-  border-top-color: #aaaaaa;
-}
 
 /* ==========================================================================
    CUSTOM MATERIALIZE STYLES
@@ -7888,17 +7649,6 @@ button.picker__today:focus, button.picker__clear:focus, button.picker__close:foc
   z-index: 10;
 }
 
-/* Disabled time */
-.picker__list-item--disabled,
-.picker__list-item--disabled:hover,
-.picker--focused .picker__list-item--disabled {
-  background: #f5f5f5;
-  border-color: #f5f5f5;
-  color: #ddd;
-  cursor: default;
-  border-color: #ddd;
-  z-index: auto;
-}
 
 /**
  * The clear button
