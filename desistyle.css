@@ -5010,13 +5010,13 @@ small {
   overflow-y: hidden;
   height: 48px;
   width: 100%;
-  background-color: #fff;
+  background-color: #689f33;
   margin: 0 auto;
   white-space: nowrap;
 }
 
 .tabs.tabs-transparent {
-  background-color: transparent;
+  background-color: #689f33;
 }
 
 .tabs.tabs-transparent .tab a,
@@ -5031,7 +5031,7 @@ small {
 }
 
 .tabs.tabs-transparent .indicator {
-  background-color: #fff;
+  background-color: #ff8f00;
 }
 
 .tabs.tabs-fixed-width {
@@ -5072,8 +5072,8 @@ small {
 }
 
 .tabs .tab a:hover, .tabs .tab a.active {
-  background-color: transparent;
-  color: #ee6e73;
+  background-color: #689f33;
+  color: #fff;
 }
 
 .tabs .tab.disabled a,
@@ -5086,7 +5086,7 @@ small {
   position: absolute;
   bottom: 0;
   height: 2px;
-  background-color: #f6b2b5;
+  background-color: #ff8f00;
   will-change: left, right;
 }
 
