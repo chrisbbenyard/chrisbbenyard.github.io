@@ -1,0 +1,490 @@
+<style>/*! normalize.css v2.1.0 | MIT License | git.io/normalize */
+
+/* ==========================================================================
+   HTML5 display definitions
+   ========================================================================== */
+
+  
+#cart section.content {
+  *zoom: 1;
+  box-sizing: 5px border-box;
+  margin: 0 auto;
+  max-width: 500px;
+  padding-left: 32px;
+  padding-right: 32px;
+    text-transform: uppercase;
+}
+#cart section.content:after {
+  content: "";
+  display: table;
+  clear: both;
+    text-transform: uppercase;
+}
+
+
+#cart section.content h1 {
+  margin-bottom: 16px;
+    text-transform: uppercase;
+}
+#cart section.content h4 {
+  margin: 16px auto 0px auto;
+  padding: 0;
+  text-align: center;
+    text-transform: uppercase;
+}
+
+#cart section.content p {
+  margin: 0 auto 0px auto;
+  text-align: center;
+    text-transform: uppercase;
+  width: 100%;
+}
+#cart section.content p strong {
+  display: block;
+  clear: both;
+  text-transform: uppercase;
+  margin-bottom: 15px;
+}
+
+.cart_form {
+  margin: 0 auto;
+    text-transform: uppercase;
+   text-rendering: optimizeLegibility;
+   background-color: #757575;
+background-image: url("https://www.transparenttextures.com/patterns/iron-grip.png");
+}
+.cart_form .cart_details {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  list-style: none;
+  margin: 0px;
+  padding: 0;
+  *zoom: 1;
+    text-transform: uppercase;
+     {% if theme.twitter_url != blank or theme.facebook_url != blank or theme.instagram_url != blank or theme.tumblr_url != blank or theme.pinterest_url != blank %}
+          <ul class="social_icons">
+            {% if theme.twitter_url != blank %}
+              <li><a title="Twitter" href="{{ theme.twitter_url }}"><svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 150.857 612 490.298"><path d="M606 209c-22.2 9.7-46 16.4-70.8 19.4 25.4-15.3 45-39.6 54-68.5-23.7 14-50 24-78 30-22.5-24-54.4-39-89.8-39-68 0-123 55-123 123 0 9.3 1 19 3 28-102.2-5-192.8-54-253.4-129-11 18.3-17 39.5-17 62.2 0 43 21.5 81 54.6 103-20.2-.6-39.2-6-55.8-15.4v2c0 60 42.3 110 98.6 121.2-10.4 3-21.3 4.6-32.5 4.6-8 0-16-1-23-2.5 15 49.3 61 85 115 86-42 33.3-96 53-153 53-10 0-20-.5-30-1.7 55 35 119.5 55.5 189 55.5 226.3 0 350-188.5 350-352 0-5.5 0-10.8-.3-16 24-17.6 45-39.4 61.4-64z"/></svg></a></li>
+            {% endif %}
+
+            {% if theme.facebook_url != blank %}
+              <li><a title="Facebook" href="{{ theme.facebook_url }}"><svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="157.162 90 297.799 612"><path d="M369.036 193.795h85.68V90H333.662c-97.553 19.707-98.776 108.936-98.776 108.936V304.69h-77.724v102.937h77.724V702H343.21V407.383h102.08l9.67-102.938H343.945v-75.52c-.123-33.172 25.092-35.13 25.092-35.13z"/></svg></a></li>
+            {% endif %}
+
+            {% if theme.instagram_url != blank %}
+              <li><a title="Instagram" href="{{ theme.instagram_url }}"><svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 90 612 612"><path d="M540.273 90H71.727C32.19 90 0 122.19 0 161.727v468.67C0 669.81 32.19 702 71.727 702h468.67c39.535 0 71.726-32.19 71.726-71.727V161.727C612 122.313 579.687 90 540.273 90zM306 280.332c63.893 0 115.668 51.775 115.668 115.668S369.893 511.668 306 511.668 190.332 459.893 190.332 396 242.107 280.332 306 280.332zM542.232 608.12c0 13.096-10.77 23.867-23.868 23.867H92.412c-13.097 0-23.868-10.77-23.868-23.868V348.51h56.304c-3.917 15.177-6.12 31.21-6.12 47.49 0 103.55 83.966 187.272 187.272 187.272S493.272 499.552 493.272 396c0-16.524-2.204-32.313-6.12-47.49h55.08v259.61zm0-353.002c0 13.097-10.77 23.868-23.868 23.868h-69.77c-13.096 0-23.867-10.77-23.867-23.868V185.35c0-13.097 10.77-23.868 23.868-23.868h69.77c13.096 0 23.867 10.77 23.867 23.868v69.768z"/></svg></a></li>
+            {% endif %}
+
+            {% if theme.tumblr_url != blank %}
+              <li><a title="Tumblr" href="{{ theme.tumblr_url }}"><svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="117.504 90 377.114 611.937"><path d="M493.272 571.276c-14.566 13.832-55.692 26.194-55.692 26.194-115.18 27.907-107.957-66.464-107.957-66.464v-189.72h144.31v-96.818h-144.31V90H241.74c-11.383 139.658-124.236 164.628-124.236 164.628v87.394h67.81v224.604c-.98 62.424 36.475 92.656 36.475 92.656 115.055 89.964 272.83 9.67 272.83 9.67v-99.02l-1.348 1.344z"/></svg></a></li>
+            {% endif %}
+
+            {% if theme.pinterest_url != blank %}
+              <li><a title="Pinterest" href="{{ theme.pinterest_url }}"><svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 12 16"><path d="M4.933 10.582c-.406 2.203-.9 4.314-2.366 5.418-.452-3.33.665-5.83 1.183-8.484C2.866 6 3.9 2.9 5.7 3.63c2.315.97-2 5.77.9 6.34 3 .6 4.225-5.4 2.365-7.36C6.285-.22 1.1 2.5 1.8 6.596c.154 1 1.1 1.3.4 2.658C.48 8.858-.034 7.45.032 5.574.138 2.504 2.692.352 5.255.054c3.24-.376 6.3 1.2 6.7 4.396.473 3.568-1.462 7.433-4.927 7.2C6.063 11.5 5.7 11 4.9 10.582z"/></svg></a></li>
+            {% endif %}
+          </ul>
+        {% endif %}
+}
+.cart_form .cart_details:after {
+  content: "";
+  display: table;
+  clear: both;
+    text-transform: uppercase;
+}
+.cart_form .cart_details li {
+  border-bottom: 1px solid #ffffff;
+  display: block;
+  height: auto;
+  margin-bottom: 10px;
+  padding-bottom: 5px;
+  overflow: hidden;
+    text-transform: uppercase;
+}
+  
+  
+.cart_form .cart_details li a.product_image {
+  display: inline;
+  float: left;
+  text-transform: uppercase; 
+  margin-right: 32px;
+  position: relative;
+  top: 0;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+.cart_form .cart_details li a.product_image img {
+  float: left;
+  text-transform: uppercase; 
+  height: auto;
+  width: 50%px;
+
+}
+.cart_form .cart_details li .product_details {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  display: inline;
+  float: ;
+  top: 100px;
+  font-family: {{ theme.text_font | font_family }};
+  font-style: normal;
+  text-transform: uppercase;
+  font-size: 17px;
+  height: 100%;
+  letter-spacing: 0;
+  margin: 0;
+  max-width: 100%;
+  padding: 0;
+  width: auto;
+}
+.cart_form .cart_details li .product_details a {
+  white-space: nowrap;
+  text-transform: uppercase; 
+  text-overflow: ellipsis;
+
+}
+.cart_form .cart_details li .product_details a {
+  position: relative;
+  top: 50%;
+  text-transform: uppercase; 
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  display: block;
+}
+.cart_form .cart_details li .product_details a em {
+  display: block;
+  font-style: normal;
+  text-transform: uppercase;
+}
+.cart_form .cart_details li .product_actions {
+  display: block;
+  text-transform: uppercase; 
+  margin: 0px 150px 0px 0;
+  height: 50px;
+  line-height: 50px;
+  width: 150px;
+  text-align: center;
+}
+
+.cart_form .cart_details li .product_actions div {
+  display: inline-block;
+  text-transform: uppercase; 
+}
+.cart_form .cart_details li .product_actions div.quantity {
+  width: 120px;
+}
+
+.cart_form .cart_details li .product_actions div.quantity input[type='text'] {
+  height: 30px;
+  font-size:20px;
+  text-align: center;
+  text-indent: 0;
+  width: 30px;
+}
+
+.cart_form .cart_details li .product_actions div.price {
+  width: 12px;
+  font-size:25px;
+  text-transform: uppercase; 
+}
+.cart_form .cart_details li .product_actions div.remove {
+  cursor: pointer;
+  width: 36px;
+  text-transform: uppercase; 
+  text-align: center;
+}
+.cart_form .cart_details li .product_actions div.remove svg {
+  cursor: pointer;
+  position: relative;
+  top: 0px;
+  text-transform: uppercase; 
+}
+.cart_form .cart_details li .product_actions div.remove path {
+  fill: {{ theme.link_color }};
+  text-transform: uppercase; 
+}
+.cart_form .cart_details li .product_actions div:hover svg path {
+  fill: #000000;
+  text-transform: uppercase; 
+}
+@media only screen and (max-width: 800px) {
+  .cart_form .cart_details li .product_actions div:hover svg path {
+    width: 10px;
+  text-transform: uppercase; 
+  }
+}
+.cart_form .cart_details li .product_actions div:hover svg path a {
+  display: inline;
+  text-transform: uppercase; 
+}
+.cart_form .cart_options {
+  *zoom: 1;
+  list-style: none;
+  margin: 0 auto;
+  max-width: 800px;
+  padding: 0;
+  height: 128px;
+  padding-bottom: 32px;
+  border-bottom: 1px solid #ffffff;
+  text-transform: uppercase; 
+}
+.cart_form .cart_options:after {
+  content: "";
+  display: table;
+  clear: both;
+  text-transform: uppercase; 
+}
+
+.cart_form .cart_options li {
+  float: left;
+  width: 50%;
+  position: relative;
+  top: 50%;
+  text-transform: uppercase; 
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.cart_form .cart_options li label {
+  display: block;
+  margin-bottom: 15px;
+  text-transform: uppercase; 
+}
+.cart_form .cart_options li .select {
+  position: relative;
+  width: 85%;
+  text-transform: uppercase; 
+}
+
+.cart_form .cart_options li .select svg {
+  position: absolute;
+  right: 32px;
+  top: 50%;
+  margin-top: -2px;
+}
+.cart_form .cart_options li .select path {
+  fill: {{ theme.link_color }};
+  text-transform: uppercase; 
+}
+.cart_form .cart_options li .select:hover path {
+  fill: #757575;
+  text-transform: uppercase; 
+}
+.cart_form .cart_options li input {
+  height: 56px;
+  width: 85%;
+  margin-top: 10px;
+}
+
+.cart_form .cart_options li div {
+  margin-bottom: 15px;
+  text-align: right;
+  font-weight: bold;
+  font-family: {{ theme.header_font | font_family }};
+  text-transform: uppercase;
+}
+
+.cart_form .cart_options li div > span {
+  width: 150px;
+  margin-left: 30px;
+  text-transform: uppercase; 
+  display: inline-block;
+;
+  }
+
+.cart_form button{
+  display: block;
+  border: 0px solid #ffffff;
+  background: #000000;
+   font-size: 15px;
+    letter-spacing: 2px;
+  font-family: {{ theme.header_font | font_family }};
+  color: #000000;
+   line-height: 20px;  text-shadow: 0 1px 2px rgba(0,0,0,.7);
+  margin: 0px auto 0px auto;
+  max-width: 350px;
+}
+
+ .cart_form #button2{
+  display: block;
+  border: 0px solid #ffffff;
+  background: transparent;
+   font-size: 15px;
+    letter-spacing: 2px;
+  font-family: {{ theme.header_font | font_family }};
+  color: #000000;
+   line-height: 20px;  text-shadow: 0 1px 2px rgba(0,0,0,.7);
+  margin: 0px auto 0px auto;
+  max-width: 350px;
+}
+
+/* ------------------------------------------------------------------------------------------------
+ *
+ * This is where all of the CSS code is handled for your theme.
+ *
+ * We recommend you break your CSS into multiple files and put them in a separate
+ * directory. We've used a "stylesheets" directory in our example below. After that we'll use
+ * Sprockets (getsprockets.org) to package them into one file. Sprockets also allows you to
+ * use Sass/SCSS (sass-lang.com) by ending your file name with .sass or .scss, and you can also
+ * use LESS (lesscss.org) by ending your file with .less.
+ *
+ * However, if you don't have much CSS, or you're just a glutton for punishment,
+ * you could simply put all of your CSS in this file. It's up to you.
+ *
+ * ------------------------------------------------------------------------------------------------
+ */
+
+/*
+ * Here we're including a 3rd-party stylesheet we put in stylesheets/vendor written in normal CSS,
+ * as well as a few custom Sass stylesheets we've written for different areas of the store
+ *
+
+
+
+
+
+
+
+</style>
+
+
+
+
+
+<section class="content">
+
+
+{% if cart.items != blank %}
+<header class="product_header page_header">
+    
+       
+ 
+
+  
+  <form method="post" action="/cart" class="cart_form">
+   
+    <ul class="cart_details">
+      {% for item in cart.items %}
+      
+          
+      <li>     
+       
+        
+        <div class="product_details">
+          
+         <center> <img src="{{ item.product.image | product_image_url size:"large" }}"><br>
+           <h2> {{ item.product.name }} -
+            {% unless item.product.has_default_option %}
+              {{ item.option.name }}
+           {% endunless %}  
+           </h2></center>
+          </div>
+       
+      
+    <center><div class="product_actions">
+          <div class="quantity">{{ item | item_quantity_input }}</div>
+          <div class="price">{{ item.price | money_with_sign }}</div>
+      </div>
+        
+        
+      <button class="update_btn" name="update" border="none" type="submit" title="Update Cart"><h1>UPDATE</h1></button> 
+      
+      </li>
+        
+
+        </center>   
+        
+        
+        
+        
+      {% endfor %}
+  
+  <br>
+  
+  <center><h1><span> {{ cart.item_count | pluralize: 'ITEM', 'ITEMS' }}</span> - {{ cart.subtotal | money_with_sign }}</h1></center><br>
+  
+    
+  <button class="checkout_btn" type="submit" name="checkout" title="Checkout"onclick="window.location.href='/checkout'"><h1>CHECKOUT</h1></button>
+     
+    </ul>
+
+    
+     </br>
+  
+  {% if cart.shipping.enabled or cart.discount.enabled %}
+	<ul class="cart_options">
+	  <li class="cart_shipping">
+	  {% if cart.shipping.enabled %}
+	    {% if cart.shipping.strict %}
+	      <div class="select">
+		  	{{ store.country | country_select }}
+		  	<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" width="10.001px" height="6px" viewBox="0 0 10.001 6" xml:space="preserve"><path class="down_arrow" d="M9.852 1.537c0.199-0.189 0.199-0.496 0-0.684L9.135 0.17C8.938-0.02 8.617-0.02 8.4 0.17L5.016 3.5 L1.582 0.143c-0.199-0.189-0.52-0.189-0.717 0L0.148 0.826c-0.197 0.188-0.197 0.5 0 0.684l4.508 4.3 c0.199 0.2 0.5 0.2 0.7 0L9.852 1.537z"/></svg>
+	      </div>
+	    
+	    {% endif %}  
+	  {% endif %}
+	  
+	  {% if cart.discount.enabled %}
+	      <input autocomplete="off" id="cart_discount_code" name="cart[discount_code]" type="text" placeholder="Enter discount code" {% if cart.discount.code %}value="{{ cart.discount.code }}"{% endif %}>
+	  {% endif %}
+	  </li>
+	  <li class="cart_totals">
+	  	{% if cart.shipping.enabled %}
+	  	<div>SHIPPING <span>
+		  	
+        {% if cart.shipping.pending %}
+          {% if cart.country %}
+          SELECT ANOTHER COUNTRY
+          {% else %}
+          SELECT COUNTRY
+          {% endif %}
+        {% else %}
+          {{ cart.shipping.amount | money_with_sign }}
+        {% endif %}
+		 </span></div>
+	  	{% endif %}
+		{% if cart.discount.enabled %}
+		  {% if cart.discount.pending %}
+		    {% elsif cart.discount.free_shipping %}
+		      <div>DISCOUNT <span>FREE SHIPPING!</span></div>
+		    {% else %}
+		      <div>DISCOUNT <span>- {{ cart.discount.amount | money_with_sign }}</span></div>
+		  {% endif %}
+		{% endif %}
+	  	<div>TOTAL <span>{{ cart.total | money_with_sign }}</span></div>
+	  </li>
+	</ul>   
+    {% endif %} 
+
+
+  {% else %}
+  <br><br>
+<center>
+  
+  <div class="boxed">
+  <BR>
+    
+    <center><h1>YOUR CART IS CURRENTLY EMPTY.</h1></center></br>
+  <center><button type="button" class="button" onclick="window.location.href='/products'"><font color="white">CONTINUE SHOPPING</font></button></center>
+  <BR>
+
+ 
+  
+  
+  </div></center>
+  
+
+
+  {% endif %}
+  
+  </section>
+
+
+
+
+    </div>
+    

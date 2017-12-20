@@ -1,0 +1,80 @@
+ 
+ 
+   
+<ul class="slides">
+    {% for image in product.images %}
+     <li id="image_{{ forloop.index }}">
+       <center>  <img src="{{ image | product_image_url: "fullsize" }}" class="responsive-image9" alt="Image of {{ product.name | escape }}"></center>
+     </li>
+    {% endfor %}         
+  </ul>     
+  <center> <div id="product_info">  
+ {% case product.status %}
+  
+  {% when 'active' %}
+    <center><h1>{{ product.name }}</h1></center>
+    
+  
+        {% if product.description != blank %}
+  <center>
+    <h2><font color="#ffffff">{{ product.description | paragraphs }}</font></h2></center>
+     <span class="dash"></span>
+          {% endif %}
+  
+    <center><b>{{ product.default_price | money_with_sign }}</b></center>
+  
+      <center>
+      <section id="product_form">
+  <form method="post" action="/cart" accept-charset="utf8">
+        <input type="hidden" name="utf8" value='✓'>
+        {% if product.has_default_option %}
+    <center> {{ product.option | hidden_option_input }} </center>
+        {% else %}
+             <center>  {{ product.options_in_stock | options_select }} </center>
+        {% endif %}   
+    <br><button id="product-addtocart" name="submit" type="submit" class="probutton"><span><h3>Add to cart</h3></span></button> 
+    </form> 
+   </section> 
+    </center> 
+  
+  
+  {% when 'sold-out' %}
+  <center>  
+ <h1>{{ product.name }}</h1>
+  </center> 
+  {% if product.description != blank %}
+  
+    <center><h2><font color="#ffffff">{{ product.description | paragraphs }}</font></h2></center>
+        <span class="dash"></span>
+        {% endif %}
+  
+  <center><h3>Sold Out</h3></center>
+  
+
+
+          
+
+  {% when 'coming-soon' %}
+  
+
+<center>  
+ <h1>{{ product.name }}</h1>
+  </center> 
+  {% if product.description != blank %}
+  
+    <center> <h2><font color="#ffffff">{{ product.description | paragraphs }}</font></h2> </center>
+        <span class="dash"></span>
+        {% endif %}
+  
+  <center><h3>Coming Soon</h3></center>
+  
+  {% endcase %}
+  
+  
+  
+  </br></br> 
+  <center>
+<button type="button" class="button" onclick="window.location.href='/products'"><h3>Continue Shopping</h3></button></center>
+</div>
+</center>
+   
