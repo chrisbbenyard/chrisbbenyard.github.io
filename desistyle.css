@@ -4755,7 +4755,7 @@ small {
 }
 
 .card.small .card-image + .card-content, .card.medium .card-image + .card-content, .card.large .card-image + .card-content {
-  max-height: 25%;
+  max-height: 33%;
 }
 
 .card.small .card-content, .card.medium .card-content, .card.large .card-content {
@@ -4771,7 +4771,7 @@ small {
 }
 
 .card.small {
-  height: 300px;
+  height: 400px;
 }
 
 .card.medium {
