@@ -4867,7 +4867,7 @@ small {
 }
 
 .card .card-content {
-  padding: 24px;
+  padding: 4px;
   border-radius: 0 0 2px 2px;
 }
 
@@ -4910,7 +4910,7 @@ small {
 }
 
 .card .card-reveal {
-  padding: 24px;
+  padding: 4px;
   position: absolute;
   background-color: #fff;
   width: 100%;
@@ -5038,7 +5038,7 @@ h2.product-price {
   font-size: 20px;
   font-weight: normal;
   margin: 0;
-  margin-bottom: 40px;
+  margin-bottom: 10px;
   margin-top: 10px;
   padding: 0;
 }
@@ -5069,12 +5069,11 @@ h2.product-price {
 }
 
 .product-form {
-  margin-bottom: 40px;
+  margin-bottom: 10px;
 }
 
 .product-select {
   display: inline-block;
-  max-width: 260px;
   margin-bottom: 10px;
   margin-right: 25px;
   width: 100%;
@@ -5123,7 +5122,7 @@ h2.product-price {
 
 
 #product .panel-content {
-  max-width: 600px;
+  max-width: auto;
 }
 
 
