@@ -9417,3 +9417,116 @@ button.picker__today:focus, button.picker__clear:focus, button.picker__close:foc
   stroke-linecap: round;
   /*shape-rendering: crispEdges;*/
 }
+.product-form {
+  margin-bottom: 40px;
+}
+@media screen and (max-width: 1025px) {
+  .product-form {
+    max-width: 500px;
+    margin: 0 auto 40px;
+  }
+}
+@media screen and (max-width: 668px) {
+  .product-form {
+    padding: 0 20px;
+  }
+}
+
+.product-select {
+  display: inline-block;
+  max-width: 260px;
+  margin-bottom: 10px;
+  margin-right: 25px;
+  width: 100%;
+}
+@media screen and (max-width: 1025px) {
+  .product-select {
+    display: block;
+    margin: 0 auto 10px;
+    max-width: 100%;
+  }
+}
+
+.options-list {
+  color: #646464;
+  font-family: Work Sans;
+  margin: 0 0 40px;
+  padding: 0;
+}
+@media screen and (max-width: 1025px) {
+  .options-list {
+    text-align: center;
+  }
+}
+.options-list .option-item {
+  -webkit-transition: all 0.3s linear;
+  transition: all 0.3s linear;
+  border-bottom: 2px solid transparent;
+  cursor: pointer;
+  display: inline-block;
+  margin: 0 5px 10px;
+  padding-bottom: 2px;
+}
+.options-list .option-item:hover {
+  border-bottom: 2px solid #646464;
+}
+.options-list .option-item.selected {
+  border-bottom: 2px solid #646464;
+}
+.options-list .option-item.sold-out {
+  border-bottom: 2px solid transparent !important;
+  color: #646464;
+  cursor: default;
+  opacity: 0.5;
+  text-decoration: line-through;
+}
+
+.product-quantity {
+  display: none;
+}
+
+.add-to-cart-button {
+  display: inline-block;
+  max-width: 260px;
+  width: 100%;
+}
+@media screen and (max-width: 1025px) {
+  .add-to-cart-button {
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
+  }
+}
+
+#product .panel-content {
+  max-width: 600px;
+}
+@media screen and (max-width: 1025px) {
+  #product .panel-content {
+    max-width: 100%;
+  }
+}
+
+.product-image-panel .full-product-images {
+  background-repeat: repeat;
+  background-size: 100px;
+  background-color: #FAFAFA;
+}
+.product-image-panel .full-product-image {
+  -webkit-transition: background-image 0.2s linear;
+  transition: background-image 0.2s linear;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50% 50%;
+  position: absolute;
+  bottom: 0;
+  height: 100vh;
+  left: 0;
+  padding: 60px 0;
+  object-fit: contain;
+  right: 0;
+  top: 0;
+  width: 100%;
+  z-index: 2;
+}
