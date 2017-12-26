@@ -5551,14 +5551,12 @@ h2.product-price {
 
 .btn, .btn-large,
 .btn-flat {
-  padding: 15px 0;
-  width: 220px;
-  cursor: pointer;
-  font-size: 14px;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  background: transparent;
-  border: 0px solid #000;
+  border: none;
+  border-radius: 2px;
+  display: inline-block;
+  height: 36px;
+  line-height: 36px;
+  padding: 0 2rem;
   text-transform: uppercase;
   vertical-align: middle;
   -webkit-tap-highlight-color: transparent;
@@ -5649,7 +5647,7 @@ h2.product-price {
   width: 40px;
   height: 40px;
   line-height: 40px;
-  padding: 15px;
+  padding: 0;
   background-color: #26a69a;
   border-radius: 50%;
   -webkit-transition: .3s;
@@ -5928,18 +5926,6 @@ button.btn-floating {
  * Released under the MIT license
  * https://github.com/fians/Waves/blob/master/LICENSE
  */
-
-border: none;
-  border-radius: 2px;
-  display: inline-block;
-  height: 36px;
-  line-height: 36px;
-  padding: 0 2rem;
-  text-transform: uppercase;
-  vertical-align: middle;
-  -webkit-tap-highlight-color: transparent;
-
-
 .waves-effect {
   position: relative;
   cursor: pointer;
