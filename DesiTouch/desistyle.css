@@ -4230,7 +4230,6 @@ nav.nav-extended {
 }
 
 nav.nav-extended .nav-wrapper {
-  min-height: 56px;
   height: auto;
 }
 
@@ -4411,7 +4410,7 @@ nav .input-field label.active i {
 
 .navbar-fixed {
   position: relative;
-  height: 56px;
+  height: auto;
   z-index: 997;
 }
 
@@ -4424,11 +4423,11 @@ nav .input-field label.active i {
     min-height: 64px;
   }
   nav, nav .nav-wrapper i, nav a.button-collapse, nav a.button-collapse i {
-    height: 64px;
+    height: auto;
     line-height: 64px;
   }
   .navbar-fixed {
-    height: 64px;
+    height: auto;
   }
 }
 
