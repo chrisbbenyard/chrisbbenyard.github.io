@@ -1,4 +1,4 @@
-na/*!
+/*!
  * Materialize v0.100.2 (http://materializecss.com)
  * Copyright 2014-2017 Materialize
  * MIT License (https://raw.githubusercontent.com/Dogfalo/materialize/master/LICENSE)
@@ -5009,13 +5009,13 @@ small {
   overflow-y: hidden;
   height: 48px;
   width: 100%;
-  background-color: #accc65;
+  background-color: #8bc34a;
   margin: 0 auto;
   white-space: nowrap;
 }
 
 .tabs.tabs-transparent {
-  background-color: #accc65;
+  background-color: #8bc34a;
 }
 
 .tabs.tabs-transparent .tab a,
