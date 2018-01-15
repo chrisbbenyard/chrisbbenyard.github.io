@@ -55,7 +55,7 @@ $(window).load(function(){
 /* END ------------------------------------------------------- */
 
 
-$('#countdown').countdown({
+$('#hero').countdown({
 	date: "December 13, 2017 18:03:26",
 	render: function(data) {
 	  var el = $(this.el);
