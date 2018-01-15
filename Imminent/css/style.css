@@ -153,6 +153,7 @@ h2 {
 .sphere img{
 background-image: url("https://www.transparenttextures.com/patterns/iron-grip.png") ;
 	background-repeat: repeat;
+	width: 110%;
 	-webkit-transform: scale(0.7);
 	-moz-transform: scale(0.7);
 	-ms-transform: scale(0.7,0.7);
@@ -166,7 +167,7 @@ background-image: url("https://www.transparenttextures.com/patterns/iron-grip.pn
 .title {
 	display: block;
 	text-align: center;
-	width: 100%;
+	width: 80%;
 	position: absolute;
 	z-index: 2;
 	top: 30%;
@@ -338,7 +339,7 @@ background-image: url("https://www.transparenttextures.com/patterns/iron-grip.pn
 	#countdown div span {font-size: 20px; line-height: 25px;}
 	.sub-title { font-size: ; line-height: ; margin-top: 10px; }
 	/* TITLE & CONTACT */
-	.title { top: 35%;}
+	.title { top: 25%;}
 	.contact .icons { margin-bottom: 0px; }
 	/* SIZES */
 	.sphere img{
