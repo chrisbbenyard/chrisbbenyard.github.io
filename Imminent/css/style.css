@@ -39,7 +39,8 @@ img {
 body {
 	background: #757575;
 	color: #666666;
-	font-family: 'Roboto', sans-serif;
+	font-family:Consolas, "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", Monaco, "Courier New", "monospace";
+	font: "Courier New", "monospace";
 	-webkit-font-smoothing: antialiased;
 	-webkit-text-size-adjust: 100%;
 }
@@ -58,6 +59,8 @@ a {
 h1, h2 { margin: 0; }
 
 h1 {
+font-family:Consolas, "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", Monaco, "Courier New", "monospace";
+	font: "Courier New", "monospace";
 	font-size: 80px;
 	font-weight: 800;
 	line-height: 80px;
@@ -76,6 +79,8 @@ h2 {
 
 #countdown div span {
 	display:block;
+	font-family:Consolas, "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", Monaco, "Courier New", "monospace";
+	font: "Courier New", "monospace";
 	font-size: 45px;
 	line-height: 45px;
 	letter-spacing: initial;
