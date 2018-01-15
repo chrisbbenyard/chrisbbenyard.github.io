@@ -141,6 +141,7 @@ h2 {
 /* Background */
 .background {
   background: url(../images/background.jpg) no-repeat 50% 100%;
+	background-image: url("https://www.transparenttextures.com/patterns/iron-grip.png") ;
   bottom: -20px;
   background-size: cover;
   position: absolute;
@@ -151,9 +152,6 @@ h2 {
 
 
 .sphere img{
-background-image: url("https://www.transparenttextures.com/patterns/iron-grip.png") ;
-	background-repeat: repeat;
-	background-size: cover;
 	-webkit-transform: scale(0.7);
 	-moz-transform: scale(0.7);
 	-ms-transform: scale(0.7,0.7);
@@ -167,10 +165,10 @@ background-image: url("https://www.transparenttextures.com/patterns/iron-grip.pn
 .title {
 	display: block;
 	text-align: center;
-	width: 80%;
+	width: 100%;
 	position: absolute;
 	z-index: 2;
-	top: 30%;
+	top: 20%;
 }
 
 .line {
