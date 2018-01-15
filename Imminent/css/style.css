@@ -37,7 +37,7 @@ img {
 }
 
 body {
-	background: #fff;
+	background: #757575;
 	color: #666666;
 	font-family: 'Roboto', sans-serif;
 	-webkit-font-smoothing: antialiased;
@@ -76,8 +76,8 @@ h2 {
 
 #countdown div span {
 	display:block;
-	font-size: 50px;
-	line-height: 50px;
+	font-size: 45px;
+	line-height: 45px;
 	letter-spacing: initial;
 	font-weight: 100;
 	text-transform: uppercase;
@@ -164,7 +164,7 @@ h2 {
 	width: 100%;
 	position: absolute;
 	z-index: 2;
-	top: 10%;
+	top: 30%;
 }
 
 .line {
@@ -172,7 +172,7 @@ h2 {
 	margin: 0 auto;
 	width: 60px;
 	height: 1px;
-	background: #00d9ec;
+	background: #000000;
 	margin-top: 10px;
 }
 
@@ -188,7 +188,7 @@ h2 {
 .contact .icons {
 	margin: 0;
 	padding: 0;
-	margin-bottom: 18px;
+	margin-bottom: 10px;
 	text-align: center;
 	list-style: none;
 	list-style-type: none;
@@ -203,14 +203,14 @@ h2 {
 
 .contact .icons li a {
 	display: block;
-	width: 25px;
-	height: 25px;
+	width: 16px;
+	height: 16px;
 	opacity: .5;
 	-webkit-transition: opacity 0.3s;
 	-moz-transition: opacity 0.3s;
 	transition: opacity 0.3s;
 	color: black;
-	font-size: 24px;
+	font-size: 12px;
 }
 
 
@@ -330,10 +330,10 @@ h2 {
 @media (max-width: 320px) {
 	/* HERO */
 	h1 { font-size: 40px; line-height: 40px; }
-	#countdown div span {font-size: 24px; line-height: 34px;}
+	#countdown div span {font-size: 20px; line-height: 30px;}
 	.sub-title { font-size: ; line-height: ; margin-top: 10px; }
 	/* TITLE & CONTACT */
-	.title { top: 15%;}
+	.title { top: 35%;}
 	.contact .icons { margin-bottom: 0px; }
 	/* SIZES */
 	.sphere img{
@@ -411,7 +411,7 @@ h2 {
 	#countdown div span {font-size: 24px; line-height: 34px;}
 	.sub-title { font-size: ; line-height: ; margin-top: 10px; }
 	/* TITLE & CONTACT */
-	.title { top: 15%;}
+	.title { top: 10%;}
 	.contact .icons { margin-bottom: 0px; }
 	/* SIZES */
 	.sphere img{
@@ -573,8 +573,8 @@ h2 {
 	.sub-title { font-size: 20px; line-height: 20px; margin-top: 20px; }
 	/* TITLE & CONTACT */
 	.title { top: 15%;}
-	.contact { bottom: 8%; }
-	.contact .icons { margin-bottom: 12px; }
+	.contact { bottom: 3%; }
+	.contact .icons { margin-bottom: 10px; }
 	/* SIZES */
 	.sphere img{
 		-webkit-transform: scale(1);
