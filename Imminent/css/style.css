@@ -59,8 +59,6 @@ a {
 h1, h2 { margin: 0; }
 
 h1 {
-font-family: "Courier New", "monospace";
-	font: "Courier New", "monospace";
 	font-size: 80px;
 	font-weight: 800;
 	line-height: 80px;
@@ -79,10 +77,8 @@ h2 {
 
 #countdown div span {
 	display:block;
-	font-family: "Courier New", "monospace";
-	font: "Courier New", "monospace";
-	font-size: 45px;
-	line-height: 45px;
+	font-size: 50px;
+	line-height: 50px;
 	letter-spacing: initial;
 	font-weight: 100;
 	text-transform: uppercase;
@@ -106,114 +102,6 @@ h2 {
     text-align: center;
     margin-top: 10px;
 }
-
-.overla a {
-           display:inline;
-	position:absolute;
-	right:50px;
-	top:35px;
-	z-index:999;
-    font-size: 30px;
-    color: #ffffff;
-     transition: 0.3s;
-}
-
-.overla a:hover, .overlay a:focus {
-    color: #757575;
-}
-
-
-.overla .closebtn {
-    position: absolute;
-    top: 3%;
-    right: 45px;
-    font-size: 80px;
-}
-          
-.overla .button2 {
-  padding: 5px 0px;
-  width:auto;
-  cursor: pointer;
-  font-size: 16px;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-  background: transparent;
-  -webkit-font-smoothing: subpixel-antialiased;
-  -webkit-transition: all 0 ease-in;
-  -moz-transition: all 0 ease-in;
-  -ms-transition: all 0 ease-in;
-  -o-transition: all 0 ease-in;
-  transition: all 0 ease-in;
-    text-shadow: 0 1px 2px rgba(0,0,0,.7);
-  }
-.button2:hover { 
-  color: #757575;
-}
-      .overla    .button2:hover { 
-  color: #757575;
-  }
-    .overla {
-    height: 100%;
-    width: 0;
-    position: fixed;
-    z-index: 1;
-    top: 0;
-    left: 0;
-    background-color: rgb(7,7,7);
-    background-color: rgba(7,7,7, 0.9);
-    overflow-x: hidden;
-    transition: 0.5s;
-}
-
-
-
-
-/* --------------------------------------------------------------
-  Site Footer
--------------------------------------------------------------- */
-
-           
-#footer {	
-  position:absolute;
-   top:100%;
-   width:100%;
-   height:50px; 
-  transform: translate(-50%, -50%);
-   background:transparent;
-
-}
-
-
-@media screen and (max-height: 250px) {
-  .overla a {font-size: 30px}
-  .overla .closebtn {
-    font-size: 40px;
-    top: 15px;
-    right: 35px;
-  }
-}
- /**
- * Footer Styles
- */
-         
-.topsie {
-  
-          position:fixed;
-   top:3%;
-   width:100%;
-   height:50px;   /* Height of the footer */
-   background:transparent;
-}
- 
-
-          }
-
-.responsive-image{
-        height:auto;
-        width:80.5%;
-    }
-/* =Content Styles
--------------------------------------------------------------- */
 
 .carousel {
   overflow: hidden;
@@ -288,6 +176,68 @@ h2 {
 .carousel .indicators .indicator-item.active {
   background-color: #fff;
 }
+
+
+    .overla {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: rgb(7,7,7);
+    background-color: rgba(7,7,7, 0.9);
+    overflow-x: hidden;
+    transition: 0.5s;
+}
+
+
+
+
+/* --------------------------------------------------------------
+  Site Footer
+-------------------------------------------------------------- */
+
+           
+#footer {	
+  position:absolute;
+   top:100%;
+   width:100%;
+   height:50px; 
+  transform: translate(-50%, -50%);
+   background:transparent;
+
+}
+
+
+@media screen and (max-height: 250px) {
+  .overla a {font-size: 30px}
+  .overla .closebtn {
+    font-size: 40px;
+    top: 15px;
+    right: 35px;
+  }
+}
+ /**
+ * Footer Styles
+ */
+         
+.topsie {
+  
+          position:fixed;
+   top:3%;
+   width:100%;
+   height:50px;   /* Height of the footer */
+   background:transparent;
+}
+ 
+
+          }
+
+
+/* =Content Styles
+-------------------------------------------------------------- */
+
 
 .wrapper {
   text-align: center;		
@@ -371,6 +321,53 @@ h2 {
 	
 	
 }
+
+.overla a {
+           display:inline;
+	position:absolute;
+	right:50px;
+	top:35px;
+	z-index:999;
+    font-size: 30px;
+    color: #ffffff;
+     transition: 0.3s;
+}
+
+.overla a:hover, .overlay a:focus {
+    color: #757575;
+}
+
+
+.overla .closebtn {
+    position: absolute;
+    top: 3%;
+    right: 45px;
+    font-size: 80px;
+}
+          
+.overla .button2 {
+  padding: 5px 0px;
+  width:auto;
+  cursor: pointer;
+  font-size: 16px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  background: transparent;
+  -webkit-font-smoothing: subpixel-antialiased;
+  -webkit-transition: all 0 ease-in;
+  -moz-transition: all 0 ease-in;
+  -ms-transition: all 0 ease-in;
+  -o-transition: all 0 ease-in;
+  transition: all 0 ease-in;
+    text-shadow: 0 1px 2px rgba(0,0,0,.7);
+  }
+.button2:hover { 
+  color: #757575;
+}
+      .overla    .button2:hover { 
+  color: #757575;
+  }
+
 
 /* Text */
 .title {
