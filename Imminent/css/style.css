@@ -103,10 +103,10 @@ h2 {
   position: absolute;
   overflow: hidden;
   display: table-cell;
-  height: 100%;
-  width: 100%;
-  left: 0;
-  top: 0;
+  height: 90%;
+  width: 90%;
+  left: 5%;
+  top: 5%;
 }
 
 .scene,
