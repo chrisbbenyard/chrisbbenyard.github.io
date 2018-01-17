@@ -60,10 +60,10 @@ $('#countdown').countdown({
 	render: function(data) {
 	  var el = $(this.el);
 	  el.empty()
-	    //.append("<div><span>" + this.leadingZeros(data.years, 4) + "years</span></div>")
-	    .append("<div><span>" + this.leadingZeros(data.days, 2) + " days</span></div>")
-	    .append("<div><span>" + this.leadingZeros(data.hours, 2) + " hrs</span></div>")
-	    .append("<div><span>" + this.leadingZeros(data.min, 2) + " min</span></div>")
-	    .append("<div><span>" + this.leadingZeros(data.sec, 2) + " sec</span></div>");
+	    //.append("<div>" + this.leadingZeros(data.years, 4) + "<span>years</span></div>")
+	    .append("<div>" + this.leadingZeros(data.days, 2) + "<span>days</span></div>")
+	    .append("<div>" + this.leadingZeros(data.hours, 2) + "<span>hrs</span></div>")
+	    .append("<div>" + this.leadingZeros(data.min, 2) + "<span>min</span></div>")
+	    .append("<div>" + this.leadingZeros(data.sec, 2) + "<span>sec</span></div>");
 	}
 });

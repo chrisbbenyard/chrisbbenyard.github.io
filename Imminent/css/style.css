@@ -56,13 +56,14 @@ a {
     text-decoration: none;
 }
 
-h1, h2, h3 { margin: 0; }
+h1, h2 { margin: 0; }
 
 h1 {
 	font-size: 50px;
-	font-weight: 100;
 	line-height: 50px;
-	letter-spacing: -0.08em;
+	letter-spacing: initial;
+	font-weight: 100;
+	text-transform: uppercase;
 	color: #161a1b; 
 }
 
@@ -541,8 +542,8 @@ h2 {
 
 @media (max-width: 320px) {
 	/* HERO */
-	h1 { font-size: 40px; line-height: 40px; }
-	#countdown div span {font-size: 20px; line-height: 25px;}
+	h1 { font-size: 24px; line-height: 24px; }
+	#countdown div span {font-size: 24px; line-height: 34px;}
 	.sub-title { font-size: ; line-height: ; margin-top: 10px; }
 	/* TITLE & CONTACT */
 	.title { top: 25%;}
@@ -619,7 +620,7 @@ h2 {
 /* Landscape Phone */
 @media all and (min-width: 400px) {
 	/* HERO */
-	h1 { font-size: 40px; line-height: 40px; }
+	h1 { font-size: 24px; line-height: 48px; }
 	#countdown div span {font-size: 24px; line-height: 25px;}
 	.sub-title { font-size: ; line-height: ; margin-top: 10px; }
 	/* TITLE & CONTACT */
@@ -696,7 +697,7 @@ h2 {
 /* Tablet Portrait */
 @media all and (min-width: 700px) {
 	/* HERO */
-	h1 { font-size: 90px; line-height: 90px; }
+	h1 { font-size: 50px; line-height: 50px; }
 	.sub-title { font-size: 20px; line-height: 20px; margin-top: 10px; }
 	/* TITLE & CONTACT */
 	.title { top: 18%;}
@@ -778,7 +779,7 @@ h2 {
 
 @media all and (min-width: 900px) {
 	/* HERO */
-	h1 { font-size: 120px; line-height: 120px; }
+	h1 { font-size: 50px; line-height: 50px; }
 
 	#countdown div span {font-size: 34px; line-height: 34px;}
 	
@@ -1089,7 +1090,7 @@ h2 {
 
 @media all and (min-width: 1400px) {
 	/* HERO */
-	h1 { font-size: 160px; line-height: 160px; }
+	h1 { font-size: 60px; line-height: 60px; }
 	.sub-title { font-size: 25px; line-height: 25px; margin-top: 20px; }
 	/* POSITIONING */
 	.depth-5 {
@@ -1166,7 +1167,7 @@ h2 {
 
 @media all and (min-width: 1600px) {
 	/* HERO */
-	h1 { font-size: 180px; line-height: 180px; }
+	h1 { font-size: 54px; line-height: 54px; }
 	#countdown div span {font-size: 54px; line-height: 54px;}
 	.sub-title { font-size: 25px; line-height: 25px; margin-top: 25px; }
 }
@@ -1174,7 +1175,7 @@ h2 {
 
 @media all and (min-width: 1920px) {
 	/* HERO */
-	h1 { font-size: 200px; line-height: 200px; }
+	h1 { font-size: 120px; line-height: 120px; }
 	.sub-title { font-size: 30px; line-height: 30px; margin-top: 30px; }
 	/* POSITIONING */
 	.depth-5 {
