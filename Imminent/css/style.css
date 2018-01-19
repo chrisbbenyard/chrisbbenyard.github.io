@@ -39,7 +39,7 @@ img {
 body {
 	background: #757575;
 	color: #666666;
-	font-family: 'Playfair Display SC', serif;
+	font-family: 'Cutive Mono', monospace;
 	-webkit-font-smoothing: antialiased;
 	-webkit-text-size-adjust: 100%;
 }
@@ -76,7 +76,7 @@ h2 {
 
 #countdown div span {
 	display:block;
-	font-family: 'Playfair Display SC', serif;
+	font-family: 'Cutive Mono', monospace;
 	font-size: 50px;
 	line-height: 55px;
 	letter-spacing: initial;
