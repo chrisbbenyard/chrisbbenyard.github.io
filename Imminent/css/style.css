@@ -78,7 +78,7 @@ h2 {
 	display:block;
 	font-family: 'Playfair Display SC', serif;
 	font-size: 50px;
-	line-height: 50px;
+	line-height: 55px;
 	letter-spacing: initial;
 	font-weight: 100;
 	text-transform: uppercase;
@@ -152,10 +152,10 @@ h2 {
 
 
 .sphere img{
-	-webkit-transform: scale(0.7);
-	-moz-transform: scale(0.7);
-	-ms-transform: scale(0.7,0.7);
-	transform: scale(0.7);
+	-webkit-transform: scale(0.6);
+	-moz-transform: scale(0.6);
+	-ms-transform: scale(0.7,0.6);
+	transform: scale(0.6);
 }
 
 /* Text */
@@ -173,7 +173,7 @@ h2 {
 	margin: 0 auto;
 	width: 60px;
 	height: 1px;
-	background: #00d9ec;
+	background: #000000;
 	margin-top: 10px;
 }
 
@@ -204,14 +204,14 @@ h2 {
 
 .contact .icons li a {
 	display: block;
-	width: 25px;
-	height: 25px;
+	width: 20px;
+	height: 20px;
 	opacity: .5;
 	-webkit-transition: opacity 0.3s;
 	-moz-transition: opacity 0.3s;
 	transition: opacity 0.3s;
 	color: black;
-	font-size: 24px;
+	font-size: 18px;
 }
 
 
