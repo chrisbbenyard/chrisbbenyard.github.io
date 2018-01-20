@@ -142,7 +142,7 @@ h2 {
 .carousel {
   overflow: hidden;
   position: relative;
-  width: 50%;
+  width: 60%;
   height: 380px;
   -webkit-perspective: 500px;
           perspective: 500px;
@@ -170,7 +170,7 @@ h2 {
 }
 
 .carousel.carousel-slider .carousel-item {
-  width: 80%;
+  width: 70%;
   height: 100%;
   min-height: 400px;
   position: absolute;
