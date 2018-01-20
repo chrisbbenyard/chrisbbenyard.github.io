@@ -140,7 +140,7 @@ h2 {
 }
 
 .carousel {
-  overflow: none;
+ 
   position: relative;
   width: 80%;
 
@@ -189,7 +189,7 @@ h2 {
 }
 
 .carousel .carousel-item {
-  display: none;
+  
   width: 400px;
   height: 400px;
   position: absolute;
