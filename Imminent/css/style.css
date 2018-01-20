@@ -142,7 +142,7 @@ h2 {
 .carousel {
   overflow: hidden;
   position: relative;
-  width: 60%;
+  width: 50%;
   height: 380px;
   -webkit-perspective: 500px;
           perspective: 500px;
