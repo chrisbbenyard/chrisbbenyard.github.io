@@ -231,7 +231,6 @@ h2 {
 .carousel .carousel-item:not(.active) .materialboxed {
   pointer-events: none;
 }
-
 /* Background */
 .background {
   background: url(../images/background.jpg) no-repeat 50% 100%;
