@@ -1,5 +1,5 @@
 
-      shuffleLetters(document.querySelector('h1'))
+      shuffleLetters(document.querySelector('h1')
         .then(function () {
           return shuffleLetters(document.querySelector('.first'), {
             text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima suscipit debitis necessitatibus nihil repellat a porro quibusdam earum excepturi vero, unde, autem, sint dolorem. Nam, pariatur doloribus animi ipsam esse.',
