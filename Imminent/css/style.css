@@ -199,12 +199,7 @@ h2 {
 
 .carousel .carousel-item > img {
   width: 100%;
-	-webkit-transform: scale(0.5);
-	-moz-transform: scale(0.5);
-	-ms-transform: scale(0.5,0.5);
-	transform: scale(0.5);
 }
-
 
 .carousel .indicators {
   position: absolute;
@@ -433,13 +428,6 @@ h2 {
 	.sub-title { font-size: ; line-height: ; margin-top: 10px; }
 	/* TITLE & CONTACT */
 	.title { top: 15%;}
-	.carousel .carousel-item > img {
-  width: 100%;
-	-webkit-transform: scale(0.5);
-	-moz-transform: scale(0.5);
-	-ms-transform: scale(0.5,0.5);
-	transform: scale(0.5);
-}
 	.contact .icons { margin-bottom: 0px; }
 	/* SIZES */
 	.sphere img{
@@ -518,13 +506,6 @@ h2 {
 	.sub-title { font-size: ; line-height: ; margin-top: 10px; }
 	/* TITLE & CONTACT */
 	.title { top: 15%;}
-	.carousel .carousel-item > img {
-  width: 100%;
-	-webkit-transform: scale(0.5);
-	-moz-transform: scale(0.5);
-	-ms-transform: scale(0.5,0.5);
-	transform: scale(0.5);
-}
 	.contact .icons { margin-bottom: 0px; }
 	/* SIZES */
 	.sphere img{
@@ -602,13 +583,6 @@ h2 {
 	/* TITLE & CONTACT */
 	.title { top: 18%;}
 	.line { margin-top: 20px; }
-	.carousel .carousel-item > img {
-  width: 100%;
-	-webkit-transform: scale(0.5);
-	-moz-transform: scale(0.5);
-	-ms-transform: scale(0.5,0.5);
-	transform: scale(0.5);
-}
 	.contact { bottom: 10%; }
 	.contact .icons { margin-bottom: 12px; }
 	/* SIZES */
@@ -693,13 +667,6 @@ h2 {
 	.sub-title { font-size: 20px; line-height: 20px; margin-top: 20px; }
 	/* TITLE & CONTACT */
 	.title { top: 15%;}
-	.carousel .carousel-item > img {
-  width: 100%;
-	-webkit-transform: scale(0.5);
-	-moz-transform: scale(0.5);
-	-ms-transform: scale(0.5,0.5);
-	transform: scale(0.5);
-}
 	.contact { bottom: 8%; }
 	.contact .icons { margin-bottom: 12px; }
 	/* SIZES */
@@ -779,13 +746,6 @@ h2 {
 	h1 { font-size: 150px; line-height: 150px; }
 	#countdown div span {font-size: 44px; line-height: 44px;}
 	.sub-title { font-size: 25px; line-height: 25px; margin-top: 20px; }
-	.carousel .carousel-item > img {
-  width: 100%;
-	-webkit-transform: scale(0.5);
-	-moz-transform: scale(0.5);
-	-ms-transform: scale(0.5,0.5);
-	transform: scale(0.5);
-}
 	/* SIZES */
 	.sphere img{
 		-webkit-transform: scale(0.8);
@@ -896,13 +856,6 @@ h2 {
 	/* HERO */
 	h1 { font-size: 160px; line-height: 160px; }
 	.sub-title { font-size: 25px; line-height: 25px; margin-top: 20px; }
-	.carousel .carousel-item > img {
-  width: 100%;
-	-webkit-transform: scale(0.5);
-	-moz-transform: scale(0.5);
-	-ms-transform: scale(0.5,0.5);
-	transform: scale(0.5);
-}
 	/* POSITIONING */
 	.depth-5 {
 		right: -10%;
