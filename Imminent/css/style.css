@@ -672,6 +672,7 @@ h2 {
 	.sub-title { font-size: 20px; line-height: 20px; margin-top: 20px; }
 	/* TITLE & CONTACT */
 	.title { top: 15%;}
+<<<<<<< HEAD
 .carousel {
   overflow: hidden;
   position: relative;
@@ -764,6 +765,8 @@ h2 {
 .carousel .carousel-item:not(.active) .materialboxed {
   pointer-events: none;
 }
+=======
+>>>>>>> parent of d989760... dfggf
 	.contact { bottom: 8%; }
 	.contact .icons { margin-bottom: 12px; }
 	/* SIZES */
