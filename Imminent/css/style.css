@@ -292,7 +292,7 @@ h2 {
 .contact .icons ul {
 	display: inline-block;
 	margin-right: 10px;
-	top:20%;
+	top:50%;
 }
 
 .contact .icons ul:last-of-type { margin-right: 0px; }
