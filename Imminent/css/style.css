@@ -291,6 +291,7 @@ h2 {
 .contact .icons li {
 	display: inline-block;
 	margin-right: 10px;
+	top:20%;
 }
 
 .contact .icons li:last-of-type { margin-right: 0px; }
