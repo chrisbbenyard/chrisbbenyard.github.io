@@ -350,6 +350,14 @@ h2 {
 	-moz-transform: translateY(0px);
 	transform: translateY(0px);
 }
+.footer {
+	display: fixed;
+	width: 100%;
+	position: absolute;
+	z-index: 2;
+	text-align: center;
+	bottom: 0;
+}
 
 /* Flakes Sizing */
 .depth-5 img, .depth-4 img, .depth-3 img, .depth-2 img, .depth-1 img {
@@ -431,7 +439,8 @@ h2 {
 	.sub-title { font-size: ; line-height: ; margin-top: 10px; }
 	/* TITLE & CONTACT */
 	.title { top: 15%;}
-	.contact .icons { margin-bottom: 0px; }
+	.contact .icons { margin-bottom: 0px; }	
+	.footer { margin-bottom: 0px; }
 	/* SIZES */
 	.sphere img{
 		-webkit-transform: scale(0.5);
@@ -510,6 +519,7 @@ h2 {
 	/* TITLE & CONTACT */
 	.title { top: 15%;}
 	.contact .icons { margin-bottom: 0px; }
+	.footer { margin-bottom: 0px; }
 	/* SIZES */
 	.sphere img{
 		-webkit-transform: scale(0.5);
@@ -586,9 +596,9 @@ h2 {
 	/* TITLE & CONTACT */
 	.title { top: 18%;}
 	.line { margin-top: 20px; }
-	
-	.contact { bottom: 10%; }
+	.contact { bottom: 50%; }
 	.contact .icons { margin-bottom: 12px; }
+	.footer { bottom: 0; }
 	/* SIZES */
 	.sphere img{
 		-webkit-transform: scale(0.7);
@@ -671,7 +681,7 @@ h2 {
 	.sub-title { font-size: 20px; line-height: 20px; margin-top: 20px; }
 	/* TITLE & CONTACT */
 	.title { top: 15%;}
-<<<<<<< HEAD
+
 .carousel {
   overflow: hidden;
   position: relative;
@@ -764,8 +774,6 @@ h2 {
 .carousel .carousel-item:not(.active) .materialboxed {
   pointer-events: none;
 }
-=======
->>>>>>> parent of d989760... dfggf
 	.contact { bottom: 8%; }
 	.contact .icons { margin-bottom: 12px; }
 	/* SIZES */
