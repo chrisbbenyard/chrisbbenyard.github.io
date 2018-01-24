@@ -289,13 +289,13 @@ h2 {
 	list-style-type: none;
 }
 
-.contact .icons li {
+.contact .icons ul {
 	display: inline-block;
 	margin-right: 10px;
 	top:20%;
 }
 
-.contact .icons li:last-of-type { margin-right: 0px; }
+.contact .icons ul:last-of-type { margin-right: 0px; }
 
 .contact .icons li a {
 	display: block;
