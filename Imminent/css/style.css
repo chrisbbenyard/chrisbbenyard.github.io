@@ -250,7 +250,7 @@ h2 {
 	position: absolute;
 	z-index: 2;
 	text-align: center;
-	top: 55%;
+	top: 50%;
 }
 
 .contact .icons {
@@ -263,7 +263,7 @@ h2 {
 }
 
 .contact .icons li {
-	display: inline-block;
+	display: block;
 	margin-right: 10px;
 }
 
@@ -298,7 +298,7 @@ h2 {
 
 .contact a.mail::after {
 	position: absolute;
-	top: 100%;
+	top: 50%;
 	left: 50%;
 	width: 125px;
 	margin-left: -60px;
