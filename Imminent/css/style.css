@@ -267,7 +267,11 @@ h2 {
 .contact .icons li {
 	display: inline-block;
 	margin-right: 10px;
+<<<<<<< HEAD
 	
+=======
+	top:65%;
+>>>>>>> parent of 5ab6493... ghff
 }
 
 .contact .icons li:last-of-type { margin-right: 0px; }
