@@ -249,6 +249,9 @@ h2 {
 .contact {
 	display: block;
 	width: 100%;
+<<<<<<< HEAD
+=======
+>>>>>>> parent of dd62e13... dfgfdg
 	position: absolute;
 	z-index: 2;
 	text-align: center;
@@ -268,10 +271,14 @@ h2 {
 	display: inline-block;
 	margin-right: 10px;
 <<<<<<< HEAD
+<<<<<<< HEAD
 	
 =======
 	top:65%;
 >>>>>>> parent of 5ab6493... ghff
+=======
+	top:10%;
+>>>>>>> parent of dd62e13... dfgfdg
 }
 
 .contact .icons li:last-of-type { margin-right: 0px; }
@@ -328,7 +335,15 @@ h2 {
 	-moz-transform: translateY(0px);
 	transform: translateY(0px);
 }
-
+.footer {
+	display: fixed;
+	width: 100%;
+	height: 5%;
+	position: absolute;
+	z-index: 2;
+	text-align: center;
+	bottom: 0;
+}
 
 /* Flakes Sizing */
 .depth-5 img, .depth-4 img, .depth-3 img, .depth-2 img, .depth-1 img {
