@@ -39,7 +39,7 @@ img {
 body {
 	background: #fff;
 	color: #666666;
-	font-family: 'Roboto', sans-serif;
+	font-family: Courier new, 'monospace';
 	-webkit-font-smoothing: antialiased;
 	-webkit-text-size-adjust: 100%;
 }
@@ -151,10 +151,10 @@ h2 {
 
 
 .sphere img{
-	-webkit-transform: scale(0.5);
-	-moz-transform: scale(0.5);
-	-ms-transform: scale(0.5,0.5);
-	transform: scale(0.5;
+	-webkit-transform: scale(0.6);
+	-moz-transform: scale(0.6);
+	-ms-transform: scale(0.6,0.6);
+	transform: scale(0.6;
 }
 
 /* Text */
@@ -172,7 +172,7 @@ h2 {
 	margin: 0 auto;
 	width: 60px;
 	height: 1px;
-	background: #00d9ec;
+	background: #000000;
 	margin-top: 10px;
 }
 
