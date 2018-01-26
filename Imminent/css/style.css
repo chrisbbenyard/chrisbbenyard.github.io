@@ -172,7 +172,7 @@ h2 {
 	margin: 0 auto;
 	width: 60px;
 	height: 1px;
-	background: #00d9ec;
+	background: #000000;
 	margin-top: 10px;
 }
 .carousel {
@@ -198,7 +198,7 @@ h2 {
   left: 0;
   right: 0;
   bottom: 20px;
-  z-index: 1;
+  z-index: 2;
 }
 
 .carousel.carousel-slider .carousel-fixed-item.with-indicators {
@@ -247,7 +247,7 @@ h2 {
 	position: absolute;
 	z-index: 2;
 	text-align: center;
-	top: 65%;
+	top: 35%;
 }
 
 .contact .icons {
