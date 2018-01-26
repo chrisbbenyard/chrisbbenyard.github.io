@@ -37,9 +37,9 @@ img {
 }
 
 body {
-	background: #fff;
+	background: #757575;
 	color: #666666;
-	font-family: Courier New, 'monospace';
+	font-family: 'Cutive Mono', monospace;
 	-webkit-font-smoothing: antialiased;
 	-webkit-text-size-adjust: 100%;
 }
@@ -52,14 +52,15 @@ section { overflow: hidden; }
 /* =Typography
 -------------------------------------------------------------- */
 a {
-    text-decoration: none;
+    color: black;
+	text-decoration: none;
 }
 
 h1, h2 { margin: 0; }
 
 h1 {
 	font-size: 80px;
-	font-weight: 800;
+	font-weight: 400;
 	line-height: 80px;
 	letter-spacing: -0.08em;
 	color: #161a1b; 
@@ -67,7 +68,7 @@ h1 {
 
 h2 {
 	font-size: 18px;
-	font-weight: 800;
+	font-weight: 400;
 	line-height: 1em;
 	letter-spacing: 0.2em;
 	text-transform: uppercase;
@@ -76,8 +77,9 @@ h2 {
 
 #countdown div span {
 	display:block;
+	font-family: 'Cutive Mono', monospace;
 	font-size: 50px;
-	line-height: 50px;
+	line-height: 55px;
 	letter-spacing: initial;
 	font-weight: 100;
 	text-transform: uppercase;
@@ -137,49 +139,12 @@ h2 {
   backface-visibility: hidden;
 }
 
-
-/* Background */
-.background {
-  background: url(../images/background.jpg) no-repeat 50% 100%;
-  bottom: -20px;
-  background-size: cover;
-  position: absolute;
-  width: 110%;
-  left: -5%;
-  top: -5%;
-}
-
-
-.sphere img{
-	-webkit-transform: scale(0.5);
-	-moz-transform: scale(0.5);
-	-ms-transform: scale(0.5,0.5);
-	transform: scale(0.5;
-}
-
-/* Text */
-.title {
-	display: block;
-	text-align: center;
-	width: 100%;
-	position: absolute;
-	z-index: 2;
-	top: 10%;
-}
-
-.line {
-	display: block;
-	margin: 0 auto;
-	width: 60px;
-	height: 1px;
-	background: #00d9ec;
-	margin-top: 10px;
-}
 .carousel {
   overflow: hidden;
   position: relative;
   width: 100%;
   height: 400px;
+	top:50%;
   -webkit-perspective: 500px;
           perspective: 500px;
   -webkit-transform-style: preserve-3d;
@@ -189,7 +154,7 @@ h2 {
 }
 
 .carousel.carousel-slider {
-  top: 0;
+  top: 50%;
   left: 0;
 }
 
@@ -225,9 +190,9 @@ h2 {
 }
 
 .carousel .carousel-item {
-  visibility: hidden;
-  width: 200px;
-  height: 200px;
+  display: none;
+  width: 300px;
+  height: 300px;
   position: absolute;
   top: 0;
   left: 0;
@@ -267,9 +232,50 @@ h2 {
 .carousel .carousel-item:not(.active) .materialboxed {
   pointer-events: none;
 }
+
+/* Background */
+.background {
+  background: url(../images/background.jpg) no-repeat 50% 100%;
+  bottom: -20px;
+  background-size: cover;
+  position: absolute;
+  width: 110%;
+  left: -5%;
+  top: -5%;
+}
+
+
+.sphere img{
+	-webkit-transform: scale(0.5);
+	-moz-transform: scale(0.5);
+	-ms-transform: scale(0.5,0.5);
+	transform: scale(0.5);
+}
+
+/* Text */
+.title {
+	display: block;
+	text-align: center;
+	width: 100%;
+	position: absolute;
+	z-index: 2;
+	top: 10%;
+}
+
+.line {
+	display: block;
+	margin: 0 auto;
+	width: 50px;
+	height: 1px;
+	background: #000000;
+	margin-top: 10px;
+}
+
+
 .contact {
 	display: block;
 	width: 100%;
+	height:50%;
 	position: absolute;
 	z-index: 2;
 	text-align: center;
@@ -288,20 +294,21 @@ h2 {
 .contact .icons li {
 	display: inline-block;
 	margin-right: 10px;
+	top:50%;
 }
 
 .contact .icons li:last-of-type { margin-right: 0px; }
 
 .contact .icons li a {
 	display: block;
-	width: 25px;
-	height: 25px;
+	width: 20px;
+	height: 20px;
 	opacity: .5;
 	-webkit-transition: opacity 0.3s;
 	-moz-transition: opacity 0.3s;
 	transition: opacity 0.3s;
 	color: black;
-	font-size: 24px;
+	font-size: 18px;
 }
 
 
@@ -343,6 +350,15 @@ h2 {
 	-webkit-transform: translateY(0px);
 	-moz-transform: translateY(0px);
 	transform: translateY(0px);
+}
+.footer {
+	display: fixed;
+	width: 100%;
+	height: 5%;
+	position: absolute;
+	z-index: 2;
+	text-align: center;
+	bottom: 0;
 }
 
 /* Flakes Sizing */
@@ -425,13 +441,14 @@ h2 {
 	.sub-title { font-size: ; line-height: ; margin-top: 10px; }
 	/* TITLE & CONTACT */
 	.title { top: 15%;}
-	.contact .icons { margin-bottom: 0px; }
+	.contact .icons { margin-bottom: 0px; }	
+	.footer { margin-bottom: 0px; }
 	/* SIZES */
 	.sphere img{
-		-webkit-transform: scale(0.6);
-		-moz-transform: scale(0.6);
-		-ms-transform: scale(0.6,0.6);
-		transform: scale(0.6);
+		-webkit-transform: scale(0.5);
+		-moz-transform: scale(0.5);
+		-ms-transform: scale(0.5,0.5);
+		transform: scale(0.5);
 	}
 	/* POSITIONING */
 	.depth-5 {
@@ -504,12 +521,13 @@ h2 {
 	/* TITLE & CONTACT */
 	.title { top: 15%;}
 	.contact .icons { margin-bottom: 0px; }
+	.footer { margin-bottom: 0px; }
 	/* SIZES */
 	.sphere img{
-		-webkit-transform: scale(0.6);
-		-moz-transform: scale(0.6);
-		-ms-transform: scale(0.6,0.6);
-		transform: scale(0.6);
+		-webkit-transform: scale(0.5);
+		-moz-transform: scale(0.5);
+		-ms-transform: scale(0.5,0.5);
+		transform: scale(0.5);
 	}
 	/* POSITIONING */
 	.depth-5 {
@@ -580,14 +598,15 @@ h2 {
 	/* TITLE & CONTACT */
 	.title { top: 18%;}
 	.line { margin-top: 20px; }
-	.contact { bottom: 10%; }
+	.contact { bottom: 50%; }
 	.contact .icons { margin-bottom: 12px; }
+	.footer { bottom: 0; }
 	/* SIZES */
 	.sphere img{
-		-webkit-transform: scale(1);
-		-moz-transform: scale(1);
-		-ms-transform: scale(1,1);
-		transform: scale(1);
+		-webkit-transform: scale(0.7);
+		-moz-transform: scale(0.7);
+		-ms-transform: scale(0.7,0.7);
+		transform: scale(0.7);
 	}
 	.depth-5 img, .depth-4 img, .depth-3 img, .depth-2 img, .depth-1 img {
 		-webkit-transform: scale(0.8);
@@ -664,14 +683,107 @@ h2 {
 	.sub-title { font-size: 20px; line-height: 20px; margin-top: 20px; }
 	/* TITLE & CONTACT */
 	.title { top: 15%;}
+
+.carousel {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  height: 400px;
+  -webkit-perspective: 500px;
+          perspective: 500px;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  -webkit-transform-origin: 0% 50%;
+          transform-origin: 0% 50%;
+}
+
+.carousel.carousel-slider {
+  top: 50%;
+  left: 0;
+}
+
+.carousel.carousel-slider .carousel-fixed-item {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 20px;
+  z-index: 1;
+}
+
+.carousel.carousel-slider .carousel-fixed-item.with-indicators {
+  bottom: 68px;
+}
+
+.carousel.carousel-slider .carousel-item {
+  width: 100%;
+  height: 100%;
+  min-height: 400px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.carousel.carousel-slider .carousel-item h2 {
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 32px;
+}
+
+.carousel.carousel-slider .carousel-item p {
+  font-size: 15px;
+}
+
+.carousel .carousel-item {
+  display: none;
+  width: 300px;
+  height: 300px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.carousel .carousel-item > img {
+  width: 100%;
+}
+
+.carousel .indicators {
+  position: absolute;
+  text-align: center;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: 0;
+}
+
+.carousel .indicators .indicator-item {
+  display: inline-block;
+  position: relative;
+  cursor: pointer;
+  height: 8px;
+  width: 8px;
+  margin: 24px 4px;
+  background-color: rgba(255, 255, 255, 0.5);
+  -webkit-transition: background-color .3s;
+  transition: background-color .3s;
+  border-radius: 50%;
+}
+
+.carousel .indicators .indicator-item.active {
+  background-color: #fff;
+}
+
+.carousel.scrolling .carousel-item .materialboxed,
+.carousel .carousel-item:not(.active) .materialboxed {
+  pointer-events: none;
+}
 	.contact { bottom: 8%; }
 	.contact .icons { margin-bottom: 12px; }
 	/* SIZES */
 	.sphere img{
-		-webkit-transform: scale(1);
-		-moz-transform: scale(1);
-		-ms-transform: scale(1,1);
-		transform: scale(1);
+		-webkit-transform: scale(0.8);
+		-moz-transform: scale(0.8);
+		-ms-transform: scale(0.8,0.8);
+		transform: scale(0.8);
 	}
 	.depth-5 img, .depth-4 img, .depth-3 img, .depth-2 img, .depth-1 img {
 		-webkit-transform: scale(0.8);
@@ -745,10 +857,10 @@ h2 {
 	.sub-title { font-size: 25px; line-height: 25px; margin-top: 20px; }
 	/* SIZES */
 	.sphere img{
-		-webkit-transform: scale(1);
-		-moz-transform: scale(1);
-		-ms-transform: scale(1,1);
-		transform: scale(1);
+		-webkit-transform: scale(0.8);
+		-moz-transform: scale(0.8);
+		-ms-transform: scale(0.8,0.8);
+		transform: scale(0.8);
 	}
 	.depth-5 img, .depth-4 img, .depth-3 img, .depth-2 img, .depth-1 img {
 		-webkit-transform: scale(1);
@@ -1093,7 +1205,7 @@ h2 {
 	margin-top: 80px;
 	text-decoration: none;
 	font-size: 9px;
-	font-weight: 700;
+	font-weight: 400;
 	line-height: 1em;
 	letter-spacing: 0.2em;
 	text-transform: uppercase;
