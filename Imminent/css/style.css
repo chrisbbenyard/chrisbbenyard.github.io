@@ -246,6 +246,7 @@ h2 {
 .contact {
 	display: block;
 	width: 100%;
+	top:10%;
 	position: absolute;
 	z-index: 2;
 	text-align: center;
