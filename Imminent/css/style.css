@@ -140,7 +140,7 @@ h2 {
 }
 
 .carousel {
-  overflow: hidden;
+  overflow:none;
   position: relative;
   width: 100%;
   height: 400px;
@@ -230,7 +230,7 @@ h2 {
 
 .carousel.scrolling .carousel-item .materialboxed,
 .carousel .carousel-item:not(.active) .materialboxed {
-  pointer-events: none;
+  pointer-events: all;
 }
 
 /* Background */
