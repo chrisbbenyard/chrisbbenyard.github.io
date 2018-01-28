@@ -9603,6 +9603,7 @@ if (Vel) {
         function click(e) {
           // Disable clicks if carousel was dragged.
           if (dragged) {
+            e.preventDefault();
             e.stopPropagation();
             return false;
           } else if (!options.fullWidth) {
@@ -9611,6 +9612,7 @@ if (Vel) {
 
             // Disable clicks if carousel was shifted by click
             if (diff !== 0) {
+              e.preventDefault();
               e.stopPropagation();
             }
             cycleTo(clickedIndex);
@@ -9644,6 +9646,8 @@ if (Vel) {
         function tap(e) {
           // Fixes firefox draggable image bug
           if (e.type === 'mousedown' && $(e.target).is('img')) {
+            e.preventDefault();
+          }
           pressed = true;
           dragged = false;
           vertical_dragged = false;
@@ -9673,6 +9677,7 @@ if (Vel) {
               }
             } else if (dragged) {
               // If dragging don't allow vertical scroll.
+              e.preventDefault();
               e.stopPropagation();
               return false;
             } else {
@@ -9683,6 +9688,7 @@ if (Vel) {
 
           if (dragged) {
             // If dragging don't allow vertical scroll.
+            e.preventDefault();
             e.stopPropagation();
             return false;
           }
@@ -9716,6 +9722,7 @@ if (Vel) {
           requestAnimationFrame(autoScroll);
 
           if (dragged) {
+            e.preventDefault();
             e.stopPropagation();
           }
           return false;
