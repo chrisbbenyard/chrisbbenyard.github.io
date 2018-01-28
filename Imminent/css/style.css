@@ -279,8 +279,7 @@ h2 {
 	position: absolute;
 	z-index: 2;
 	text-align: center;
-	top:0;
-	left:0;
+	bottom: 5%;
 }
 
 .contact .icons {
@@ -294,7 +293,7 @@ h2 {
 
 .contact .icons li {
 	display: inline-block;
-	margin-right: 5px;
+	margin-right: 10px;
 	top:50%;
 }
 
