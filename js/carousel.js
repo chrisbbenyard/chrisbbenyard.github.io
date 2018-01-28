@@ -204,8 +204,6 @@
     _handleCarouselTap(e) {
       // Fixes firefox draggable image bug
       if (e.type === 'mousedown' && $(e.target).is('img')) {
-        e.preventDefault();
-      }
       this.pressed = true;
       this.dragged = false;
       this.verticalDragged = false;
@@ -240,7 +238,6 @@
 
         } else if (this.dragged) {
           // If dragging don't allow vertical scroll.
-          e.preventDefault();
           e.stopPropagation();
           return false;
 
@@ -252,7 +249,6 @@
 
       if (this.dragged) {
         // If dragging don't allow vertical scroll.
-        e.preventDefault();
         e.stopPropagation();
         return false;
       }
@@ -290,7 +286,6 @@
       requestAnimationFrame(this._autoScrollBound);
 
       if (this.dragged) {
-        e.preventDefault();
         e.stopPropagation();
       }
       return false;
@@ -303,7 +298,6 @@
     _handleCarouselClick(e) {
       // Disable clicks if carousel was dragged.
       if (this.dragged) {
-        e.preventDefault();
         e.stopPropagation();
         return false;
 
@@ -313,7 +307,6 @@
 
         // Disable clicks if carousel was shifted by click
         if (diff !== 0) {
-          e.preventDefault();
           e.stopPropagation();
         }
         this._cycleTo(clickedIndex);
