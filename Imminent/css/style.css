@@ -230,7 +230,7 @@ h2 {
 
 .carousel.scrolling .carousel-item .materialboxed,
 .carousel .carousel-item:not(.active) .materialboxed {
-  pointer-events: all;
+  pointer-events: none;
 }
 
 /* Background */
