@@ -774,7 +774,7 @@ h2 {
 
 .carousel.scrolling .carousel-item .materialboxed,
 .carousel .carousel-item:not(.active) .materialboxed {
-  pointer-events: none;
+  pointer-events: all;
 }
 	.contact { bottom: 8%; }
 	.contact .icons { margin-bottom: 12px; }
