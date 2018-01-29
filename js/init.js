@@ -58,31 +58,7 @@
     }, 100);
 
 
-    // BuySellAds Detection
-    var $bsa = $(".buysellads"),
-        $timesToCheck = 3;
-    function checkForChanges() {
-        if (!$bsa.find('#carbonads').length) {
-          $timesToCheck -= 1;
-          if ($timesToCheck >= 0) {
-            setTimeout(checkForChanges, 500);
-          }
-          else {
-            var donateAd = $('<div id="carbonads"><span><a class="carbon-text" href="#!" onclick="document.getElementById(\'paypal-donate\').submit();"><img src="images/donate.png" /> Help support us by turning off adblock. If you still prefer to keep adblock on for this page but still want to support us, feel free to donate. Any little bit helps.</a></form></span></div>');
-
-            $bsa.append(donateAd);
-          }
-        }
-
-    }
-    checkForChanges();
-
-
-    // BuySellAds Demos close button.
-    $('.buysellads.buysellads-demo .close').on('click', function() {
-      $(this).parent().remove();
-    });
-
+   
 
     // Github Latest Commit
     if ($('.github-commit').length) { // Checks if widget div exists (Index only)
@@ -137,31 +113,7 @@
       $('#nav-mobile').css({ overflow: 'auto'});
     }
 
-    // Set checkbox on forms.html to indeterminate
-    var indeterminateCheckbox = document.getElementById('indeterminate-checkbox');
-    if (indeterminateCheckbox !== null)
-      indeterminateCheckbox.indeterminate = true;
-
-
-    // Pushpin Demo Init
-    if ($('.pushpin-demo-nav').length) {
-      $('.pushpin-demo-nav').each(function() {
-        var $this = $(this);
-        var $target = $('#' + $(this).attr('data-target'));
-        $this.pushpin({
-          top: $target.offset().top,
-          bottom: $target.offset().top + $target.outerHeight() - $this.height()
-        });
-      });
-    }
-
-    // CSS Transitions Demo Init
-    if ($('#scale-demo').length &&
-        $('#scale-demo-trigger').length) {
-      $('#scale-demo-trigger').click(function() {
-        $('#scale-demo').toggleClass('scale-out');
-      });
-    }
+   
 
 
     // Plugin initialization
@@ -172,73 +124,9 @@
       onCycleTo: function(item, dragged) {
 
       }
-    });
-    $('.collapsible').collapsible();
-    $('.collapsible.expandable').collapsible({
-      accordion: false
-    });
-
-    $('.dropdown-trigger').dropdown();
-    $('.slider').slider();
-    $('.parallax').parallax();
-    $('.materialboxed').materialbox();
-    $('.modal').modal();
-    $('.scrollspy').scrollSpy();
-    $('.datepicker').datepicker();
-    $('.tabs').tabs();
-    $('.timepicker').timepicker();
-    $('.tooltipped').tooltip();
-    $('select').not('.disabled').select();
-    $('.sidenav').sidenav();
-    $('.tap-target').featureDiscovery();
-    $('input.autocomplete').autocomplete({
-      data: {"Apple": null, "Microsoft": null, "Google": 'http://placehold.it/250x250'},
-    });
-    $('input[data-length], textarea[data-length]').characterCounter();
-
-    // Swipeable Tabs Demo Init
-    if ($('#tabs-swipe-demo').length) {
-      $('#tabs-swipe-demo').tabs({ 'swipeable': true });
-    }
-
-    // Chips
-    $('.chips').chips();
-    $('.chips-initial').chips({
-      readOnly: true,
-      data: [{
-        tag: 'Apple',
-      }, {
-        tag: 'Microsoft',
-      }, {
-        tag: 'Google',
-      }]
-    });
-    $('.chips-placeholder').chips({
-      placeholder: 'Enter a tag',
-      secondaryPlaceholder: '+Tag',
-    });
-    $('.chips-autocomplete').chips({
-      autocompleteOptions: {
-        data: {
-          'Apple': null,
-          'Microsoft': null,
-          'Google': null
-        }
-      },
-    });
-
-    // Fab
-    $('.fixed-action-btn').floatingActionButton();
-    $('.fixed-action-btn.horizontal').floatingActionButton({
-      direction: 'left'
-    });
-    $('.fixed-action-btn.click-to-toggle').floatingActionButton({
-      direction: 'left',
-      hoverEnabled: false
-    });
-    $('.fixed-action-btn.toolbar').floatingActionButton({
-      toolbarEnabled: true
-    });
+   
+  
+   
 
 
   }); // end of document ready
