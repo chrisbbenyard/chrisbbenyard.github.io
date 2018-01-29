@@ -90,10 +90,7 @@ h2 {
     margin: 0 34px;
 }
 
-#center250b { width: 100%; margin: auto; border: none; 
-}
-#fixedtop2 { position: absolute; width: 100%; bottom: 50%; background-color: #transparent; z-index: 50; 
-}
+
 .sub-title {
 	font-size: 18px;
 	margin-top: 5px;
