@@ -64,6 +64,7 @@ section { overflow: hidden; }
   font-weight: 100;
   font-size: 40px;
   color: #000000;
+	z-index: 1;
     }
 .dud {
   color: #757575;
