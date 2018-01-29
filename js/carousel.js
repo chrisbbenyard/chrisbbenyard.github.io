@@ -264,7 +264,7 @@
      */
     _handleCarouselRelease(e) {
       if (this.pressed) {
-        this.pressed = false;
+        this.pressed = true;
       } else {
         return;
       }
