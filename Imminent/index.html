@@ -1,52 +1,92 @@
-<!--[if IE 8 ]><html class="ie" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US"> <![endif]-->
-<!--[if (gte IE 9)|!(IE)]><!-->
-<!DOCTYPE html>
-<html lang="en-US">
-    <!--<![endif]-->
-
-    <head>
+<head>{{ head_content }}
         <meta charset="utf-8">
         <title>
-            Imminent - The most spectacular coming soon template!
-        </title><!-- Behavioral Meta Data -->
-        <meta content="yes" name="apple-mobile-web-app-capable">
-        <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport"><!-- Core Meta Data -->
-        <meta content="ThemeWagon" name="author">
-        <meta content="The most spectacular coming soon template!" name="description">
-        <meta content="Comming Soon, Responsive, Landing Page, One Page" name="keywords"><!-- Open Graph Meta Data -->
-        <meta content="The most spectacular coming soon template!">
-        <meta content="ThemeWagon">
-        <meta content="ThemeWagon">
-        <meta content="website">
-        <meta content="index.html"><!-- Twitter Card Meta Data -->
-        <meta content="summary" name="twitter:card">
-        <meta content="@themewagon" name="twitter:site">
-        <meta content="@themewagon" name="twitter:creator">
-        <meta content="ThemeWagon" name="twitter:title">
-        <meta content="Imminent - The most spectacular coming soon template!" name="twitter:description">
+           Fair & Glorious
+        </title>
 
-        <link href="favicon.png" rel="shortcut icon" type="image/png">
+      <!-- Startup configuration -->
+<!-- Fallback application metadata for legacy browsers -->
+<meta name="application-name" content="Fair & Glorious">
+<link rel="icon" sizes="16x16 32x32 48x48" href="http://www.iconj.com/ico/1/7/17kbofimez.ico">
+<link rel="icon" sizes="512x512" href="http://chrisbbenyard.github.io/fngappicon.png">
+         
+    <meta property="og:image" content="http://chrisbbenyard.github.io/fngappicon.png" />
+         
+   
+      <link rel="apple-touch-icon" href="http://chrisbbenyard.github.io/fngappicon.png" /> 
+      <link rel="apple-touch-icon" sizes="76x76" href="http://chrisbbenyard.github.io/fngappicon.png" /> 
+      <link rel="apple-touch-icon" sizes="120x120" href="http://chrisbbenyard.github.io/fngappicon.png" />
+      <link rel="apple-touch-icon" sizes="152x152" href="http://chrisbbenyard.github.io/fngappicon.png" />
+           <link rel="apple-touch-icon" sizes="256x256" href="http://chrisbbenyard.github.io/fngappicon.png" />
+   
+             
+         
+         
+         <link rel="apple-touch-startup-image" href="/launch.png">      
+         
+    <meta name="apple-mobile-web-app-title" content="Fair & Glorious">
+         
+            <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes"> 
+   
+         
+         
+         <meta name="apple-mobile-web-app-status-bar-style" content="black" />     
+  
+      <meta name="description" content="An Atlanta based street wear brand.">
+     
+     <link rel="shortcut icon" href="http://www.iconj.com/ico/1/7/17kbofimez.ico" type="image/x-icon" />
+    <meta name="viewport" content="user-scalable=no">
+              
+<meta name="robots" content="noindex">
+<meta name="googlebot" content="noindex">
+   
+  
+       
+   
+  
+   <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+       
 
-        <!--[if lt IE 9]>
-            <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
-        <![endif]-->
+    <script src="https://chrisbbenyard.github.io/js/materialize.js"></script> 
+ <script src="https://chrisbbenyard.github.io/js/init.js"></script>
+   
+    
         
         <!-- CSS -->
-        <link href='http://fonts.googleapis.com/css?family=Roboto:400,100,900' rel='stylesheet' type='text/css'><!-- Styles -->
-        <link href="css/loader.css" rel="stylesheet" type="text/css">
-        <link href="css/normalize.css" rel="stylesheet" type="text/css">
-        <link rel="stylesheet" href="css/font-awesome.min.css">
-        <link href="css/style.css" rel="stylesheet" type="text/css">
-        <!--[if lt IE 9]>
-            <link rel="stylesheet" type="text/css" href="css/ie.css" />
-        <![endif]-->
-        <!-- Javascript -->
+       <link href='http://fonts.googleapis.com/css?family=Cutive+Mono:400,700,900' rel='stylesheet' type='text/css'>
+  <link href="https://chrisbbenyard.github.io/Imminent/css/loader.css" rel="stylesheet" type="text/css">     
+    <link href="https://chrisbbenyard.github.io/Imminent/css/normalize.css" rel="stylesheet" type="text/css">
+      <link rel="stylesheet" href="https://chrisbbenyard.github.io/Imminent/css/font-awesome.min.css"> 
+        <link href="https://chrisbbenyard.github.io/Imminent/css/style.css" rel="stylesheet" type="text/css">
+  
+      
+    
+    
+    
+    
 
-        <script src="js/jquery.js"></script>
+        <script src="https://chrisbbenyard.github.io/Imminent/js/jquery.js"></script>
+     
     </head>
-    <body>
-        <div class="preloader">
-            <div class="loading">
+    
+    
+          
+  
+  
+</head>
+ 
+
+  
+
+
+  
+    
+    
+
+    <body>   
+        <div class="preloader">          
+        <div class="loading">
                 <h2>
                     Loading...
                 </h2>
@@ -54,132 +94,404 @@
             </div>
         </div>
 
-        <div class="wrapper">
-            <ul class="scene unselectable" data-friction-x="0.1" data-friction-y="0.1" data-scalar-x="25" data-scalar-y="15" id="scene">
-                <li class="layer" data-depth="0.00">
-                </li>
-                <!-- BG -->
+      
+      
+    
+         <div class="wrapper">
+           
+           <div class="container">
+			<!-- Top Navigation -->
+            
+             <div class="codrops-top clearfix">            
+    <span style="font-size:50px;cursor:pointer" class="openbtn" onclick="openNav()"><font color="transparent"></font></span>				
+             </div>
 
-                <li class="layer" data-depth="0.10">
+             <div id="myNav" class="overla">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  
+               <div class="overla-content">    
+     <li {% if page.full_url contains '/products' %}class="button"{% endif %}>        
+       <button type="button" class="button" onclick="window.location.href='/products'">Products</button></li>
+            
+     <li {% if page.full_url contains '/contact' %}class="button"{% endif %}>
+      <button type="button" class="button" onclick="window.location.href='/contact'">Contact</button></li> 
+      
+     <li {% if page.full_url contains '/lookbook' %}class="button"{% endif %}>
+       <button type="button" class="button" onclick="window.location.href='/lookbook'">Lookbook</button></li>           
+    
+     <li {% if page.full_url contains '/about' %}class="button"{% endif %}>
+       <button type="button" class="button" onclick="window.location.href='/About'">About</button></li> 
+                        
+     <li {% if page.full_url contains '/cart' %}class="button"{% endif %}>
+       <button type="button" class="button" onclick="window.location.href='/cart'">Checkout</button></li>
+    
+     <li {% if page.full_url contains '/privacy-policy' %}class="button"{% endif %}>
+       <button type="button" class="button" onclick="window.location.href='/privacy-policy'">Privacy Policy</button></li>
+     
+     <li {% if page.full_url contains '/terms-and-conditions' %}class="button"{% endif %}>
+       <button type="button" class="button" onclick="window.location.href='/terms-and-conditions'">Terms & Conditions</button></li> 
+         
+     <li {% if page.full_url contains '/check' %}class="button"{% endif %}>
+       <button type="button" class="button" onclick="window.location.href='/check'">Check</button></li>   
+             
+         <div id="site_footer">
+      <div id="badge"><img src="http://i.imgur.com/mXamSNS.png" onclick="window.location.href='/'"> 
+        <center>
+          <font color="#ffffff">©2018 Fair & Glorious, All Rights Reserved.</font> 
+        </center>            
+        </div>
+           </div>
+         
+           
+           
+           
+         </div>          
+       </div> 
+
+      
+           
+
+                                   
+           
+           
+           
+           
+           
+           
+           
+           
+           
+           
+           
+           
+           
+           
+           
+           
+           
+           
+           
+           
+           
+           
+           
+           
+           
+           
+           
+           
+           
+           
+           
+           
+           
+           
+           
+           
+           
+           
+           
+           
+           
+           
+           
+           
+       <ul class="scene unselectable" data-friction-x="0.1" data-friction-y="0.1" data-scalar-x="25" data-scalar-y="15" id="scene">
+               
+              <li class="layer" data-depth="0.00">
+              </li>
+              
+              <!-- BG -->
+              <li class="layer" data-depth="0.10">
                     <div class="background">
                     </div>
-                </li>
-
+              </li>
+              
                 <!-- Hero -->
+              <li class="layer" data-depth="0.20">
+                <div class="title">
+                                     
+  
+                      <center>
+                        <div class="text">
+                          dsfsdfsd
+                        </div>
+                      </center>
+                      <span class="line"></span>
+                    
+                      
+                </div>
+              </li>
 
-                <li class="layer" data-depth="0.20">
-                    <div class="title">
-                        <h2>
-                            IMMINENT
-                        </h2>
-                        <span class="line"></span>
-                    </div>
-                </li>
+              
+              <li class="layer" data-depth="0.25">
+                <div class="sphere">
+                  <img src="http://chrisbbenyard.github.io/Imminent/images/sphere.png"style="opacity:0.4;filter:alpha(opacity=40);">
+                </div>        
+              </li>
 
-                <li class="layer" data-depth="0.25">
-                    <div class="sphere">
-                        <img alt="sphere" src="images/sphere.png">
-                    </div>
-                </li>
+              
+              <li class="layer" data-depth="0.30">        
+                <div class="hero">       
+                  <p class="sub-title">
+                  </p>      
+                </div>     
+              </li>
+  
+   
+              <!-- Flakes -->
 
-                <li class="layer" data-depth="0.30">
-                    <div class="hero">
-                        <h1 id="countdown">
-                            The most spectacular coming soon template!
-                        </h1>
-
-                        <p class="sub-title">
-                            The most spectacular coming soon template!
-                        </p>
-                    </div>
-                </li>
-                <!-- Flakes -->
-
+              
                 <li class="layer" data-depth="0.40">
                     <div class="depth-1 flake1">
-                        <img alt="flake" src="images/flakes/depth1/flakes1.png">
+                      <img src="">
                     </div>
 
                     <div class="depth-1 flake2">
-                        <img alt="flake" src="images/flakes/depth1/flakes2.png">
+                        <img src="">
                     </div>
 
                     <div class="depth-1 flake3">
-                        <img alt="flake" src="images/flakes/depth1/flakes3.png">
+                        <img src="">
                     </div>
 
                     <div class="depth-1 flake4">
-                        <img alt="flake" src="images/flakes/depth1/flakes4.png">
+                      <img src="">
                     </div>
                 </li>
 
                 <li class="layer" data-depth="0.50">
                     <div class="depth-2 flake1">
-                        <img alt="flake" src="images/flakes/depth2/flakes1.png">
+                      <img src="">
                     </div>
 
                     <div class="depth-2 flake2">
-                        <img alt="flake" src="images/flakes/depth2/flakes2.png">
+                      <img src="">
                     </div>
                 </li>
 
                 <li class="layer" data-depth="0.60">
                     <div class="depth-3 flake1">
-                        <img alt="flake" src="images/flakes/depth3/flakes1.png">
+                        <img src="">
                     </div>
 
                     <div class="depth-3 flake2">
-                        <img alt="flake" src="images/flakes/depth3/flakes2.png">
+                        <img src="">
                     </div>
 
                     <div class="depth-3 flake3">
-                        <img alt="flake" src="images/flakes/depth3/flakes3.png">
+                        <img src="">
                     </div>
 
                     <div class="depth-3 flake4">
-                        <img alt="flake" src="images/flakes/depth3/flakes4.png">
+                        <img src="">
                     </div>
                 </li>
 
+              
                 <li class="layer" data-depth="0.80">
                     <div class="depth-4">
-                        <img alt="flake" src="images/flakes/depth4/flakes.png">
+                        <img src="">
                     </div>
                 </li>
 
+              
                 <li class="layer" data-depth="1.00">
                     <div class="depth-5">
-                        <img alt="flake" src="images/flakes/depth5/flakes.png">
+                        <img src="">
                     </div>
                 </li>
+              
                 <!-- Contact -->
-
                 <li class="layer" data-depth="0.20">
-                    <div class="contact">
-                        <ul class="icons">
-                            <li>
-                                <a class="behance" href="#"><i class="fa fa-behance"></i></a>
-                            </li>
+                  
+                  
+                 
+                    
+                  
+                  <div id="carousel" class="carousel">                            
+                    <a class="carousel-item"><img src="https://chrisbbenyard.github.io/images/LettermanBlack.png" onclick="window.location.href='/product/letterman-black'"></a>
+                    <a class="carousel-item"><img src="https://chrisbbenyard.github.io/images/blackliveevil_front.png" onclick="window.location.href='/product/live-evil-black'"></a>
+                    <a class="carousel-item"><img src="https://chrisbbenyard.github.io/images/blackgexfg.png" onclick="window.location.href='/product/ideas-black'"></a> 
+                    <a class="carousel-item"><img src="https://chrisbbenyard.github.io/images/HomeSafeBlack.png" onclick="window.location.href='/product/letterman-red'"></a> 
+                    <a class="carousel-item"><img src="https://chrisbbenyard.github.io/images/LettermanRed.png" onclick="window.location.href='/product/letterman-red'"></a>
+                    <a class="carousel-item"><img src="https://chrisbbenyard.github.io/images/redliveevil_front.png" onclick="window.location.href='/product/live-evil-red'"></a>
+                    <a class="carousel-item"><img src="https://chrisbbenyard.github.io/images/redgexfg.png" onclick="window.location.href='/product/ideas-red'"></a>
+                    <a class="carousel-item"><img src="https://chrisbbenyard.github.io/images/HomeSafeRed.png" onclick="window.location.href='/product/fg-red'"></a>
+                    <a class="carousel-item"><img src="https://chrisbbenyard.github.io/images/LettermanBlue.png" onclick="window.location.href='/product/letterman-blue'"></a> 
+                    <a class="carousel-item"><img src="https://chrisbbenyard.github.io/images/blueliveevil_front.png" onclick="window.location.href='/product/live-evil-blue'"></a> 
+                    <a class="carousel-item"><img src="https://chrisbbenyard.github.io/images/bluegexfg.png" onclick="window.location.href='/product/ideas-blue'"></a>
+                    <a class="carousel-item"><img src="https://chrisbbenyard.github.io/images/HomeSafeBlue.png" onclick="window.location.href='/product/fg-blue'"></a>
+                  </div> 
+                          
+                                                  
+                  <div class="contact">
+                    <ul class="icons"> 
+                      <a href="/products"><i class="fa fa-info-circle"></i></a> 
+                    </ul>
+                  </div>
+              </li>   
+              
+       </ul>
+                    
+              
+            </div>
+          </div>
+                  
+          
+          
 
-                            <li>
-                                <a class="twitter" href="#"><i class="fa fa-twitter"></i></a>
-                            </li>
+  
+  
+  
+  
+  
+  
+  
+  <div class="topsie"><span style="font-size:50px;cursor:pointer" class="openbtn" onclick="openNav()"><font color="#000000"> &#9776;</font></span></div>
+		
+             </div><!-- /container -->
+		        
+		
+	
+         
 
-                            <li>
-                                <a class="dribbble" href="#"><i class="fa fa-dribbble"></i></a>
-                            </li>
-                        </ul>
-                        Theme by <a href="https://themewagon.com/" target="_blank">ThemeWagon</a>
-                        <a class="mail" href="mailto:info@example.com?subject=Hi%20ThemeWagon!">info@example.com</a>
-                    </div>
-                </li>
-            </ul>
-        </div>
+                                 
+       
+        
 
-        <!-- Javascript -->
-        <script src="js/plugins.js"></script> 
-        <script src="js/jquery.countdown.min.js"></script> 
-        <script src="js/main.js"></script>
 
-    </body>
+        
+        
+<script>
+function openNav() {
+    document.getElementById("myNav").style.width = "100%";
+}
+
+function closeNav() {
+    document.getElementById("myNav").style.width = "0%";
+}
+</script>   
+  
+  
+  
+  
+  
+
+      
+    
+
+    
+    
+       
+  
+  
+  
+  
+<script type="text/javascript">
+   // ——————————————————————————————————————————————————
+// TextScramble
+// ——————————————————————————————————————————————————
+
+class TextScramble {
+  constructor(el) {
+    this.el = el
+    this.chars = ',.?/\\(^ACpbG8oUlw9Dn5eHK)![]{}*^%$#\@ ________'
+    this.update = this.update.bind(this)
+  }
+  setText(newText) {
+    const oldText = this.el.innerText
+    const length = Math.max(oldText.length, newText.length)
+    const promise = new Promise((resolve) => this.resolve = resolve)
+    this.queue = []
+    for (let i = 0; i < length; i++) {
+      const from = oldText[i] || ''
+      const to = newText[i] || ''
+      const start = Math.floor(Math.random() * 40)
+      const end = start + Math.floor(Math.random() * 40)
+      this.queue.push({ from, to, start, end })
+    }
+    cancelAnimationFrame(this.frameRequest)
+    this.frame = 0
+    this.update()
+    return promise
+  }
+  update() {
+    let output = ''
+    let complete = 0
+    for (let i = 0, n = this.queue.length; i < n; i++) {
+      let { from, to, start, end, char } = this.queue[i]
+      if (this.frame >= end) {
+        complete++
+        output += to
+      } else if (this.frame >= start) {
+        if (!char || Math.random() < 1.99) {
+          char = this.randomChar()
+          this.queue[i].char = char
+        }
+        output += `<span class="dud">${char}</span>`
+      } else {
+        output += from
+      }
+    }
+    this.el.innerHTML = output
+    if (complete === this.queue.length) {
+      this.resolve()
+    } else {
+      this.frameRequest = requestAnimationFrame(this.update)
+      this.frame++
+    }
+  }
+  randomChar() {
+    return this.chars[Math.floor(Math.random() * this.chars.length)]
+  }
+}
+
+// ——————————————————————————————————————————————————
+// Example
+// ——————————————————————————————————————————————————
+
+const phrases = [
+  
+  'Fair & Glorious',
+  'F + G'
+]
+
+const el = document.querySelector('.text')
+const fx = new TextScramble(el)
+
+let counter = 0
+const next = () => {
+  fx.setText(phrases[counter]).then(() => {
+    setTimeout(next, 400)
+  })
+  counter = (counter + 1) % phrases.length
+}
+
+next()
+    </script>
+  
+  
+  
+  
+  
+ 
+ 
+  
+  
+  
+  
+   
+       
+ 
+     
+ 
+        
+    <script src="https://chrisbbenyard.github.io/Imminent/js/plugins.js"></script> 
+
+       <script src="https://chrisbbenyard.github.io/Imminent/js/main.js"></script>
+  
+  
+
+      </body>
 </html>
