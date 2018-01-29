@@ -228,10 +228,7 @@ h2 {
   background-color: #fff;
 }
 
-.carousel.scrolling .carousel-item .materialboxed,
-.carousel .carousel-item:not(.active) .materialboxed {
-  pointer-events: none;
-}
+
 
 /* Background */
 .background {
