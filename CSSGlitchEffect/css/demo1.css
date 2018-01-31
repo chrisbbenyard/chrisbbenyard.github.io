@@ -41,12 +41,12 @@
 
 .content__text {
 	font-family: 'Orbitron', sans-serif;	 
-    font-size: 40px;	
-	top: 4em;
+    font-size: 80px;	
+	bottom: 0em;
 	left: 10vw;
 	max-width: 500px;
 	text-align: left;
-	font-weight: 400;
+	font-weight: 700;
 	animation-delay: calc(var(--delay-anim) + var(--time-anim) * 0.25);
 }
 
