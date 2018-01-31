@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css?family=Orbitron:400,700');
 .demo-1 {
 	--color-text: #fff;
 	--color-bg: #000;
@@ -34,18 +35,17 @@
 	font-size: 12vw;
 	margin: 35vh 0 0 0;
 	position: relative;
-	font-family: 'Playfair Display', serif;
+	font-family: 'Orbitron', sans-serif;
 	animation-delay: calc(var(--delay-anim) + var(--time-anim) * 0.2);
 }
 
 .content__text {
-	font-family: 'IM Fell English', serif;
-	position: absolute;
-	font-size: 1.5em;
+	font-family: 'Orbitron', sans-serif;	 
+    font-size: 40px;	
 	top: 4em;
-	right: 10vw;
+	left: 10vw;
 	max-width: 500px;
-	text-align: right;
+	text-align: left;
 	font-weight: 400;
 	animation-delay: calc(var(--delay-anim) + var(--time-anim) * 0.25);
 }
@@ -55,7 +55,7 @@
 		position: relative;
 		right: auto;
 		top: auto;
-		font-size: 1.25em;
+		font-size: 1.5em;
 		padding: 0 1em;
 		text-align: center;
 	}

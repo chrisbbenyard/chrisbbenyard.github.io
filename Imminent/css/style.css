@@ -8,7 +8,7 @@ Author URI: http://www.themewagon.com
 
 /* =Common Styles
 -------------------------------------------------------------- */
-
+@import url('https://fonts.googleapis.com/css?family=Orbitron:400,700');
 @import url('https://fonts.googleapis.com/css?family=Geo:400,400i');
 *,
 *:before,
@@ -225,7 +225,7 @@ h2 {
 
 
 .sub-title {
-	font-size: 18px;
+	font-size: 40px;
 	margin-top: 5px;
 	margin-bottom: 0px;
 }
@@ -562,10 +562,9 @@ h2 {
 	/* HERO */
 	h1 { font-size: 40px; line-height: 40px; }
 	#countdown div span {font-size: 24px; line-height: 34px;}
-	.sub-title { font-size: ; line-height: ; margin-top: 10px; }
+	.sub-title { font-family: 'Orbitron', sans-serif; font-size:40px ; line-height:40px ; margin-top: 10px; }
 	/* TITLE & CONTACT */
-	.title { top: 15%; 
-	font-family: 'Geo', sans-serif;}
+	.title { top: 15%; font-family: 'Geo', sans-serif;}
 	.contact .icons { margin-bottom: 0px; }	
 	.footer { margin-bottom: 0px; }
 	/* SIZES */
@@ -642,10 +641,9 @@ h2 {
 	/* HERO */
 	h1 { font-size: 40px; line-height: 40px; }
 	#countdown div span {font-size: 24px; line-height: 34px;}
-	.sub-title { font-size: ; line-height: ; margin-top: 10px; }
+	.sub-title { font-family: 'Orbitron', sans-serif; font-size:40px; line-height:40px; margin-top: 10px; }
 	/* TITLE & CONTACT */
-	.title { top: 15%;
-	font-family: 'Geo', sans-serif;}
+	.title { top: 15%; font-family: 'Geo', sans-serif;}
 	.contact .icons { margin-bottom: 0px; }
 	.footer { margin-bottom: 0px; }
 	/* SIZES */
@@ -720,10 +718,9 @@ h2 {
 @media all and (min-width: 700px) {
 	/* HERO */
 	h1 { font-size: 90px; line-height: 90px; }
-	.sub-title { font-size: 20px; line-height: 20px; margin-top: 10px; }
+	.sub-title { font-size: 40px; line-height: 40px; margin-top: 10px; }
 	/* TITLE & CONTACT */
-	.title { top: 18%;
-	font-family: 'Geo', sans-serif;}
+	.title { top: 18%; font-family: 'Geo', sans-serif;}
 	.line { margin-top: 20px; }
 	.contact { bottom: 50%; }
 	.contact .icons { margin-bottom: 12px; }
@@ -807,14 +804,9 @@ h2 {
 
 	#countdown div span {font-size: 34px; line-height: 34px;}
 	
-	.sub-title { font-size: 20px; line-height: 20px; margin-top: 20px; }
+	.sub-title { font-family: 'Orbitron', sans-serif; font-size: 20px; line-height: 20px; margin-top: 20px; }
 	/* TITLE & CONTACT */
-	.title { top: 15%;
-	font-family: 'Geo', sans-serif;}
-
-
-
-
+	.title { top: 15%; font-family: 'Geo', sans-serif;}
 	.contact { bottom: 8%; }
 	.contact .icons { margin-bottom: 12px; }
 	/* SIZES */
@@ -893,7 +885,7 @@ h2 {
 	/* HERO */
 	h1 { font-size: 150px; line-height: 150px; }
 	#countdown div span {font-size: 44px; line-height: 44px;}
-	.sub-title { font-size: 25px; line-height: 25px; margin-top: 20px; }
+	.sub-title {font-family: 'Orbitron', sans-serif; font-size: 25px; line-height: 25px; margin-top: 20px; }
 	/* SIZES */
 	.sphere img{
 		-webkit-transform: scale(0.8);
@@ -1003,7 +995,7 @@ h2 {
 @media all and (min-width: 1400px) {
 	/* HERO */
 	h1 { font-size: 160px; line-height: 160px; }
-	.sub-title { font-size: 25px; line-height: 25px; margin-top: 20px; }
+	.sub-title {font-family: 'Orbitron', sans-serif; font-size: 25px; line-height: 25px; margin-top: 20px; }
 	/* POSITIONING */
 	.depth-5 {
 		right: -10%;
@@ -1081,14 +1073,14 @@ h2 {
 	/* HERO */
 	h1 { font-size: 180px; line-height: 180px; }
 	#countdown div span {font-size: 54px; line-height: 54px;}
-	.sub-title { font-size: 25px; line-height: 25px; margin-top: 25px; }
+	.sub-title {font-family: 'Orbitron', sans-serif; font-size: 25px; line-height: 25px; margin-top: 25px; }
 }
 
 
 @media all and (min-width: 1920px) {
 	/* HERO */
 	h1 { font-size: 200px; line-height: 200px; }
-	.sub-title { font-size: 30px; line-height: 30px; margin-top: 30px; }
+	.sub-title {font-family: 'Orbitron', sans-serif; font-size: 30px; line-height: 30px; margin-top: 30px; }
 	/* POSITIONING */
 	.depth-5 {
 		right: -10%;
