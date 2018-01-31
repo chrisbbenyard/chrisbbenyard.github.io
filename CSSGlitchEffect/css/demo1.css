@@ -43,7 +43,8 @@
 	font-family: 'Orbitron', sans-serif;	 
     font-size: 80px;	
 	bottom: 0em;
-	left: 10vw;
+	right: 10vw;
+	position: absolute;
 	max-width: 500px;
 	text-align: left;
 	font-weight: 700;
