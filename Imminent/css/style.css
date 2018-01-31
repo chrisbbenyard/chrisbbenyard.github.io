@@ -9,6 +9,7 @@ Author URI: http://www.themewagon.com
 /* =Common Styles
 -------------------------------------------------------------- */
 
+@import url('https://fonts.googleapis.com/css?family=Geo:400,400i');
 *,
 *:before,
 *:after {
@@ -61,8 +62,9 @@ section { overflow: hidden; }
   display: flex;
     }
 .text {
-  font-weight: 100;
-  font-size: 40px;
+	font-family: 'Geo', sans-serif;
+  font-weight: 400;
+  font-size: 40px;	
 	text-transform:none;
   color: #888888;
 	z-index: 1;
