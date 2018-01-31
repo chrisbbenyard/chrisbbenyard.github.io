@@ -377,10 +377,10 @@ h2 {
 
 
 .sphere img{
-	-webkit-transform: scale(0.7);
-	-moz-transform: scale(0.7);
-	-ms-transform: scale(0.7,0.7);
-	transform: scale(0.7);
+	-webkit-transform: scale(0.5);
+	-moz-transform: scale(0.5);
+	-ms-transform: scale(0.5,0.5);
+	transform: scale(0.5);
 }
 
 /* Text */
@@ -401,6 +401,7 @@ h2 {
 	background: #000000;
 	margin-top: 10px;
 }
+
 
 .contact {
 	display: block;
@@ -565,10 +566,10 @@ h2 {
 	.footer { margin-bottom: 0px; }
 	/* SIZES */
 	.sphere img{
-		-webkit-transform: scale(0.6);
-		-moz-transform: scale(0.6);
-		-ms-transform: scale(0.6,0.6);
-		transform: scale(0.6);
+		-webkit-transform: scale(0.5);
+		-moz-transform: scale(0.5);
+		-ms-transform: scale(0.5,0.5);
+		transform: scale(0.5);
 	}
 	/* POSITIONING */
 	.depth-5 {
@@ -644,10 +645,10 @@ h2 {
 	.footer { margin-bottom: 0px; }
 	/* SIZES */
 	.sphere img{
-		-webkit-transform: scale(0.6);
-		-moz-transform: scale(0.6);
-		-ms-transform: scale(0.6,0.6);
-		transform: scale(0.6);
+		-webkit-transform: scale(0.5);
+		-moz-transform: scale(0.5);
+		-ms-transform: scale(0.5,0.5);
+		transform: scale(0.5);
 	}
 	/* POSITIONING */
 	.depth-5 {
@@ -718,15 +719,15 @@ h2 {
 	/* TITLE & CONTACT */
 	.title { top: 18%;}
 	.line { margin-top: 20px; }
-	.contact { bottom: 10%; }
+	.contact { bottom: 50%; }
 	.contact .icons { margin-bottom: 12px; }
-	.footer { bottom: 10%; }
+	.footer { bottom: 0; }
 	/* SIZES */
 	.sphere img{
-		-webkit-transform: scale(1);
-		-moz-transform: scale(1);
-		-ms-transform: scale(1,1);
-		transform: scale(1);
+		-webkit-transform: scale(0.7);
+		-moz-transform: scale(0.7);
+		-ms-transform: scale(0.7,0.7);
+		transform: scale(0.7);
 	}
 	.depth-5 img, .depth-4 img, .depth-3 img, .depth-2 img, .depth-1 img {
 		-webkit-transform: scale(0.8);
@@ -811,10 +812,10 @@ h2 {
 	.contact .icons { margin-bottom: 12px; }
 	/* SIZES */
 	.sphere img{
-		-webkit-transform: scale(1);
-		-moz-transform: scale(1);
-		-ms-transform: scale(1,1);
-		transform: scale(1);
+		-webkit-transform: scale(0.8);
+		-moz-transform: scale(0.8);
+		-ms-transform: scale(0.8,0.8);
+		transform: scale(0.8);
 	}
 	.depth-5 img, .depth-4 img, .depth-3 img, .depth-2 img, .depth-1 img {
 		-webkit-transform: scale(0.8);
@@ -888,10 +889,10 @@ h2 {
 	.sub-title { font-size: 25px; line-height: 25px; margin-top: 20px; }
 	/* SIZES */
 	.sphere img{
-		-webkit-transform: scale(1);
-		-moz-transform: scale(1);
-		-ms-transform: scale(1,1);
-		transform: scale(1);
+		-webkit-transform: scale(0.8);
+		-moz-transform: scale(0.8);
+		-ms-transform: scale(0.8,0.8);
+		transform: scale(0.8);
 	}
 	.depth-5 img, .depth-4 img, .depth-3 img, .depth-2 img, .depth-1 img {
 		-webkit-transform: scale(1);
