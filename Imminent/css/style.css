@@ -73,11 +73,14 @@ section { overflow: hidden; }
   color: #ffffff;
     }
 
+
 .blink {
 	color: #ff0000;
   -webkit-animation-name: flash;
   animation-name: flash;
 }
+
+
 
 .overla-content {
     position: relative;
