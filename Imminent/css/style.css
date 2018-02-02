@@ -63,9 +63,9 @@ section { overflow: hidden; }
     }
 .text {
 	font-family: 'Geo', sans-serif;
-  font-weight: 400;
-  font-size: 80px;	
-	text-transform:none;
+  font-size: 30px;
+    letter-spacing: 4px;
+    line-height: 40px;
   color: #888888;
 	z-index: 1;
     }
