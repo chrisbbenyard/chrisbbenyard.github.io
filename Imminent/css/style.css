@@ -76,6 +76,10 @@ section { overflow: hidden; }
 
 .blink {
 	color: #ff0000;
+	position: absolute;
+    top: 2%;
+    right: 45px;
+    font-size: 80px;
   -webkit-animation-name: flash;
   animation-name: flash;
 }
