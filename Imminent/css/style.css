@@ -578,6 +578,7 @@ h2 {
 	.sub-title {font-family: 'Orbitron', sans-serif; font-size:40px ; line-height:40px ; margin-top: 10px; }
 	/* TITLE & CONTACT */
 	.title { top: 15%; font-family: 'Geo', sans-serif;}
+	.txt {  top: 0;}
 	.contact .icons { margin-bottom: 0px; }	
 	.footer { margin-bottom: 0px; }
 	/* SIZES */
