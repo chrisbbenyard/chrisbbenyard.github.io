@@ -194,6 +194,7 @@ section { overflow: hidden; }
 .copyright {
  display: block;
 	width: 100%;
+	font-size:16px;
 	text-transform: capitalize;
 	position: absolute;
 	z-index: 2;
@@ -230,7 +231,7 @@ h2 {
 	font-size:14px;
 	font-weight: 400;
 	line-height: 1em;
-	letter-spacing: 0.2em;
+	letter-spacing: -0.05em;
 	text-transform: uppercase;
 	color: #161a1b;
 }
