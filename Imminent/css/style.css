@@ -194,6 +194,7 @@ section { overflow: hidden; }
 .copyright {
  display: block;
 	width: 100%;
+	text-transform: capitalize;
 	position: absolute;
 	z-index: 2;
 	text-align: center;
@@ -439,6 +440,7 @@ h2 {
 .contact { 
 	display: block;
 	width: 100%;
+	text-transform: capitalize;
 	position: absolute;
 	z-index: 999;
 	text-align: left;
