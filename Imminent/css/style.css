@@ -61,6 +61,7 @@ section { overflow: hidden; }
   align:-items center;
   display: flex;
     }
+
 .text {
 	font-family: 'Geo', sans-serif;
   font-size: 40px;
@@ -69,6 +70,7 @@ section { overflow: hidden; }
   color: #888888;
 	z-index: 999;
     }
+
 .dud {
   color: #ffffff;
     }
@@ -200,6 +202,10 @@ section { overflow: hidden; }
 	z-index: 2;
 	text-align: center;
 	bottom: 1%;
+	font-weight: 800;
+	line-height: 1em;
+	text-transform: uppercase;
+	color: #161a1b;
 }        
 .topsie {
   
@@ -228,10 +234,10 @@ h1 {
 }
 
 h2 {
-	font-size:14px;
-	font-weight: 400;
+	font-size:24px;
+	font-weight: 800;
 	line-height: 1em;
-	letter-spacing: -0.05em;
+	letter-spacing: 0.2em;
 	text-transform: uppercase;
 	color: #161a1b;
 }
