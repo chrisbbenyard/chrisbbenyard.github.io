@@ -138,9 +138,9 @@ section { overflow: hidden; }
 .button:hover { 
   color: #757575;
 }
-.txt {
+.txtstring {
 	left:100%;
-	top:100%;
+	bottom:0;
 }
 
       .overla    .button:hover { 
