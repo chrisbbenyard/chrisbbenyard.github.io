@@ -431,14 +431,7 @@ h2 {
 }
 
 
-.contact {
-	display: block;
-	width: 100%;
-	position: absolute;
-	z-index: 2;
-	text-align: center;
-	bottom: 5%;
-}
+
 
 .contact { 
 	display: block;
@@ -446,7 +439,7 @@ h2 {
 	position: absolute;
 	z-index: 999;
 	text-align: left;
-	bottom: 5%;
+	bottom: 2%;
 }
 .contact .icons {
 	margin: 0;
