@@ -67,7 +67,7 @@ section { overflow: hidden; }
     letter-spacing: 4px;
     line-height: 60px;
   color: #888888;
-	z-index: 1;
+	z-index: 5;
     }
 .dud {
   color: #ffffff;
@@ -91,6 +91,7 @@ section { overflow: hidden; }
     width: 100%;
     text-align: center;
     margin-top: 10px;
+	z-index: 5;
 }
 
 .overla a {
@@ -147,7 +148,7 @@ section { overflow: hidden; }
     height: 100%;
     width: 0;
     position: fixed;
-    z-index: 1;
+    z-index: 5;
     top: 0;
     left: 0;
     background-color: rgb(7,7,7);
