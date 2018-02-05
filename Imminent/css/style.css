@@ -84,7 +84,10 @@ section { overflow: hidden; }
   animation-name: flash;
 }
 
-
+.txt {
+	font-family:Orbitron;
+	font-size:40px;
+}
 
 .overla-content {
     position: relative;
