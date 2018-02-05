@@ -78,8 +78,7 @@ section { overflow: hidden; }
 	color: #ff0000;
 	position: absolute;
     top: 2%;
-    right: 45px;
-    font-size: 80px;
+    font-size: 40px;
   -webkit-animation-name: flash;
   animation-name: flash;
 }
