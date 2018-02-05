@@ -197,15 +197,14 @@ section { overflow: hidden; }
 .copyright {
  display: block;
 	width: 100%;
-	font-size:16px;
+	font-size:18px;
 	text-transform: capitalize;
 	position: absolute;
 	z-index: 2;
 	text-align: center;
 	bottom: 1%;
 	font-weight: 800;
-	line-height: 1em;
-	text-transform: uppercase;
+	line-height: 1.2em;
 	color: #161a1b;
 }        
 .topsie {
