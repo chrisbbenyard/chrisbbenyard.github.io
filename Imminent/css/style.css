@@ -188,7 +188,14 @@ section { overflow: hidden; }
  /**
  * Footer Styles
  */
-         
+.copyright {
+ display: block;
+	width: 100%;
+	position: absolute;
+	z-index: 2;
+	text-align: center;
+	bottom: 5%;
+}        
 .topsie {
   
           position:fixed;
