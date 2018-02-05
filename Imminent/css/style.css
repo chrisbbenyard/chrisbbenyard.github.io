@@ -140,7 +140,7 @@ section { overflow: hidden; }
 }
 .txtstring {
 	left:100%;
-	bottom:0;
+	bottom:0px;
 }
 
       .overla    .button:hover { 
