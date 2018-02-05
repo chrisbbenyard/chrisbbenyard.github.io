@@ -437,13 +437,14 @@ h2 {
 	display: block;
 	width: 100%;
 	position: absolute;
-	z-index: 2;
+	z-index: 999;
 	text-align: left;
 	bottom: 5%;
 }
 .contact .icons {
 	margin: 0;
 	padding: 0;
+	z-index: 999;
 	margin-bottom: 18px;
 	text-align: center;
 	list-style: none;
