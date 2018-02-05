@@ -74,8 +74,8 @@
 
 .glitch__img {
 	position: absolute;
-	top: calc(-5% * var(--gap-vertical));
-	left: calc(-5% * var(--gap-horizontal));
+	top: calc(1 * var(--gap-vertical));
+	left: calc(1 * var(--gap-horizontal));
 	width: calc(110% + var(--gap-horizontal) * 2);
 	height: calc(110% + var(--gap-vertical) * 2);
 	background: url(../img/img1.jpg) no-repeat 50% 0;
