@@ -423,7 +423,9 @@ h2 {
 	background: #000000;
 	margin-top: 10px;
 }
-
+.timestamp {
+	bottom: 5%;
+}
 
 .contact {
 	display: block;
@@ -434,7 +436,7 @@ h2 {
 	bottom: 5%;
 }
 
-.contact .txt { 
+.contact { 
 	display: block;
 	width: 100%;
 	position: absolute;
