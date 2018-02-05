@@ -89,6 +89,7 @@ section { overflow: hidden; }
 .txt {
 	font-family:Orbitron;
 	font-size:40px;
+	position:fixed;
 }
 
 .overla-content {
