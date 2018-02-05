@@ -139,10 +139,6 @@ section { overflow: hidden; }
   color: #757575;
 }
 
-.txtstring {
-	 margin-bottom: 80px;
-    font-size: 30px;
-}
 
       .overla    .button:hover { 
   color: #757575;
@@ -248,6 +244,9 @@ h2 {
 	margin-bottom: 0px;
 }
 
+.txt {
+    font-size: 60px;
+}
 
 /* =Content Styles
 -------------------------------------------------------------- */
@@ -290,7 +289,7 @@ h2 {
   -moz-backface-visibility: hidden;
   backface-visibility: hidden;
 }
-.txt { top: 0;
+.txt { top: 80%;
 }
 
 .carousel {
@@ -435,6 +434,14 @@ h2 {
 	bottom: 5%;
 }
 
+.contact .txtstring { 
+	display: block;
+	width: 100%;
+	position: absolute;
+	z-index: 2;
+	text-align: left;
+	bottom: 5%;
+}
 .contact .icons {
 	margin: 0;
 	padding: 0;
@@ -585,7 +592,7 @@ h2 {
 	.sub-title {font-family: 'Orbitron', sans-serif; font-size:40px ; line-height:40px ; margin-top: 10px; }
 	/* TITLE & CONTACT */
 	.title { top: 15%; font-family: 'Geo', sans-serif;}
-	.txt { top: 0;}
+	.txt { top: 80%;}
 	.contact .icons { margin-bottom: 0px; }	
 	.footer { margin-bottom: 0px; }
 	/* SIZES */
