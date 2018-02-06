@@ -682,13 +682,19 @@ h2 {
 /* Background */
 .background {
  position: absolute;	
+<<<<<<< HEAD
  background: url(https://chrisbbenyard.github.io/Imminent/images/background.jpg) no-repeat 50% 100%;
+=======
+	 background: url(https://chrisbbenyard.github.io/Imminent/images/background.jpg) no-repeat 55% 0;
+	top: calc(-1 * var(--gap-vertical));
+	left: calc(-1 * var(--gap-horizontal));
+	width: calc(100% + var(--gap-horizontal) * 2);
+	height: calc(100% + var(--gap-vertical) * 2);
+>>>>>>> parent of c266371... ertert
   bottom: -20px;
-  background-size: cover;
-  position: absolute;
-  width: 110%;
-  left: -5%;
-  top: -5%;
+	background-size: cover;
+	transform: translate3d(0,0,0);
+	
 }
 
 
@@ -1361,6 +1367,389 @@ h2 {
 		right: 40%;
 		top: 40%;
 	}
+<<<<<<< HEAD
+=======
+
+	.depth-2.flake2 { 
+		display: none;
+	}
+
+	.depth-1.flake1 {
+		display: block;
+		position: absolute;
+		left: 30%;
+		bottom: 30%;
+	}
+
+	.depth-1.flake2 { 
+		display: block;
+		left: 15%;
+		top: 25%;
+	}
+
+	.depth-1.flake3 { 
+		display: block;
+		position: absolute;
+		bottom: 20%;
+		right: 40%;
+	}
+
+	.depth-1.flake4 { 
+		display: block;
+		right: 40%;
+		top: 25%;
+	}
+}
+
+@media all and (min-width: 1600px) {
+	/* HERO */
+	h1 { font-size: 180px; line-height: 180px; }
+	#countdown div span {font-size: 54px; line-height: 54px;}
+	.sub-title {font-family: 'Orbitron', sans-serif; font-size: 50px; line-height: 50px; margin-top: 50px; }
+}
+
+
+@media all and (min-width: 1920px) {
+	/* HERO */
+	h1 { font-size: 200px; line-height: 200px; }
+	.sub-title {font-family: 'Orbitron', sans-serif; font-size: 60px; line-height: 60px; margin-top: 60px; }
+	/* POSITIONING */
+	.depth-5 {
+		right: -10%;
+		top: 5%;
+	}
+
+	.depth-4 {
+		left: 3%;
+		top: 15%;
+	 }
+
+	.depth-3.flake1 {
+		display: block;
+		position: absolute;
+		left: 20%;
+		top: 40%;
+	}
+
+	.depth-3.flake2 {
+		right: 25%;
+		bottom: 25%;
+	}
+
+	.depth-3.flake3 {
+		left: 40%;
+		bottom: 20%;
+	}
+
+	.depth-3.flake4 {
+		display: block;
+		position: absolute;
+		left: 10%;
+		bottom: 40%;
+	}
+
+	.depth-2.flake1 { 
+		display: block;
+		position: absolute;
+		right: 40%;
+		top: 40%;
+	}
+
+	.depth-2.flake2 { 
+		display: none;
+	}
+
+	.depth-1.flake1 {
+		display: block;
+		position: absolute;
+		left: 30%;
+		bottom: 30%;
+	}
+
+	.depth-1.flake2 { 
+		display: block;
+		left: 20%;
+		top: 30%;
+	}
+
+	.depth-1.flake3 { 
+		display: block;
+		position: absolute;
+		bottom: 30%;
+		right: 40%;
+	}
+
+	.depth-1.flake4 { 
+		display: block;
+		right: 40%;
+		top: 25%;
+	}
+
+.demo-1 {
+	--color-text: #fff;
+	--color-bg: #000;
+	--color-link: #f9d77e;
+	--color-link-hover: #fff;
+	--color-info: #efc453;
+	--glitch-width: 100vw;
+	--glitch-height: 100vh;
+	--gap-horizontal: 10px;
+	--gap-vertical: 5px;
+	--time-anim: 4s;
+	--delay-anim: 2s;
+	--blend-mode-1: none;
+	--blend-mode-2: none;
+	--blend-mode-3: none;
+	--blend-mode-4: none;
+	--blend-mode-5: overlay;
+	--blend-color-1: transparent;
+	--blend-color-2: transparent;
+	--blend-color-3: transparent;
+	--blend-color-4: transparent;
+	--blend-color-5: #af4949;
+}
+
+.imgloaded .content__title,
+.imgloaded .content__text {
+	animation-name: glitch-anim-text;
+	animation-duration: var(--time-anim);
+	animation-timing-function: linear;
+	animation-iteration-count: infinite;
+}
+
+.content__title {
+	font-size: 12vw;
+	margin: 35vh 0 0 0;
+	position: relative;
+	font-family: 'Orbitron', sans-serif;
+	animation-delay: calc(var(--delay-anim) + var(--time-anim) * 0.2);
+}
+
+.content__text {
+	font-family: 'Orbitron', sans-serif;	 
+    font-size: 80px;	
+	bottom: 0em;
+	right: 10vw;
+	position: absolute;
+	max-width: 500px;
+	text-align: left;
+	font-weight: 700;
+	animation-delay: calc(var(--delay-anim) + var(--time-anim) * 0.25);
+}
+
+@media screen and (max-width: 55em) {
+	.content__text {
+		position: relative;
+		right: auto;
+		top: auto;
+		font-size: 1.5em;
+		padding: 0 1em;
+		text-align: left;
+	}
+}
+
+/* Glitch styles */
+.glitch {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: var(--glitch-width);
+	height: var(--glitch-height);
+	overflow: hidden;
+}
+
+.glitch__img {
+	position: absolute;
+	top: calc(-1 * var(--gap-vertical));
+	left: calc(-1 * var(--gap-horizontal));
+	width: calc(100% + var(--gap-horizontal) * 2);
+	height: calc(100% + var(--gap-vertical) * 2);
+	 background: url(https://chrisbbenyard.github.io/Imminent/images/background.jpg) no-repeat 50% 0;
+	background-color: var(--blend-color-1);
+	background-size: cover;
+	transform: translate3d(0,0,0);
+	background-blend-mode: var(--blend-mode-1);
+	 
+}
+
+.glitch__img:nth-child(n+2) {
+	opacity: 0;
+}
+
+.imgloaded .glitch__img:nth-child(n+2) {
+	animation-duration: var(--time-anim);
+	animation-delay: var(--delay-anim);
+	animation-timing-function: linear;
+	animation-iteration-count: infinite;
+}
+
+.imgloaded .glitch__img:nth-child(2) {
+	background-color: var(--blend-color-2);
+	background-blend-mode: var(--blend-mode-2);
+	animation-name: glitch-anim-1;
+}
+
+.imgloaded .glitch__img:nth-child(3) {
+	background-color: var(--blend-color-3);
+	background-blend-mode: var(--blend-mode-3);
+	animation-name: glitch-anim-2;
+}
+
+.imgloaded .glitch__img:nth-child(4) {
+	background-color: var(--blend-color-4);
+	background-blend-mode: var(--blend-mode-4);
+	animation-name: glitch-anim-3;
+}
+
+.imgloaded .glitch__img:nth-child(5) {
+	background-color: var(--blend-color-5);
+	background-blend-mode: var(--blend-mode-5);
+	animation-name: glitch-anim-flash;
+}
+
+.glitch--style-1 {
+	--gap-horizontal: 20px;
+	--gap-vertical: 2px;
+	--time-anim: 2.25s;
+	--blend-mode-1: none;
+	--blend-mode-2: none;
+	--blend-mode-3: none;
+	--blend-mode-4: none;
+	--blend-mode-5: none;
+	--blend-color-1: transparent;
+	--blend-color-2: transparent;
+	--blend-color-3: transparent;
+	--blend-color-4: transparent;
+	--blend-color-5: transparent;
+}
+
+.glitch--style-2 {
+	--gap-horizontal: 5px;
+	--gap-vertical: 10px;
+	--time-anim: 2s;
+	--blend-mode-1: none;
+	--blend-mode-2: none;
+	--blend-mode-3: luminosity;
+	--blend-mode-4: none;
+	--blend-mode-5: none;
+	--blend-color-1: transparent;
+	--blend-color-2: transparent;
+	--blend-color-3: #4d8c60;
+	--blend-color-4: transparent;
+	--blend-color-5: #c9b09a;
+}
+
+.glitch--style-3 {
+	--gap-horizontal: 20px;
+	--gap-vertical: 2px;
+	--time-anim: 2.25s;
+	--blend-mode-1: none;
+	--blend-mode-2: none;
+	--blend-mode-3: multiply;
+	--blend-mode-4: none;
+	--blend-mode-5: none;
+	--blend-color-1: transparent;
+	--blend-color-2: transparent;
+	--blend-color-3: #af4563;
+	--blend-color-4: transparent;
+	--blend-color-5: transparent;
+}
+
+.glitch--style-4 {
+	--gap-horizontal: 5px;
+	--gap-vertical: 20px;
+	--time-anim: 5s;
+	--blend-mode-1: none;
+	--blend-mode-2: exclusion;
+	--blend-mode-3: hard-light;
+	--blend-mode-4: overlay;
+	--blend-mode-5: none;
+	--blend-color-1: transparent;
+	--blend-color-2: #52f1cd;
+	--blend-color-3: #525df1;
+	--blend-color-4: #f19b52;
+	--blend-color-5: transparent;
+}
+
+.glitch--style-5 {
+	--gap-horizontal: 50px;
+	--gap-vertical: 100px;
+	--time-anim: 2.25s;
+	--blend-mode-1: none;
+	--blend-mode-2: none;
+	--blend-mode-3: none;
+	--blend-mode-4: overlay;
+	--blend-mode-5: overlay;
+	--blend-color-1: transparent;
+	--blend-color-2: transparent;
+	--blend-color-3: transparent;
+	--blend-color-4: #000;
+	--blend-color-5: #8d16f2;
+}
+
+.glitch--style-6 {
+	--gap-horizontal: 3px;
+	--gap-vertical: 70px;
+	--time-anim: 2.25s;
+	--blend-mode-1: none;
+	--blend-mode-2: none;
+	--blend-mode-3: overlay;
+	--blend-mode-4: none;
+	--blend-mode-5: none;
+	--blend-color-1: transparent;
+	--blend-color-2: transparent;
+	--blend-color-3: rgba(255,255,255,0.2);
+	--blend-color-4: transparent;
+	--blend-color-5: transparent;
+}
+
+.grid {
+	margin: 50vh auto 0;
+    position: relative;
+    padding: 0 1em;
+    width: 100%;
+    display: grid;
+    max-width: 1200px;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.grid__item {
+    margin: 0 0 40vh;
+    position: relative;
+}
+
+.grid__item:nth-child(odd) {
+	margin-top: -40vh;
+}
+
+.grid__item-title {
+	position: absolute;
+	margin: 0;
+	font-size: 6vw;
+	color: var(--color-title);
+	font-family: 'Barlow', sans-serif;
+	font-weight: 800;
+	padding: 30vh 0.5em 0;
+	top: 0;
+	pointer-events: none;
+	line-height: 1;
+}
+
+.grid__item:nth-child(odd) .grid__item-title {
+	right: 0;
+	text-align: right;
+	padding-top: 10vh;
+}
+
+.grid__item-title span {
+	display: block;
+	position: relative;
+	font-size: 50%;
+	font-weight: 500;
+	opacity: 0;
+	color: var(--color-subtitle);
+}
+>>>>>>> parent of c266371... ertert
 
 	.depth-2.flake2 { 
 		display: none;
