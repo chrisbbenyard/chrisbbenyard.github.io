@@ -681,9 +681,7 @@ h2 {
 
 /* Background */
 .background {	
-
-
-	 background: url(https://chrisbbenyard.github.io/Imminent/images/background.jpg) no-repeat 55% 0;
+background: url(https://chrisbbenyard.github.io/Imminent/images/background.jpg) no-repeat 55% 0;
 	top: calc(-1 * var(--gap-vertical));
 	left: calc(-1 * var(--gap-horizontal));
 	width: calc(100% + var(--gap-horizontal) * 2);
@@ -1562,7 +1560,7 @@ position:absolute;
 	left: calc(-1 * var(--gap-horizontal));
 	width: calc(100% + var(--gap-horizontal) * 2);
 	height: calc(100% + var(--gap-vertical) * 2);
-	 background: url(https://chrisbbenyard.github.io/Imminent/images/background.jpg) no-repeat 50% 0;
+	 background: no-repeat 50% 0;
 	background-color: var(--blend-color-1);
 	background-size: cover;
 	transform: translate3d(0,0,0);
