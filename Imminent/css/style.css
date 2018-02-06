@@ -413,6 +413,7 @@ h2 {
   top: -5%;
 }
 
+	
 
 .sphere img{
 	-webkit-transform: scale(0.5);
@@ -1269,16 +1270,16 @@ h2 {
 	position: absolute;
 	top: calc(-1 * var(--gap-vertical));
 	left: calc(-1 * var(--gap-horizontal));
-	width: calc(100% + var(--gap-horizontal) * 2);
-	height: calc(100% + var(--gap-vertical) * 2);
-	 background: url(https://chrisbbenyard.github.io/Imminent/images/background.jpg) no-repeat 55% 110%;
-  bottom: 0px;
+	width: calc(110% + var(--gap-horizontal) * 2);
+position: absolute;
+bottom: -20px;
+background: url(https://chrisbbenyard.github.io/Imminent/images/background.jpg) no-repeat 50% 100%;
 	background-color: var(--blend-color-1);
 	background-size: cover;
 	transform: translate3d(0,0,0);
 	background-blend-mode: var(--blend-mode-1);
-}
-
+	}
+	
 .glitch__img:nth-child(n+2) {
 	opacity: 0;
 }
