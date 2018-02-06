@@ -680,19 +680,17 @@ h2 {
 
 
 /* Background */
-.background {
- position: absolute;	
-<<<<<<< HEAD
- background: url(https://chrisbbenyard.github.io/Imminent/images/background.jpg) no-repeat 50% 100%;
-=======
+.background {	
+
+
 	 background: url(https://chrisbbenyard.github.io/Imminent/images/background.jpg) no-repeat 55% 0;
 	top: calc(-1 * var(--gap-vertical));
 	left: calc(-1 * var(--gap-horizontal));
 	width: calc(100% + var(--gap-horizontal) * 2);
 	height: calc(100% + var(--gap-vertical) * 2);
->>>>>>> parent of c266371... ertert
+position:absolute;
   bottom: -20px;
-	background-size: cover;
+	background-size:cover;
 	transform: translate3d(0,0,0);
 	
 }
