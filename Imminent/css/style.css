@@ -54,6 +54,29 @@ section { overflow: hidden; }
 ::selection { background: #161a1b; color: #fff; }
 ::-moz-selection { background: #161a1b; color: #fff; }
 
+.demo-1 {
+	--color-text: #fff;
+	--color-bg: #000;
+	--color-link: #f9d77e;
+	--color-link-hover: #fff;
+	--color-info: #efc453;
+	--glitch-width: 100vw;
+	--glitch-height: 100vh;
+	--gap-horizontal: 10px;
+	--gap-vertical: 5px;
+	--time-anim: 4s;
+	--delay-anim: 2s;
+	--blend-mode-1: none;
+	--blend-mode-2: none;
+	--blend-mode-3: none;
+	--blend-mode-4: none;
+	--blend-mode-5: overlay;
+	--blend-color-1: transparent;
+	--blend-color-2: transparent;
+	--blend-color-3: transparent;
+	--blend-color-4: transparent;
+	--blend-color-5: #af4949;
+}
 .container {
   height: 100%;
   width: 100%;
@@ -405,16 +428,15 @@ h2 {
 /* Background */
 .background {
  position: absolute;	
-	 background: url(https://chrisbbenyard.github.io/Imminent/images/background.jpg) no-repeat 55% 110%;
+	 background: url(https://chrisbbenyard.github.io/Imminent/images/background.jpg) no-repeat 55% 0;
 	top: calc(-1 * var(--gap-vertical));
 	left: calc(-1 * var(--gap-horizontal));
 	width: calc(100% + var(--gap-horizontal) * 2);
 	height: calc(100% + var(--gap-vertical) * 2);
   bottom: -20px;
-	background-color: var(--blend-color-1);
 	background-size: cover;
 	transform: translate3d(0,0,0);
-	background-blend-mode: var(--blend-mode-1);
+	
 }
 
 
