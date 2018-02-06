@@ -1191,7 +1191,127 @@ h2 {
 		right: 40%;
 		top: 25%;
 	}
+
+.demo-1 {
+	--color-text: #fff;
+	--color-bg: #000;
+	--color-link: #f9d77e;
+	--color-link-hover: #fff;
+	--color-info: #efc453;
+	--glitch-width: 100vw;
+	--glitch-height: 100vh;
+	--gap-horizontal: 10px;
+	--gap-vertical: 5px;
+	--time-anim: 4s;
+	--delay-anim: 2s;
+	--blend-mode-1: none;
+	--blend-mode-2: none;
+	--blend-mode-3: none;
+	--blend-mode-4: none;
+	--blend-mode-5: overlay;
+	--blend-color-1: transparent;
+	--blend-color-2: transparent;
+	--blend-color-3: transparent;
+	--blend-color-4: transparent;
+	--blend-color-5: #af4949;
 }
+
+.imgloaded .content__title,
+.imgloaded .content__text {
+	animation-name: glitch-anim-text;
+	animation-duration: var(--time-anim);
+	animation-timing-function: linear;
+	animation-iteration-count: infinite;
+}
+
+.content__title {
+	font-size: 12vw;
+	margin: 35vh 0 0 0;
+	position: relative;
+	font-family: 'Orbitron', sans-serif;
+	animation-delay: calc(var(--delay-anim) + var(--time-anim) * 0.2);
+}
+
+.content__text {
+	font-family: 'Orbitron', sans-serif;	 
+    font-size: 80px;	
+	bottom: 0em;
+	right: 10vw;
+	position: absolute;
+	max-width: 500px;
+	text-align: left;
+	font-weight: 700;
+	animation-delay: calc(var(--delay-anim) + var(--time-anim) * 0.25);
+}
+
+@media screen and (max-width: 55em) {
+	.content__text {
+		position: relative;
+		right: auto;
+		top: auto;
+		font-size: 1.5em;
+		padding: 0 1em;
+		text-align: left;
+	}
+}
+
+/* Glitch styles */
+.glitch {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: var(--glitch-width);
+	height: var(--glitch-height);
+	overflow: hidden;
+}
+
+.glitch__img {
+	position: absolute;
+	width: calc(100% + var(--gap-horizontal) * 2);
+	height: calc(100% + var(--gap-vertical) * 2);
+	 background: url(https://chrisbbenyard.github.io/Imminent/images/background.jpg) no-repeat 50% 100%;
+  bottom: -20px;
+	background-color: var(--blend-color-1);
+	background-size: cover;
+	transform: translate3d(0,0,0);
+	background-blend-mode: var(--blend-mode-1);
+}
+
+.glitch__img:nth-child(n+2) {
+	opacity: 0;
+}
+
+.imgloaded .glitch__img:nth-child(n+2) {
+	animation-duration: var(--time-anim);
+	animation-delay: var(--delay-anim);
+	animation-timing-function: linear;
+	animation-iteration-count: infinite;
+}
+
+.imgloaded .glitch__img:nth-child(2) {
+	background-color: var(--blend-color-2);
+	background-blend-mode: var(--blend-mode-2);
+	animation-name: glitch-anim-1;
+}
+
+.imgloaded .glitch__img:nth-child(3) {
+	background-color: var(--blend-color-3);
+	background-blend-mode: var(--blend-mode-3);
+	animation-name: glitch-anim-2;
+}
+
+.imgloaded .glitch__img:nth-child(4) {
+	background-color: var(--blend-color-4);
+	background-blend-mode: var(--blend-mode-4);
+	animation-name: glitch-anim-3;
+}
+
+.imgloaded .glitch__img:nth-child(5) {
+	background-color: var(--blend-color-5);
+	background-blend-mode: var(--blend-mode-5);
+	animation-name: glitch-anim-flash;
+}
+
 .glitch--style-1 {
 	--gap-horizontal: 20px;
 	--gap-vertical: 2px;
@@ -1348,7 +1468,7 @@ h2 {
 }
 
 /* Glitch styles */
-.glitch {
+.glitch2 {
 	position: relative;
 	width: var(--glitch-width);
 	max-width: 400px;
@@ -1358,110 +1478,110 @@ h2 {
 	margin: 0 auto;
 }
 
-.glitch:hover {
+.glitch2:hover {
 	cursor: pointer;
 }
 
-.glitch__img {
+.glitch__img2 {
 	position: absolute;
 	top: calc(-1 * var(--gap-vertical));
 	left: calc(-1 * var(--gap-horizontal));
 	width: calc(100% + var(--gap-horizontal) * 2);
 	height: calc(100% + var(--gap-vertical) * 2);
-	background: url(../img/1.jpg) no-repeat 50% 0;
+	background: url(../img/background.jpg) no-repeat 50% 0;
 	background-color: var(--blend-color-1);
 	background-size: cover;
 	transform: translate3d(0,0,0);
 	background-blend-mode: var(--blend-mode-1);
 }
 
-.glitch--style-2 .glitch__img {
+.glitch--style-2 .glitch__img2 {
 	background-image: url(../img/2.jpg);
 }
 
-.glitch--style-3 .glitch__img {
+.glitch--style-3 .glitch__img2 {
 	background-image: url(../img/3.jpg);
 }
 
-.glitch--style-4 .glitch__img {
+.glitch--style-4 .glitch__img2 {
 	background-image: url(../img/4.jpg);
 }
 
-.glitch--style-5 .glitch__img {
+.glitch--style-5 .glitch__img2 {
 	background-image: url(../img/5.jpg);
 }
 
-.glitch--style-6 .glitch__img {
+.glitch--style-6 .glitch__img2 {
 	background-image: url(../img/6.jpg);
 }
 
 /* Set the background colors for the glitch images*/
-.glitch__img:nth-child(2) {
+.glitch__img2:nth-child(2) {
 	background-color: var(--blend-color-2);
 	background-blend-mode: var(--blend-mode-2);
 }
 
-.glitch__img:nth-child(3) {
+.glitch__img2:nth-child(3) {
 	background-color: var(--blend-color-3);
 	background-blend-mode: var(--blend-mode-3);
 }
 
-.glitch__img:nth-child(4) {
+.glitch__img2:nth-child(4) {
 	background-color: var(--blend-color-4);
 	background-blend-mode: var(--blend-mode-4);
 }
 
-.glitch__img:nth-child(5) {
+.glitch__img2:nth-child(5) {
 	background-color: var(--blend-color-5);
 	background-blend-mode: var(--blend-mode-5);
 }
 
 /* Hide all images except the first one */
-.glitch__img:nth-child(n+2) {
+.glitch__img2:nth-child(n+2) {
 	opacity: 0;
 }
 
 /* Hovers */
 
 /* On hover we show the 2nd, 3rd, 4th and 5th image*/
-.glitch:hover .glitch__img:nth-child(n+2) {
+.glitch2:hover .glitch__img2:nth-child(n+2) {
 	opacity: 1;
 }
 
 /* Hover animations for horizontal case */
-.glitch:hover .glitch__img:nth-child(2) {
+.glitch2:hover .glitch__img2:nth-child(2) {
 	transform: translate3d(var(--gap-horizontal),0,0);
 	animation: glitch-anim-1-horizontal var(--time-anim) infinite linear alternate;
 }
 
-.glitch:hover > .glitch__img:nth-child(3) {
+.glitch2:hover > .glitch__img2:nth-child(3) {
 	transform: translate3d(calc(-1 * var(--gap-horizontal)),0,0);
 	animation: glitch-anim-2-horizontal var(--time-anim) infinite linear alternate;
 }
 
-.glitch:hover > .glitch__img:nth-child(4) {
+.glitch2:hover > .glitch__img2:nth-child(4) {
 	transform: translate3d(0, calc(-1 * var(--gap-vertical)), 0) scale3d(-1,-1,1);
 	animation: glitch-anim-3-horizontal var(--time-anim) infinite linear alternate;
 }
 
 /* Hover animations for vertical case */
-.glitch--vertical:hover .glitch__img:nth-child(2) {
+.glitch--vertical2:hover .glitch__img2:nth-child(2) {
 	transform: translate3d(0, var(--gap-vertical), 0);
 	animation: glitch-anim-1-vertical var(--time-anim) infinite linear alternate;
 }
 
-.glitch--vertical:hover > .glitch__img:nth-child(3) {
+.glitch--vertical2:hover > .glitch__img2:nth-child(3) {
 	transform: translate3d(0, calc(-1 * var(--gap-vertical)), 0);
 	animation: glitch-anim-2-vertical var(--time-anim) infinite linear alternate;
 }
 
-.glitch--vertical:hover > .glitch__img:nth-child(4) {
+.glitch--vertical2:hover > .glitch__img2:nth-child(4) {
 	transform: translate3d(calc(-1 * var(--gap-horizontal)), 0, 0) scale3d(-1,-1,1);
 	animation: glitch-anim-3-vertical var(--time-anim) infinite linear alternate;
 }
 
 /* Hover flash animation on last image */
-.glitch:hover > .glitch__img:nth-child(5) {
+.glitch2:hover > .glitch__img2:nth-child(5) {
 	animation: glitch-anim-flash 0.5s steps(1,end) infinite;
 }
 
@@ -1537,7 +1657,7 @@ h2 {
   }
 }
 /* Horizontal */
-@keyframes glitch-anim-1-horizontal {
+@keyframes glitch-anim-1-horizontal2 {
 	0% { 
 		-webkit-clip-path: polygon(0 2%, 100% 2%, 100% 5%, 0 5%);
 		clip-path: polygon(0 2%, 100% 2%, 100% 5%, 0 5%);
@@ -1584,7 +1704,7 @@ h2 {
 	}
 }
 
-@keyframes glitch-anim-2-horizontal {
+@keyframes glitch-anim-2-horizontal2 {
 	0% { 
 		-webkit-clip-path: polygon(0 25%, 100% 25%, 100% 30%, 0 30%);
 		clip-path: polygon(0 25%, 100% 25%, 100% 30%, 0 30%);
@@ -1631,7 +1751,7 @@ h2 {
 	}
 }
 
-@keyframes glitch-anim-3-horizontal {
+@keyframes glitch-anim-3-horizontal2 {
 	0% { 
 		-webkit-clip-path: polygon(0 1%, 100% 1%, 100% 3%, 0 3%);
 		clip-path: polygon(0 1%, 100% 1%, 100% 3%, 0 3%);
@@ -1711,7 +1831,7 @@ h2 {
 }
 
 /* Vertical */
-@keyframes glitch-anim-1-vertical {
+@keyframes glitch-anim-1-vertical2 {
 	0% { 
 		-webkit-clip-path: polygon(2% 0, 5% 0, 5% 100%, 2% 100%);
 		clip-path: polygon(2% 0, 5% 0, 5% 100%, 2% 100%);
@@ -1758,7 +1878,7 @@ h2 {
 	}
 }
 
-@keyframes glitch-anim-2-vertical {
+@keyframes glitch-anim-2-vertical2 {
 	0% { 
 		-webkit-clip-path: polygon(25% 0, 30% 0, 30% 100%, 25% 100%);
 		clip-path: polygon(25% 0, 30% 0, 30% 100%, 25% 100%);
@@ -1805,7 +1925,7 @@ h2 {
 	}
 }
 
-@keyframes glitch-anim-3-vertical {
+@keyframes glitch-anim-3-vertical2 {
 	0% { 
 		-webkit-clip-path: polygon(1% 0, 3% 0, 3% 100%, 1% 100%);
 		clip-path: polygon(1% 0, 3% 0, 3% 100%, 1% 100%);
@@ -1884,7 +2004,7 @@ h2 {
 	}
 }
 
-@keyframes glitch-anim-text {
+@keyframes glitch-anim-text2 {
 	0% { 
 		opacity: 1;
 		transform: translate3d(-10px,0,0) scale3d(-1,-1,1);
@@ -1931,7 +2051,7 @@ h2 {
 }
 
 /* Flash */
-@keyframes glitch-anim-flash {
+@keyframes glitch-anim-flash2 {
 	0% { 
 		opacity: 0.2; 
 		transform: translate3d(var(--gap-horizontal), var(--gap-vertical), 0);
