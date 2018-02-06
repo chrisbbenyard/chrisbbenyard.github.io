@@ -74,8 +74,8 @@
 
 .glitch__img {
 	position: absolute;
-	width: calc(100% + var(--gap-horizontal) * 2);
-	height: calc(100% + var(--gap-vertical) * 2);
+	width: calc(110% + var(--gap-horizontal) * 2);
+	height: calc(110% + var(--gap-vertical) * 2);
 	 background: url(https://chrisbbenyard.github.io/Imminent/images/background.jpg) no-repeat 55% 110%;
   bottom: -20px;
 	background-color: var(--blend-color-1);
