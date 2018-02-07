@@ -31,6 +31,7 @@
 	function adjustWindow(){
 		
 		// Init Skrollr
+var s = skrollr.init();
 		
 		
 		// Get window size
@@ -45,7 +46,7 @@
 	    $slide.height(winH);
 	    
 	    // Refresh Skrollr after resizing our sections
-	    
+s.refresh($('.homeSlide'));
 	    
 	}
 		
