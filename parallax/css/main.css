@@ -7,7 +7,7 @@
  \___/  |_| |_|\__,_|\__\___|  \__\___/|_| |_| |_|\__,_|\__\___/ \___||___/
 
 Oh nice, welcome to the stylesheet of dreams. 
-It has it all. Classes, ID's, comments...the whole lot:)
+It has it all. Classs, ID's, comments...the whole lot:)
 Enjoy responsibly!
 @ihatetomatoes
 
@@ -121,7 +121,7 @@ h2 {
 	margin-top: 0;
 }
 .loading {
-	background: url('../img/ico_loading.gif') no-repeat center center;
+	background: url('http://chrisbbenyard.github.io/parallax/img/ico_loading.gif') no-repeat center center;
 }
 section {
 	min-width: 960px;
@@ -185,22 +185,25 @@ main {
 	}
 
 /* Slide 1 */
-#slide-1 .bcg {background-image:url('../img/bcg_slide-1.jpg')}
+#slide-1 .bcg {background-image:url('http://chrisbbenyard.github.io/parallax/img/bcg_slide-1.jpg')}
 #slide-1 .hsContent {
 	bottom: 200px;
 	top: auto;
 }
 
 /* Slide 2 */
-#slide-2 .bcg {background-image:url('../img/bcg_slide-2.jpg')}
+#slide-2 .bcg {background-image:url('http://chrisbbenyard.github.io/parallax/img/bcg_slide-2.jpg')}
 #slide-2 .hsContent {
-	margin-left: -450px;
-	bottom: 200px;
-	top: auto;
+    margin-left: -450px;
+    top: auto;
+}
+#slide-2 h2 {
+    position: fixed;
+    top: 70%;
 }
 
 /* Slide 3 */
-#slide-3 .bcg {background-image:url('../img/bcg_slide-3.jpg')}
+#slide-3 .bcg {background-image:url('http://chrisbbenyard.github.io/parallax/img/bcg_slide-3.jpg')}
 #slide-3 .hsContent {
 	margin-left: -239px;
 }
@@ -210,15 +213,17 @@ main {
 	}
 
 /* Slide 4 */
-#slide-4 .bcg {background-image:url('../img/bcg_slide-4.jpg')}
+#slide-4 .bcg {background-image:url('http://chrisbbenyard.github.io/parallax/img/bcg_slide-4.jpg')}
 #slide-4 .hsContent {
-	margin-left: -450px;
+    margin-left: -450px;
+    position: fixed;
+    top: 250px;
 }
-	#slide-4 h2 {
-		background: none;
-		padding-left: 0;
-		padding-right: 0;
-	}
+#slide-4 h2 {
+    background: none;
+    padding-left: 0;
+    padding-right: 0;
+}
 
 /* ==========================================================================
    Helper classes
