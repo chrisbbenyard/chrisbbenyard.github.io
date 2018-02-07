@@ -121,7 +121,7 @@ h2 {
 	margin-top: 0;
 }
 .loading {
-	background: url('http://chrisbbenyard.github.io/paralaxscroll/parallaxscroll/img/ico_loading.gif') no-repeat center center;
+	background: url('http://chrisbbenyard.github.io/parallaxscroll/img/ico_loading.gif') no-repeat center center;
 }
 section {
 	min-width: 960px;
