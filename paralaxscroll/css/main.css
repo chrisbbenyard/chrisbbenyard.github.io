@@ -121,7 +121,7 @@ h2 {
 	margin-top: 0;
 }
 .loading {
-	background: url('http://chrisbbenyard.github.io/parallaxscroll/img/ico_loading.gif') no-repeat center center;
+	background: url('../img/ico_loading.gif') no-repeat center center;
 }
 section {
 	min-width: 960px;
@@ -185,24 +185,25 @@ main {
 	}
 
 /* Slide 1 */
-#slide-1 .bcg {background-image:url('http://chrisbbenyard.github.io/paralaxscroll/img/bcg_slide-1.jpg')}
+#slide-1 .bcg {background-image:url('../img/bcg_slide-1.jpg')}
 #slide-1 .hsContent {
 	bottom: 200px;
 	top: auto;
 }
 
 /* Slide 2 */
-#slide-2 .bcg {background-image:url(http://chrisbbenyard.github.io/parallaxscroll/img/bcg_slide-2.jpg')}
+#slide-2 .bcg {background-image:url('../img/bcg_slide-2.jpg')}
 #slide-2 .hsContent {
-    margin-left: -450px;
-    top: auto;
+	margin-left: -450px;
+	top: auto;
 }
 #slide-2 h2 {
-    position: fixed;
-    top: 70%;
+	position: fixed;
+	top: 70%;
 }
+
 /* Slide 3 */
-#slide-3 .bcg {background-image:url('http://chrisbbenyard.github.io/parallaxscroll/img/bcg_slide-3.jpg')}
+#slide-3 .bcg {background-image:url('../img/bcg_slide-3.jpg')}
 #slide-3 .hsContent {
 	margin-left: -239px;
 }
@@ -212,7 +213,7 @@ main {
 	}
 
 /* Slide 4 */
-#slide-4 .bcg {background-image:url('http://chrisbbenyard.github.io/paralaxscroll/img/bcg_slide-4.jpg')}
+#slide-4 .bcg {background-image:url('../img/bcg_slide-4.jpg')}
 #slide-4 .hsContent {
 	margin-left: -450px;
 	position: fixed;
