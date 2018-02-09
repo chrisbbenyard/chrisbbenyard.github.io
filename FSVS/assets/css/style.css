@@ -32,7 +32,7 @@ a:hover {
   outline: 0; }
 
 abbr[title] {
-  border-bottom: 2px dotted; }
+  border-bottom: 1px dotted; }
 
 b,
 strong {
@@ -241,8 +241,8 @@ html {
   font-family: "Open Sans", sans-serif;
   font-size: 0.875em;
   line-height: 1.5;
-  background-color: #fff;
-  color: #808080;
+  background-color: white;
+  color: gray;
   overflow-y: scroll;
   height: 100%; }
 
@@ -404,7 +404,7 @@ textarea {
   width: 100%;
   display: block;
   font-size: 14px;
-  color: #808080;
+  color: gray;
   margin-bottom: 21px;
   outline: none;
   border: 1px solid transparent;
@@ -469,65 +469,104 @@ select {
   max-width: 100%;
   width: auto; }
 
-html.fsvs {
-  height: 100%;
-  width: 100%;
-  position: fixed;
-  top: 0;
-  left: 0;
+.block {
+  background: #0d0d0d; }
+  .block h1 {
+    text-shadow: 0px 1px 60px #fff;
+    color: #eb7347;
+    text-align: center;
+    font-size: 60px;
+    font-weight: bold;
+    padding: 200px 0 0 0;
+    text-transform: uppercase; }
+
+.block2 {
+  background: url(/FSVS/images/background-01.jpg) no-repeat center center;
+  background-size: cover; }
+
+.block3 {
+  background: url(/FSVS/images/background-02.jpg) no-repeat center center;
+  background-size: cover; }
+
+.contents {
+  margin: 80px 100px;
+  padding: 30px; }
+
+#fsvs1 p, #fsvs1 h2 {
+  color: #0d0d0d; }
+#fsvs1 .nth-class-1 {
+  background: #0d0d0d; }
+  #fsvs1 .nth-class-1 .contents {
+    background: #e96230; }
+#fsvs1 .nth-class-2 {
+  background: #0d0d0d; }
+  #fsvs1 .nth-class-2 .contents {
+    background: #204c4c; }
+#fsvs1 .nth-class-3 {
+  background: #0d0d0d; }
+  #fsvs1 .nth-class-3 .contents {
+    background: #a82b34; }
+
+#fsvs2 p, #fsvs2 h2 {
+  color: black; }
+#fsvs2 .nth-class-1 {
+  background: #DB0A5B; }
+#fsvs2 .nth-class-2 {
+  background: #F64747; }
+#fsvs2 .nth-class-3 {
+  background: #F62459; }
+
+.scrollable {
+  height: 400px;
+  overflow: auto; }
+
+html.hijacked {
   overflow: hidden; }
-  html.fsvs #fsvs-body {
-    -webkit-backface-visibility: hidden;
-    -webkit-perspective: 1000;
+
+.fsvs {
+  overflow: hidden;
+  position: relative; }
+  .fsvs > div {
     position: absolute;
     top: 0;
     left: 0;
-    z-index: 1;
-    height: 100%;
-    width: 100%; }
-    html.fsvs #fsvs-body > * {
+    z-index: 9; }
+    .fsvs > div > div {
       height: 100%;
-      width: 100%;
-      overflow: hidden;
-      -webkit-backface-visibility: hidden;
-      -webkit-perspective: 1000; }
-  html.fsvs #fsvs-pagination {
-    margin: 0;
-    padding: 8px 4px;
+      overflow: hidden; }
+  .fsvs + .fsvs-pagination {
+    -webkit-transition: all 0.4s;
+            transition: all 0.4s;
     position: fixed;
-    height: auto;
-    right: -100px;
-    top: 50%;
     z-index: 999;
-    width: 32px; }
-    html.fsvs #fsvs-pagination li {
+    left: 100%;
+    top: 50%;
+    margin: 0 0 0 -40px;
+    padding: 0 0 0 50px;
+    background: none; }
+    .fsvs + .fsvs-pagination li {
+      -webkit-transition: all 0.4s;
+              transition: all 0.4s;
+      border-radius: 100%;
       list-style: none;
-      width: 25px;
-      height: 25px;
-      line-height: 25px;
+      display: block;
+      width: 24px;
+      height: 24px;
       text-align: center;
-      margin: 0 0 2px 0;
-      cursor: pointer; }
-      html.fsvs #fsvs-pagination li > span {
+      line-height: 24px;
+      border: 1px solid #404040;
+      margin: 0 0 4px 0; }
+      .fsvs + .fsvs-pagination li span {
+        display: block;
+        width: 16px;
+        height: 16px;
         border-radius: 100%;
-        width: 22px;
-        height: 22px;
-        line-height: 22px;
-        border: 1px solid white;
-        display: block; }
-        html.fsvs #fsvs-pagination li > span > span {
-          border-radius: 100%;
-          width: 12px;
-          height: 12px;
-          line-height: 12px;
-          border: 1px solid white;
-          display: block;
-          margin: 4px; }
-      html.fsvs #fsvs-pagination li.active > span {
-        border: 1px dashed white; }
-        html.fsvs #fsvs-pagination li.active > span > span {
-          background: white; }
-      html.fsvs #fsvs-pagination li:last-child {
-        margin: 0; }
-
-/*# sourceMappingURL=style.css.map */
+        border: 1px solid #404040;
+        margin: 3px auto; }
+      .fsvs + .fsvs-pagination li.active {
+        border: 1px dashed #ffffff; }
+        .fsvs + .fsvs-pagination li.active span {
+          background: #fff; }
+    .fsvs + .fsvs-pagination.visible {
+      padding: 0;
+      z-index: 9991; }

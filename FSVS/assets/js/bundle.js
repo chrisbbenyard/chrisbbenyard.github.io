@@ -1,126 +1,145 @@
-
 /*!
-* 	FSVS - Full Screen Vertical Scroller
-* 	https://github.com/lukesnowden/FSVS
+* 	@plugin 	FSVS - Full Screen Vertical Scroller
+* 	@version 	2.0.0
+* 	@home 		https://github.com/lukesnowden/FSVS
+*
 * 	Copyright 2014 Luke Snowden
 * 	Released under the MIT license:
 * 	http://www.opensource.org/licenses/mit-license.php
 */
 
-;( function($){
+;( function( $, w, d ){
 
-	$.fn.fsvs = function( options ) {
+	/**
+	 * [fsvs extend the jQuery core to allow a public call to our plugin]
+	 * @param  {[type]} options [description]
+	 * @return {[type]}         [description]
+	 */
 
-		options = options || {};
+	$.fn.fsvs = function( _options ) {
 
 		/**
-		 * [defaults description]
-		 * @type {Object}
+		 * [options override our default settings with the developer settings]
+		 * @type {[type]}
 		 */
 
-		var defaults = {
-			el : null,
-			speed : 5000,
-			autoPlay : false,
-			bodyID : 'fsvs-body',
-			mouseSwipeDisance : 40,
-			afterSlide : function(){},
-			beforeSlide : function(){},
-			endSlide : function(){},
-			mouseWheelEvents : true,
-			mouseWheelDelay : false,
-			scrollableArea : 'scrollable',
-			mouseDragEvents : true,
-			touchEvents : true,
-			arrowKeyEvents : true,
-			pagination : true,
-			nthClasses : false,
-			detectHash : true,
-			slideClass : "slide",
-			selector : '> .' + this.slideClass,
+		var options = $.extend({
+			speed 				: 1000,
+			mouseSwipeDisance 	: 40,
+			mouseWheelDelay 	: false,
+			mouseDragEvents 	: true,
+			touchEvents 		: true,
+			arrowKeyEvents 		: true,
+			allowScrollable		: 'scrollable',
+			pagination 			: true,
+			paginationTemplate	: '<li data-slide-index="[%num%]"><span></span></li>',
+			nthClasses 			: 5,
+			detectHash 			: true
+		}, _options );
+
+		/**
+		 * [fsvs description]
+		 * @type {Array}
+		 */
+
+		var fsvsObjects = [];
+
+		/**
+		 * [isCustomScrollHandelerActive description]
+		 * @type {Boolean}
+		 */
+
+		var isCustomScrollHandelerActive = false;
+
+		/**
+		 * [handelerInterval description]
+		 * @type {[type]}
+		 */
+
+		var handelerInterval = null;
+
+		/**
+		 * [wheelEvent description]
+		 * @type {[type]}
+		 */
+
+		var wheelEvent = null;
+
+		/**
+		 * [handelerStart description]
+		 * @type {Number}
+		 */
+
+		var handelerStart = 0;
+
+		/**
+		 * [windowScrollTop description]
+		 * @type {Number}
+		 */
+
+		var windowScrollTop = 0;
+
+		/**
+		 * [lastScrollTop description]
+		 * @type {Number}
+		 */
+
+		var lastScrollTop = 0;
+
+		/**
+		 * [hijackingFromScrollableArea description]
+		 * @type {Boolean}
+		 */
+
+		var hijackingFromScrollableArea = false;
+
+		/**
+		 * [hasBeenHijacked description]
+		 * @return {Boolean} [description]
+		 */
+
+		var hasBeenHijacked = function(){
+			return $('html').hasClass('hijacked');
 		};
 
-		for( var i in options ) {
-			defaults[i] = options[i];
-		}
-		options = defaults;
-
 		/**
-		 * [loop description]
-		 * @type {[type]}
-		 */
-		var loop = null;
-
-		/**
-		 * [currentSlideIndex description]
-		 * @type {Number}
+		 * [anyActiveFSVS description]
+		 * @return {[type]} [description]
 		 */
 
-		var currentSlideIndex = 0;
+		var anyActiveFSVS = function() {
+			for( var i in fsvsObjects ) {
+				if( fsvsObjects[i].fsvs.isActivated() ) {
+					return fsvsObjects[i];
+				}
+			}
+			return false;
+		};
 
 		/**
-		 * [ignoreHashChange description]
-		 * @type {Boolean}
+		 * [scrollingDown description]
+		 * @param  {[type]} e [description]
+		 * @return {[type]}   [description]
 		 */
 
-		var ignoreHashChange = false;
+		var scrollingDown = function( e ) {
+			return ! scrollingUp( e );
+		};
 
 		/**
-		 * [bodyTimeout description]
-		 * @type {[type]}
+		 * [scrollingUp description]
+		 * @param  {[type]} e [description]
+		 * @return {[type]}   [description]
 		 */
 
-		var bodyTimeout = null;
-
-		/**
-		 * [body description]
-		 * @type {[type]}
-		 */
-
-		var body = null;
-
-		/**
-		 * [scrolling description]
-		 * @type {Boolean}
-		 */
-
-		var scrolling = false;
-
-		/**
-		 * [mouseWheelTimer description]
-		 * @type {Boolean}
-		 */
-
-		var mouseWheelTimer = false;
-
-		/**
-		 * [mouseWheelScrollStart description]
-		 * Indicates when the mouseWheel last invoked a slide event.
-		 * @type {Integer}
-		 */
-
-		var mouseWheelScrollStart = 0;
-
-		/**
-		 * [pagination description]
-		 * @type {Boolean}
-		 */
-
-		var pagination = false;
-
-		/**
-		 * [curentActiveSlide description]
-		 * @type {Number}
-		 */
-
-		var _curentActiveSlide = null;
-
-		/**
-		 * [curentActiveSlide description]
-		 * @type {Number}
-		 */
-
-		var _activeSlideClass = "active-slide";
+		var scrollingUp = function( e ) {
+			if( e.type === 'scroll' ) {
+				var hasScrolledUp = lastScrollTop > windowScrollTop;
+				return hasScrolledUp;
+			} else {
+				return e.originalEvent.detail < 0 || e.originalEvent.wheelDelta > 0;
+			}
+		};
 
 		/**
 		 * [isChrome description]
@@ -138,226 +157,18 @@
 		};
 
 		/**
-		 * [changeViaHash description]
-		 * @return {[type]} [description]
-		 */
-
-		var changeViaHash = function() {
-			if( ! ignoreHashChange ) {
-				if( window.location.hash !== '' ) {
-					var slideID = window.location.hash;
-					var slideTo = $( '> ' + slideID, body );
-					app.slideToIndex( slideTo.index() );
-				}
-			}
-			ignoreHashChange = false;
-		};
-
-		/**
-		 * [detectHash description]
-		 * @return {[type]} [description]
-		 */
-
-		var detectHash = function(){
-			$( options.selector, body ).each( function( i ) {
-				var slide = $(this);
-				if( ! slide.attr( 'id' ) ) {
-					slide.attr( 'id', 'slide-' + (i+1) );
-				}
-			});
-			changeViaHash();
-		};
-
-		/**
-		 * [hasTransition description]
+		 * [isYoungAndHip - you know I'm not talking about Internet Explorer]
 		 * @return {Boolean} [description]
 		 */
 
-		var hasTransition = function(){
-		    prefixes = ['Webkit','Moz','ms','O'];
+		var isYoungAndHip = function() {
+			prefixes = ['Webkit','Moz','ms','O'];
 		   	for( var i in prefixes ) {
-		   		if( typeof document.getElementsByTagName( 'body' )[0].style[prefixes[i] + 'Transition' ] !== 'undefined' ) {
+		   		if( typeof document.getElementsByTagName( 'body' )[0].style[prefixes[i] + 'Transform' ] !== 'undefined' ) {
 		   			return true;
 		   		}
 		   	}
 		    return false;
-		}
-
-		/**
-		 * [bindMouseDrag description]
-		 * @return {[type]} [description]
-		 */
-
-		var bindMouseDrag = function() {
-			function isScrollable(element) {
-				return element.parents( '.' + options.scrollabelArea ).length != 0 ;
-			}
-			var x, y;
-			window.onmousedown = function(e) {
-				var cancelOn = ['a','input','textarea','select'];
-				if( $.inArray( e.target.nodeName.toLowerCase(), cancelOn ) != -1 && isScrollable( $(e.target) ) ) {
-					cancel = true;
-				} else {
-					y = e.y;
-					cancel = false;
-				}
-			}
-			window.onmouseup = function(e) {
-				if( e.y > ( y+options.mouseSwipeDisance && !cancel ) ) {
-					app.slideUp();
-				} else if( e.y < ( y-options.mouseSwipeDisance && !cancel ) ) {
-					app.slideDown();
-				}
-			}
-		};
-
-		/**
-		 * [unBindMouseDrag description]
-		 * @return {[type]} [description]
-		 */
-		var unBindMouseDrag = function(){
-			window.onmousedown = function(){};
-			window.onmouseup = function(){};
-		}
-
-		/**
-		 * [bindTouchSwipe description]
-		 * @return {[type]} [description]
-		 */
-
-		var bindTouchSwipe = function() {
-			var startY = null;
-			$(window).on( "touchstart.fsvs", function(ev) {
-    			var e = ev.originalEvent;
-    			var cancelOn = ['a','input','textarea','select'];
-    			var targetName = e.target.nodeName.toLowerCase();
-    			var cancel = false;
-    			cancelOn.forEach(function(_cancelOn){
-    				if( $(e.target).parents(_cancelOn).length !== 0 ) {
-    					cancel = true;
-    				}
-					if( $(e.target).parents( '.' + options.scrollableArea ).length != 0 ){
-						cancel = true;
-					}
-    			});
-				if( $.inArray( targetName, cancelOn ) == -1 && ! cancel ) {
-					var touches = e.touches;
-					if( touches && touches.length ) {
-						startY = touches[0].pageY;
-					}
-				}
-			});
-			$(window).on( "touchmove.fsvs", function(ev) {
-    			var e = ev.originalEvent;
-				if( startY !== null ) {
-					var touches = e.touches;
-					if( touches && touches.length ) {
-						var deltaY = startY - touches[0].pageY;
-						if ( deltaY >= options.mouseSwipeDisance ) {
-							app.slideDown();
-							startY = null;
-						}
-						if ( deltaY <= ( options.mouseSwipeDisance * -1 ) ) {
-							app.slideUp();
-							startY = null;
-						}
-					}
-					e.preventDefault();
-				}
-			});
-		};
-
-		/**
-		 * [unbindTouchSwipe description]
-		 * @return {[type]} [description]
-		 */
-		var unbindTouchSwipe = function() {
-			$(window).unbind( "touchstart.fsvs" );
-			$(window).unbind( "touchmove.fsvs" );
-		};
-
-		/**
-		 * [mouseWheelHandler description]
-		 * @param  {[type]} e [description]
-		 * @return {[type]}   [description]
-		 */
-
-		var mouseWheelHandler = function( ev ) {
-			var e = window.event || ev;
-			var wheely = 0;			
-		    if (e.type == 'mousewheel') {
-		        wheely = (e.originalEvent.wheelDelta * -1);
-		    }else if (e.type == 'DOMMouseScroll') {
-		        wheely = 40 * e.originalEvent.detail;
-		    }
-			wheely = ( e.wheelDelta || -e.detail || wheely);
-			var delta = Math.max( -1, Math.min( 1, wheely ) );
-			if( isChrome() ) {
-				// chrome seems to extends its "wheely" motion
-				wheely = Math.floor( wheely / 5 );
-			}
-			if( ( ! scrolling || ( options.mouseWheelDelay && Date.now() > mouseWheelScrollStart + options.mouseWheelDelay ) ) && Math.abs( wheely ) > 5 ) {
-				mouseWheelScrollStart = Date.now();
-				scrolling = true;
-				var allowToRun = true;
-				var target = $(ev.target);
-				if( target.hasClass( options.scrollableArea ) || target.parents( '.' + options.scrollableArea ).length !== 0 ) {
-					allowToRun = false;
-					var scrollableArea = target.closest('.' + options.scrollableArea);
-					if( target.hasClass( options.scrollableArea ) ) scrollableArea = target;
-					if( isScrollingUp(ev) && scrollableArea.scrollTop() === 0 ) {
-						allowToRun = true;
-					} else if( scrollableArea[0].scrollHeight - scrollableArea.scrollTop() === scrollableArea.outerHeight() ) {
-						allowToRun = true;
-					}
-				}
-				if( allowToRun ) {
-					if( isScrollingUp(ev) ) {
-						app.slideUp();
-					} else {
-						app.slideDown();
-					}
-				} else {
-					scrolling = false;
-				}
-			}
-		};
-
-		/**
-		 * [isScrollingUp description]
-		 * @param  {[type]}  ev [description]
-		 * @return {Boolean}    [description]
-		 */
-		var isScrollingUp = function(ev){
-			var e = window.event || ev;
-			var wheely = ( e.wheelDelta || e.detail || e.originalEvent.detail );
-			var delta = Math.max( -1, Math.min( 1, wheely ) );
-			if( isChrome() ) wheely = Math.floor( wheely / 5 );
-			if( e.originalEvent && e.originalEvent.detail ) {
-				if( delta > 0 ) {
-					return false;
-				}
-			} else if( delta < 0 ) {
-				return false;
-			}
-			return true;
-		}
-
-		/**
-		 * [bindMouseWheelEvent description]
-		 * @return {[type]} [description]
-		 */
-
-		var bindMouseWheelEvent = function() {
-			$(window).bind('wheel.fsvs mousewheel.fsvs DOMMouseScroll.fsvs MozMousePixelScroll.fsvs', mouseWheelHandler );
-		};
-
-		/**
-		 * [unBindMouseWheelEvent description]
-		 * @return {[type]} [description]
-		 */
-		var unBindMouseWheelEvent = function(){
-			$(window).unbind('wheel.fsvs mousewheel.fsvs DOMMouseScroll.fsvs MozMousePixelScroll.fsvs', mouseWheelHandler );
 		};
 
 		/**
@@ -366,238 +177,466 @@
 		 */
 
 		var bindKeyArrows = function() {
-			allow = true;
-			$('input,textarea,select,option', body)
-			.bind( 'focus.fsvs', function(){ allow = false; })
-			.bind( 'blur.fsvs', function(){ allow = true; });
 			window.onkeydown = function(e) {
-				e = e || window.event;
-			    if ( e.keyCode == '38' && allow ) app.slideUp();
-			    else if ( e.keyCode == '40' && allow ) app.slideDown();
-			}
-		};
-
-		/**
-		 * [unbindKeyArrows description]
-		 * @return {[type]} [description]
-		 */
-		var unbindKeyArrows = function(){
-			$('input,textarea,select,option', body).unbind('focus.fsvs blur.fsvs');
-			window.onkeydown = function(){};
-		};
-
-		/**
-		 * [slideCallback description]
-		 * @param  {[type]} index [description]
-		 * @return {[type]}       [description]
-		 */
-
-		var slideCallback = function( index ) {
-			currentSlideIndex = index;
-			options.afterSlide( index );
-			if( options.detectHash ) {
-				var slide = $( options.selector, body ).eq( index );
-				window.location.hash = slide[0].id;
-			}
-			if( ! app.canSlideDown() ) {
-				options.endSlide( index );
-			}
-			if( options.autoPlay && loop === null ) {
-				play();
-			}
-			scrolling = false;
-		};
-
-		/**
-		 * [nthClasses description]
-		 * @param  {[type]} nthClassLimit [description]
-		 * @return {[type]}               [description]
-		 */
-
-		var nthClasses = function( nthClassLimit ) {
-			$( options.selector, body ).each( function( i ) {
-				var nthClass = 'nth-class-' + ((i%nthClassLimit)+1);
-				if( ! $(this).hasClass( nthClass ) ) {
-					$(this).addClass( nthClass );
+				if( activeFSVS = anyActiveFSVS() ) {
+					e = e || window.event;
+				    if ( e.keyCode == '38' ) {
+				        activeFSVS.fsvs.slideDown();
+				    }
+				    else if ( e.keyCode == '40' ) {
+						activeFSVS.fsvs.slideUp();
+				    }
 				}
-			});
-		};
-
-		/**
-		 * [jQuerySlide description]
-		 * @param  {[type]} index [description]
-		 * @return {[type]}       [description]
-		 */
-
-		var jQuerySlide = function( index ) {
-			options.beforeSlide( index );
-			if( body.is( ':animated' ) ) {
-				currentSlideIndex = index;
-				body.stop();
 			}
-			body.animate({
-				top : '-' + (index*$(window).height()) + 'px'
-			}, options.speed, function() {
-				slideCallback( index );
-			});
 		};
 
 		/**
-		 * [cssSlide description]
-		 * @param  {[type]} index [description]
-		 * @return {[type]}       [description]
+		 * [customScrollHandeler description]
+		 * @param  {[type]}   e        [description]
+		 * @param  {Function} callback [description]
+		 * @return {[type]}            [description]
 		 */
 
-		var cssSlide = function( index ) {
-			options.beforeSlide( index );
-			body.css({
-				'-webkit-transform' : 'translate3d(0, -' + (index*100) + '%, 0)',
-				'-moz-transform' : 'translate3d(0, -' + (index*100) + '%, 0)',
-				'-ms-transform' : 'translate3d(0, -' + (index*100) + '%, 0)',
-				'transform' : 'translate3d(0, -' + (index*100) + '%, 0)'
-			});
-			if( bodyTimeout !== null ) {
-				currentSlideIndex = index;
-				clearTimeout( bodyTimeout );
-			}
-			bodyTimeout = setTimeout( function(){
-				slideCallback( index );
-				bodyTimeout = null;
-			}, options.speed );
-		};
-
-		/**
-		 * [play description]
-		 * @return {[type]} [description]
-		 */
-		var play = function(){
-			loop = setInterval(function(){
-				if( app.canSlideDown() ) {
-					app.slideDown();
+		var customScrollHandeler = function( callback ) {
+			isCustomScrollHandelerActive = true;
+			handelerInterval = setInterval( function(){
+				if( ( Date.now() - handelerStart ) > 100 ) {
+					isCustomScrollHandelerActive = false;
+					clearInterval( handelerInterval );
 				} else {
-					app.slideToIndex(0);
+					callback();
 				}
-			}, options.autoPlay );
+			}, 10 );
 		};
 
 		/**
-		 * [removeStyling description]
+		 * [doTheFunkyStuff description]
+		 * @param  {[type]} wheely [description]
+		 * @param  {[type]} event  [description]
+		 * @return {[type]}        [description]
+		 */
+
+		var doTheFunkyStuff = function( wheely, event ) {
+
+			var activeFSVS = anyActiveFSVS();
+			if( activeFSVS ) {
+				fsvsClass = activeFSVS.fsvs;
+				fsvsClass.setOffset();
+				if( ! fsvsClass.isAnimated() && wheely > 1 ) {
+					if( fsvsClass.isFirstSlide() && ! scrollingDown( event ) ) {
+						event.preventDefault();
+						bindScrollHandeler();
+						unbindWheelHandeler();
+						fsvsClass.unjackScreen();
+						fsvsClass.hidePagination();
+					} else if( fsvsClass.isLastSlide() && scrollingDown( event ) ) {
+						event.preventDefault();
+						bindScrollHandeler();
+						unbindWheelHandeler();
+						fsvsClass.unjackScreen();
+						fsvsClass.hidePagination();
+					} else if( scrollingDown( event ) ) {
+						fsvsClass.slideUp();
+					} else {
+						fsvsClass.slideDown();
+					}
+				}
+			}
+		};
+
+		/**
+		 * [mouseWheelHandler description]
+		 * @param  {[type]} e [description]
+		 * @return {[type]}   [description]
+		 */
+
+		var mouseWheelHandler = function(e) {
+			wheelEvent = e;
+			var allowToRun = true;
+			var target = $(e.target);
+
+			// allow / disallow slide depending on if the target element is a scrollable (options.allowScrollable) element.
+			if( target.hasClass( options.allowScrollable ) || target.parents( '.' + options.allowScrollable ).length !== 0 ) {
+				allowToRun = false;
+				var scrollableArea = target.closest('.' + options.allowScrollable);
+				if( target.hasClass( options.allowScrollable ) ) scrollableArea = target;
+				if( scrollingUp(e) && scrollableArea.scrollTop() === 0 ) {
+					allowToRun = true;
+				} else if( scrollableArea[0].scrollHeight - scrollableArea.scrollTop() === scrollableArea.outerHeight() ) {
+					allowToRun = true;
+				}
+			}
+
+			if( typeof wheelEvent.originalEvent.wheelDelta !== 'undefined' ) {
+				// Chrome
+				var wheely = Number( ( Math.abs( wheelEvent.originalEvent.wheelDelta ) / 40 ).toFixed(0) );
+			} else {
+				// Firefox
+				var wheely = Number( ( Math.abs( wheelEvent.originalEvent.detail ) / 20 ).toFixed(0) );
+			}
+			if( allowToRun ) doTheFunkyStuff( wheely, wheelEvent );
+		};
+
+		/**
+		 * [scrollHandeler description]
+		 * @param  {[type]} e [description]
+		 * @return {[type]}   [description]
+		 */
+
+		var scrollHandeler = function(event) {
+			windowScrollTop = $(w).scrollTop();
+			var activeFSVS = anyActiveFSVS();
+			if( ! activeFSVS ) {
+				for( var i in fsvsObjects ) {
+					var fsvs = fsvsObjects[i];
+					var fsvsClass = fsvs.fsvs;
+					fsvsClass.setOffset();
+					if( ! fsvsClass.isAnimated() ) {
+						if( fsvsClass.isFirstSlide() && fsvsClass.enteredViewPortFromAbove( event ) ) {
+							fsvsClass.showPagination();
+							fsvsClass.hijackScreen();
+							unbindScrollHandeler();
+							bindWheelHandeler();
+						} else if( fsvsClass.isLastSlide() && fsvsClass.enteredViewPortFromBelow( event ) ) {
+							fsvsClass.showPagination();
+							fsvsClass.hijackScreen();
+							unbindScrollHandeler();
+							bindWheelHandeler();
+						}
+					}
+				}
+			}
+			lastScrollTop = windowScrollTop;
+		};
+
+		/**
+		 * [scrollableAreaHandeler description]
+		 * @param  {[type]} e [description]
+		 * @return {[type]}   [description]
+		 */
+
+		var scrollableAreaHandeler = function(e) {
+			var scrollableArea = $(this);
+			if( ! hasBeenHijacked() && scrollingDown(e) && ! hijackingFromScrollableArea ) {
+				var fsvsClass = scrollableArea.closest('.fsvs')[0].fsvs;
+				if( fsvsClass.isFirstSlide() ) {
+					hijackingFromScrollableArea = true;
+					fsvsClass.hijackScreen( 500, function(){
+						hijackingFromScrollableArea = false;
+						fsvsClass.showPagination();
+						fsvsClass.hijackScreen();
+						unbindScrollHandeler();
+						bindWheelHandeler();
+						unbindScrollableAreas();
+					});
+				}
+			}
+		};
+
+		/**
+		 * [bindScrollingEvent description]
 		 * @return {[type]} [description]
 		 */
-		var removeStyling = function(){
-			body.attr('style', '');
-			$(options.selector, body).each(function(i){
-				$(this).removeClass(_activeSlideClass);
-			});
-			$('body').removeClass(_activeSlideClass + '-' + _curentActiveSlide);
-			$('#fsvs-pagination').remove();
+
+		var bindWheelHandeler = function() {
+			unbindWheelHandeler();
+			$(w).bind( 'wheel.fsvs mousewheel.fsvs DOMMouseScroll.fsvs MozMousePixelScroll.fsvs', mouseWheelHandler );
 		};
 
 		/**
-		 * [app description]
-		 * @type {Object}
+		 * [unbindWheelHandeler description]
+		 * @return {[type]} [description]
 		 */
 
-		var app = {
+		var unbindWheelHandeler = function() {
+			bindScrollableAreas();
+			$(w).unbind( 'wheel.fsvs mousewheel.fsvs DOMMouseScroll.fsvs MozMousePixelScroll.fsvs' );
+		}
 
-			nthClasses : nthClasses,
+		/**
+		 * [bindScrollHandeler description]
+		 * @return {[type]} [description]
+		 */
+
+		var bindScrollHandeler = function() {
+			unbindScrollHandeler();
+			$(w).bind( 'scroll.fsvs', scrollHandeler );
+		};
+
+		/**
+		 * [bindScrollHandeler description]
+		 * @return {[type]} [description]
+		 */
+
+		var unbindScrollHandeler = function() {
+			$(w).unbind( 'scroll.fsvs' );
+		};
+
+		/**
+		 * [bindScrollableAreas description]
+		 * @return {[type]} [description]
+		 */
+
+		var bindScrollableAreas = function() {
+			unbindScrollableAreas();
+			$('.'+ options.allowScrollable).bind( 'scroll.allowable.fsvs', scrollableAreaHandeler );
+		};
+
+		/**
+		 * [unbindScrollableAreas description]
+		 * @return {[type]} [description]
+		 */
+
+		var unbindScrollableAreas = function() {
+			$('.'+ options.allowScrollable).unbind( 'scroll.allowable.fsvs' );
+		};
+
+		/**
+		 * [bindTouchSwipe description]
+		 * @return {[type]} [description]
+		 */
+
+		var bindTouchSwipe = function() {
+
+			var startY = null;
 
 			/**
-			 * [addPagination description]
+			 * [isDraggingUp description]
+			 * @param  {[type]}  ev [description]
+			 * @return {Boolean}    [description]
 			 */
 
-			addPagination : function() {
-				pagination = $('<ul id="fsvs-pagination"></ul>');
-				$( options.selector, body ).each( function(i) {
-					var linkClass = currentSlideIndex === i ? 'pagination-link active' : 'pagination-link';
-					$('<li class="' + linkClass + '"><span><span></span></span></li>').appendTo( pagination );
-				});
-				if( $('#fsvs-pagination').length !== 0 ) {
-					$('#fsvs-pagination').remove();
+			var isDraggingUp = function(ev) {
+				var e = ev.originalEvent;
+				if( startY !== null ) {
+					var touches = e.touches;
+					if( touches && touches.length ) {
+						var deltaY = startY - touches[0].pageY;
+						if ( deltaY >= options.mouseSwipeDisance ) {
+							startY = null;
+							return true;
+						}
+					}
 				}
-				pagination.appendTo( $('body') );
-				var paginationHeight = pagination.height();
-				var speed = options.speed/1000;
-				$('span', pagination).css({
-					'-webkit-transition': 'all ' + speed + 's',
-					'-moz-transition'	: 'all ' + speed + 's',
-					'-o-transition'		: 'all ' + speed + 's',
-					'transition'		: 'all ' + speed + 's'
-				});
-				pagination.css({
-					marginTop : '-' + (paginationHeight/2) + 'px',
-					right : '25px'
-				});
-				$('li', pagination).bind( 'click.fsvs', function(e){
-					ignoreHashChange = true;
-					$('.active', pagination).removeClass( 'active' );
-					$(this).addClass( 'active' );
-					app.slideToIndex( $(this).index(), e );
-				});
-			},
+				return false;
+			};
 
 			/**
-			 * [setSpeed description]
-			 * @param {[type]} _speed [description]
+			 * [isDraggingDown description]
+			 * @param  {[type]}  ev [description]
+			 * @return {Boolean}    [description]
 			 */
 
-			setSpeed : function( _speed ) {
-				speed = _speed/1000;
-				body.css({
-					'-webkit-transition': 'all ' + speed + 's',
-					'-moz-transition'	: 'all ' + speed + 's',
-					'-o-transition'		: 'all ' + speed + 's',
-					'transition'		: 'all ' + speed + 's'
-				});
-			},
-
-			/**
-			 * [shouldRun description]
-			 * @return {[type]} [description]
-			 */
-
-			shouldRun : function() {
-				return $('html').hasClass( 'fsvs' );
-			},
-
-			/**
-			 * [canSlideUp description]
-			 * @return {[type]} [description]
-			 */
-
-			canSlideUp : function() {
-				if( currentSlideIndex === 0 ) return false;
-				return true;
-			},
-
-			/**
-			 * [canSlideDown description]
-			 * @return {[type]} [description]
-			 */
-
-			canSlideDown : function() {
-				if( $( options.selector, body ).eq( (currentSlideIndex+1) ).length === 0 ) return false;
-				return true;
-			},
-
-			/**
-			 * [addClasses description]
-			 * @param {[type]} before [description]
-			 * @param {[type]} after  [description]
-			 */
-
-			addClasses : function( before, after ) {
-				var _body = $('body');
-				_curentActiveSlide =  (after+1);
-				_body.removeClass( removeClass = _activeSlideClass +'-' + (before+1) );
-				_body.addClass( _activeSlideClass + '-' + _curentActiveSlide  );
-				$( options.selector, body ).eq( before ).removeClass( _activeSlideClass );
-				$( options.selector, body ).eq( after ).addClass( _activeSlideClass );
-				if( options.nthClasses ) {
-					_body.removeClass( 'active-nth-slide-' + (( before % options.nthClasses )+1) );
-					_body.addClass( 'active-nth-slide-' + (( after % options.nthClasses )+1) );
+			var isDraggingDown = function(ev) {
+				var e = ev.originalEvent;
+				if( startY !== null ) {
+					var touches = e.touches;
+					if( touches && touches.length ) {
+						var deltaY = startY - touches[0].pageY;
+						if ( deltaY <= ( options.mouseSwipeDisance * -1 ) ) {
+							startY = null;
+							return true;
+						}
+					}
 				}
-			},
+				return false;
+			};
+
+			/**
+			 * [touchStartHandeler description]
+			 * @param  {[type]} ev [description]
+			 * @return {[type]}    [description]
+			 */
+
+			var touchStartHandeler = function(ev) {
+				var e = ev.originalEvent;
+				if( e.target.nodeName.toLowerCase() !== 'a' ) {
+					var touches = e.touches;
+					if( touches && touches.length ) startY = touches[0].pageY;
+				}
+			};
+
+			/**
+			 * [touchMoveHandeler description]
+			 * @param  {[type]} ev [description]
+			 * @return {[type]}    [description]
+			 */
+
+            var touchMoveHandeler = function(ev){
+                var activeFSVS = anyActiveFSVS();
+                if( activeFSVS ) {
+                    var fsvsClass = activeFSVS.fsvs;
+                    fsvsClass.setOffset();
+                    ev.preventDefault();
+                    var iDU = isDraggingUp(ev);
+                    var iDD = isDraggingDown(ev);
+                    if( fsvsClass.isFirstSlide() && iDD ) {
+                        bindScrollHandeler();
+                        fsvsClass.unjackScreen();
+                        fsvsClass.hidePagination();
+                    } else if( fsvsClass.isLastSlide() && iDU ) {
+                        bindScrollHandeler();
+                        fsvsClass.unjackScreen();
+                        fsvsClass.hidePagination();
+                    } else if( iDU ) {
+                        fsvsClass.slideUp();
+                    } else if( iDD ) {
+                        fsvsClass.slideDown();
+                    }
+                } else {
+                    scrollHandeler(ev);
+                }
+            }
+
+			/**
+			 * [bindTouchStartHandeler description]
+			 * @return {[type]} [description]
+			 */
+
+			var bindTouchStartHandeler = function(){
+				bindTouchMoveHandeler();
+				unbindTouchStartHandeler();
+				$(w).bind( "touchstart.fsvs", touchStartHandeler );
+			};
+
+			/**
+			 * [unbindTouchStartHandeler description]
+			 * @return {[type]} [description]
+			 */
+
+			var unbindTouchStartHandeler = function() {
+				$(w).unbind( "touchstart.fsvs" );
+			};
+
+			/**
+			 * [bindTouchMoveHandeler description]
+			 * @return {[type]} [description]
+			 */
+
+			var bindTouchMoveHandeler = function(){
+				unbindTouchMoveHandeler();
+				$(w).bind( "touchmove.fsvs", touchMoveHandeler );
+			};
+
+			/**
+			 * [unbindTouchMoveHandeler description]
+			 * @return {[type]} [description]
+			 */
+
+			var unbindTouchMoveHandeler = function(){
+				$(w).unbind( "touchmove.fsvs" );
+			};
+
+			bindTouchStartHandeler();
+
+		};
+
+		/**
+		 * [fsvsApp description]
+		 * @return {[type]} [description]
+		 */
+
+		var fsvsApp = function( elm ) {
+
+			/**
+			 * [that description]
+			 * @type {[type]}
+			 */
+
+			var that = this;
+
+			/**
+			 * [jqElm description]
+			 * @type {[type]}
+			 */
+
+			var jqElm = $(elm);
+
+			/**
+			 * [currentSlideIndex description]
+			 * @type {Number}
+			 */
+
+			var currentSlideIndex = 0;
+
+			/**
+			 * [speed description]
+			 * @type {Number}
+			 */
+
+			var speed = 0;
+
+			/**
+			 * [height description]
+			 * @type {Number}
+			 */
+
+			var height = 0;
+
+			/**
+			 * [width description]
+			 * @type {Number}
+			 */
+
+			var width = 0;
+
+			/**
+			 * [jqElmOffset description]
+			 * @type {Number}
+			 */
+
+			var jqElmOffset = 0;
+
+			/**
+			 * [fsvsPagination description]
+			 * @type {[type]}
+			 */
+
+			var fsvsPagination = null;
+
+			/**
+			 * [animated description]
+			 * @type {Boolean}
+			 */
+
+			var animated = false;
+
+			/**
+			 * [activated description]
+			 * @type {Boolean}
+			 */
+
+			var activated = false;
+
+			/**
+			 * [setOffset description]
+			 */
+
+			this.setOffset = function() {
+				jqElmOffset = jqElm.offset();
+			};
+
+			/**
+			 * [slideUp description]
+			 * @return {[type]} [description]
+			 */
+
+			this.slideUp = function() {
+				if( canSlideUp() ) {
+					this.slideToIndex( currentSlideIndex + 1 );
+				}
+			};
+
+			/**
+			 * [slideDown description]
+			 * @return {[type]} [description]
+			 */
+
+			this.slideDown = function() {
+				if( canSlideDown() ) {
+					this.slideToIndex( currentSlideIndex - 1 );
+				}
+			};
 
 			/**
 			 * [slideToIndex description]
@@ -605,128 +644,369 @@
 			 * @return {[type]}       [description]
 			 */
 
-			slideToIndex : function( index, e ) {
-				var e = e || false;
-				if( e && options.autoPlay ) {
-					clearInterval( loop );
-					loop = null;
-				}
-				if( ! e && pagination ) {
-					$('.active', pagination).removeClass( 'active' );
-					$('> *', pagination).eq(index).addClass( 'active' );
-				}
-				app.addClasses( currentSlideIndex, index );
-				if( hasTransition() ) {
+			this.slideToIndex = function( index ) {
+				changePagination( index );
+				if( isYoungAndHip() ) {
 					cssSlide( index );
 				} else {
-					jQuerySlide( index );
+					animateSlide( index );
 				}
-			},
+			};
 
 			/**
-			 * [unbind description]
-			 * @return {[type]} [description]
-			 */
-			unbind : function(){
-				unBindMouseDrag();
-				unBindMouseWheelEvent();
-				unbindKeyArrows();
-				unbindTouchSwipe();
-				removeStyling();
-				$('html').removeClass('fsvs');
-			},
-
-			/**
-			 * [rebind description]
-			 * @return {[type]} [description]
-			 */
-			rebind : function() {
-				$('html').addClass('fsvs');
-				app.init();
-			},
-
-			/**
-			 * [slideDown description]
+			 * [showPagination description]
 			 * @return {[type]} [description]
 			 */
 
-			slideDown : function(e) {
-				if( app.canSlideDown() ) {
-					ignoreHashChange = true;
-					app.slideToIndex( (currentSlideIndex+1), e );
+			this.showPagination = function() {
+				fsvsPagination.addClass('visible');
+			};
+
+			/**
+			 * [hidePagination description]
+			 * @return {[type]} [description]
+			 */
+
+			this.hidePagination = function() {
+				fsvsPagination.removeClass('visible');
+			};
+
+			/**
+			 * [isAnimated description]
+			 * @return {Boolean} [description]
+			 */
+
+			this.isAnimated = function() {
+				return animated;
+			};
+
+			/**
+			 * [isHijacked description]
+			 * @return {Boolean} [description]
+			 */
+
+			this.isHijacked = function() {
+				return $('html').hasClass( 'hijacked' );
+			};
+
+			/**
+			 * [isFirstSlide Cant he go instead? I don't want to go first!]
+			 * @return {Boolean} [description]
+			 */
+
+			this.isFirstSlide = function() {
+				return currentSlideIndex === 0;
+			};
+
+			/**
+			 * [isLastSlide last but not least... or is it?]
+			 * @return {Boolean} [description]
+			 */
+
+			this.isLastSlide = function() {
+				return currentSlideIndex === ( $( '> div > div', jqElm ).length - 1 );
+			};
+
+			/**
+			 * [enteredViewPortFromAbove description]
+			 * @param  {[type]} e [description]
+			 * @return {[type]}   [description]
+			 */
+
+			this.enteredViewPortFromAbove = function(e){
+				if( ! this.isHijacked() ) {
+					if( scrollingDown(e) && jqElmOffset.top <= windowScrollTop ) {
+						activeJqElm = jqElm;
+						return true;
+					}
+				}
+				return false;
+			};
+
+			/**
+			 * [enteredViewPortFromBelow description]
+			 * @return {[type]} [description]
+			 */
+
+			this.enteredViewPortFromBelow = function(e) {
+				if( ! this.isHijacked() ) {
+					if( scrollingUp(e) && windowScrollTop <= jqElmOffset.top ) {
+						return true;
+					}
+				}
+				return false;
+			};
+
+			/**
+			 * [isActivated description]
+			 * @return {Boolean} [description]
+			 */
+
+			this.isActivated = function() {
+				return activated;
+			};
+
+			/**
+			 * [unjackScreen description]
+			 * @return {[type]}           [description]
+			 */
+
+			this.unjackScreen = function() {
+				$('html').removeClass( 'hijacked' );
+				jqElm.removeClass('active');
+				activated = false;
+			};
+
+
+			/**
+			 * [hijackScreen description]
+			 * @return {[type]} [description]
+			 */
+
+			this.hijackScreen = function( $speed, $callback ) {
+
+				var $speed = $speed || false;
+				var $callback = $callback || function(){};
+
+				if( ! $speed ) {
+					$("html, body").scrollTop( jqElmOffset.top );
+					$('html').addClass( 'hijacked' );
+					jqElm.addClass('active');
+					activated = true;
 				} else {
-					scrolling = false;
+					$("html, body").animate({
+						scrollTop : jqElmOffset.top
+					}, $speed, function(){
+						$('html').addClass( 'hijacked' );
+						jqElm.addClass('active');
+						activated = true;
+						$callback();
+					});
 				}
-			},
+			};
 
 			/**
-			 * [slideUp description]
+			 * [changePagination description]
+			 * @param  {[type]} index [description]
+			 * @return {[type]}       [description]
+			 */
+
+			var changePagination = function( index ) {
+				$('.active', fsvsPagination).removeClass('active');
+				$('> *', fsvsPagination).eq( index ).addClass('active');
+			};
+
+			/**
+			 * [pagination description]
 			 * @return {[type]} [description]
 			 */
 
-			slideUp : function(e) {
-				if( app.canSlideUp() ) {
-					ignoreHashChange = true;
-					app.slideToIndex( (currentSlideIndex-1), e );
-				} else {
-					scrolling = false;
-				}
-			},
+			var pagination = function() {
+				fsvsPagination = $('<ul class="fsvs-pagination"></ul>');
+				$( '> div > div', jqElm ).each( function(i){
+					var temp = options.paginationTemplate.replace( /\[%num%\]/g, (i+1) );
+					var link = $(temp).addClass( i === 0 ? 'active' : '' );
+					link.appendTo( fsvsPagination );
+					link.on( 'click.fsvs', { index : i }, function(e){
+						e.preventDefault();
+						that.slideToIndex( e.data.index );
+					});
+				});
+				fsvsPagination.insertAfter( jqElm );
+				fsvsPagination.css({
+					'margin-top' : '-' + (fsvsPagination.height()/2) + 'px'
+				});
+			};
 
 			/**
-			 * [init description]
+			 * [pixelTick description]
 			 * @return {[type]} [description]
 			 */
 
-			init : function() {
-				body = $( (options.el) ? options.el : '#' + options.bodyID );
-				if( hasTransition() ) {
-					app.setSpeed( options.speed );
+			var pixelTick = function( index, currentIndex ) {
+
+				if( window.requestId ) cancelAnimationFrame( window.requestId );
+				var startTime = new Date().getTime();
+				var last = startTime;
+
+				function tick() {
+
+					window.requestId = requestAnimationFrame( tick );
+					var now = new Date().getTime();
+					var runtime = now-startTime;
+					if( runtime > options.speed ) runtime = options.speed;
+					var percentage = runtime/(options.speed/100);
+					var dt = now-last;
+					var ev = $.Event( 'pixelTick.fsvs' );
+
+					last = now;
+
+					ev.transitionSpeed = dt/100;
+					ev.slideIndex = index;
+					ev.slideFrom = $('> div > div', jqElm).eq(currentIndex);
+					ev.slideTo = $('> div > div', jqElm).eq(index);
+					ev.slidingDown = index > currentIndex;
+					ev.slidingUp = ! ev.slidingDown;
+
+					ev.percentageIn 	= percentage;
+					ev.heightPixelsIn	= (height/100)*percentage;
+					ev.widthPixelsIn 	= (width/100)*percentage;
+					ev.opacityIn 		= (percentage/100);
+
+					ev.percentageOut 	= 100-percentage;
+					ev.heightPixelsOut 	= height-ev.heightPixelsIn;
+					ev.widthPixelsOut 	= width-ev.widthPixelsIn;
+					ev.opacityOut 		= 1-ev.opacityIn;
+
+					jqElm.trigger( ev );
+
+			    	if( runtime == options.speed  ) cancelAnimationFrame( window.requestId );
+
 				}
-				if( options.pagination ) {
-					app.addPagination();
-				}
-				if( options.nthClasses ) {
-					nthClasses( options.nthClasses );
-				}
-				if( options.mouseWheelEvents ) {
-					bindMouseWheelEvent();
-				}
-				if( options.arrowKeyEvents ) {
-					bindKeyArrows();
-				}
-				if( options.mouseDragEvents ) {
-					bindMouseDrag();
-				}
-				if( options.touchEvents ) {
-					bindTouchSwipe();
-				}
-				if( options.detectHash ) {
-					detectHash();
-					if( window.addEventListener ) {
-					    window.addEventListener( "hashchange", changeViaHash, false );
-					}
-					else if (window.attachEvent) {
-					    window.attachEvent( "onhashchange", changeViaHash );
-					}
-				}
-				if( window.location.hash === '' ) {
-					app.addClasses( 0, 0 );
-				}
-				if( options.autoPlay ) {
-					if( options.autoPlay > options.speed ) {
-						play();
-					}
-				}
+				tick();
+			};
+
+			/**
+			 * [beforeSlide description]
+			 * @param  {[type]} index [description]
+			 * @return {[type]}       [description]
+			 */
+
+			var beforeSlide = function( index ) {
+				var ev = $.Event( 'beforeSlide.fsvs' );
+				ev.slideIndex = index;
+				jqElm.trigger( ev );
+			};
+
+			/**
+			 * [afterSlide description]
+			 * @param  {[type]} index [description]
+			 * @return {[type]}       [description]
+			 */
+
+			var afterSlide = function( index ) {
+				var ev = $.Event( 'afterSlide.fsvs' );
+				ev.slideIndex = index;
+				jqElm.trigger( ev );
+			};
+
+			/**
+			 * [canSlideUp from our position, can we slide up?]
+			 * @return {[type]} [description]
+			 */
+
+			var canSlideUp = function() {
+				return ( currentSlideIndex + 1 ) !== $( '> div > div', jqElm ).length;
+			};
+
+			/**
+			 * [canSlideDown from our position, can we slide down?]
+			 * @return {[type]} [description]
+			 */
+
+			var canSlideDown = function() {
+				return currentSlideIndex !== 0;
+			};
+
+			/**
+			 * [nthClasses description]
+			 * @param  {[type]} nthClassLimit [description]
+			 * @return {[type]}               [description]
+			 */
+
+			var nthClasses = function( nthClassLimit ) {
+				$( '> div > div', jqElm ).each( function( i ) {
+					var nthClass = 'nth-class-' + ((i%options.nthClasses)+1);
+					if( ! $(this).hasClass( nthClass ) ) $(this).addClass( nthClass );
+				});
+			};
+
+			/**
+			 * [setDimentions description]
+			 */
+
+			var setDimentions = function() {
+				width = $(w).width();
+				height = $(w).height();
+				jqElm.width( width ).height( height );
+				$( '> div > div', jqElm ).width( width ).height( height );
+			};
+
+			/**
+			 * [setSpeed description]
+			 * @param {[type]} _speed [description]
+			 */
+
+			var setSpeed = function( _speed ) {
+				speed = _speed/1000;
+				$( '> div', jqElm ).css({
+					'-webkit-transition': 'all ' + speed + 's',
+					'-moz-transition'	: 'all ' + speed + 's',
+					'-o-transition'		: 'all ' + speed + 's',
+					'transition'		: 'all ' + speed + 's'
+				});
+			};
+
+			/**
+			 * [cssSlide description]
+			 * @param  {[type]} index [description]
+			 * @return {[type]}       [description]
+			 */
+
+			var cssSlide = function( index ) {
+				if( animated ) return;
+				animated = true;
+				beforeSlide( index );
+				pixelTick( index, currentSlideIndex );
+				$( '> div', jqElm ).css({
+					'-webkit-transform' : 'translate3d(0, -' + (index*height) + 'px, 0)',
+					'-moz-transform' 	: 'translate3d(0, -' + (index*height) + 'px, 0)',
+					'-ms-transform' 	: 'translate3d(0, -' + (index*height) + 'px, 0)',
+					'transform' 		: 'translate3d(0, -' + (index*height) + 'px, 0)'
+				});
+				bodyTimeout = setTimeout( function(){
+					animated = false;
+					currentSlideIndex = index;
+					afterSlide( index );
+				}, options.speed );
 			}
+
+			/**
+			 * [animateSlide description]
+			 * @param  {[type]} index [description]
+			 * @return {[type]}       [description]
+			 */
+
+			var animateSlide = function( index ) {
+				if( animated ) return;
+				animated = true;
+				$( '> div', jqElm ).animate({
+					top : '-' + (index*height) + 'px'
+				}, options.speed, function() {
+					animated = false;
+					currentSlideIndex = index;
+					afterSlide( index );
+				});
+			};
+
+			setDimentions();
+			setSpeed( options.speed );
+			if( options.nthClasses ) nthClasses( options.nthClasses );
+			if( options.pagination ) pagination();
+			$(w).resize( setDimentions );
 
 		};
 
-		if( app.shouldRun() ) {
-			app.init();
-		}
-		return app;
+		bindScrollHandeler();
+		bindScrollableAreas();
+		bindKeyArrows();
+		bindTouchSwipe();
+
+		return $(this).each( function(){
+			this.fsvs = new fsvsApp( this );
+			fsvsObjects.push(this);
+		});
 
 	};
 
-})( jQuery );
+})( jQuery, window, document );
