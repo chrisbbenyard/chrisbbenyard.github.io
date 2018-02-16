@@ -10,6 +10,8 @@ Author URI: http://www.themewagon.com
 -------------------------------------------------------------- */
 @import url('https://fonts.googleapis.com/css?family=Orbitron:400,700');
 @import url('https://fonts.googleapis.com/css?family=Geo:400,400i');
+
+
 *,
 *:before,
 *:after {
@@ -18,31 +20,8 @@ Author URI: http://www.themewagon.com
   box-sizing: border-box;
 }
 
-html, body {
-	background: #757575;
-	 height: 100%;
-	margin: 0px;
-	color: #666666;
-	font-family: 'Cutive Mono', monospace;
-	font-weight: normal;
-  font-size: 115%;
-   text-transform:capitalize;
-    text-shadow: 0 1px 1px rgba(0,0,0,.2);
-  text-rendering: optimizeLegibility;
-	-webkit-font-smoothing: antialiased;
-	-webkit-text-size-adjust: 100%;
-  	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-}
-
-/* Background */
-.background {
-  background: url(../images/background.jpg) no-repeat 50% 100%;
-  bottom: -20px;
-  background-size: cover;
-  position: absolute;
-  width: 110%;
-  left: -5%;
-  top: -5%;
+html {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
 input,
@@ -60,19 +39,19 @@ img {
   height: auto;
 }
 
+body {
+	background: #fff;
+	color: #666666;
+	font-family: 'Roboto', sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-webkit-text-size-adjust: 100%;
+}
 
 section { overflow: hidden; }
 ::selection { background: #161a1b; color: #fff; }
 ::-moz-selection { background: #161a1b; color: #fff; }
 
-<<<<<<< HEAD
 
-
-
-
-
-=======
->>>>>>> parent of dbe5505... dfgdgdf
 .demo-1 {
 	--color-text: #fff;
 	--color-bg: #000;
@@ -604,6 +583,16 @@ h2 {
   backface-visibility: hidden;
 }
 
+/* Background */
+.background {
+  background: url(../images/background.jpg) no-repeat 50% 100%;
+  bottom: -20px;
+  background-size: cover;
+  position: absolute;
+  width: 110%;
+  left: -5%;
+  top: -5%;
+}
 
 .carousel {
   overflow: hidden;
