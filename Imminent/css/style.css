@@ -5,11 +5,11 @@ Author: ThemeWagon
 Author URI: http://www.themewagon.com
 */
 
-
-/* =Common Styles
--------------------------------------------------------------- */
 @import url('https://fonts.googleapis.com/css?family=Orbitron:400,700');
 @import url('https://fonts.googleapis.com/css?family=Geo:400,400i');
+/* =Common Styles
+-------------------------------------------------------------- */
+
 *,
 *:before,
 *:after {
@@ -18,20 +18,8 @@ Author URI: http://www.themewagon.com
   box-sizing: border-box;
 }
 
-html, body {
-	background: #757575;
-	 height: 100%;
-	margin: 0px;
-	color: #666666;
-	font-family: 'Cutive Mono', monospace;
-	font-weight: normal;
-  font-size: 115%;
-   text-transform:capitalize;
-    text-shadow: 0 1px 1px rgba(0,0,0,.2);
-  text-rendering: optimizeLegibility;
-	-webkit-font-smoothing: antialiased;
-	-webkit-text-size-adjust: 100%;
-  	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+html {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
 input,
@@ -49,10 +37,31 @@ img {
   height: auto;
 }
 
+body {
+	background: #fff;
+	color: #666666;
+	font-family: 'Roboto', sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-webkit-text-size-adjust: 100%;
+}
 
 section { overflow: hidden; }
 ::selection { background: #161a1b; color: #fff; }
 ::-moz-selection { background: #161a1b; color: #fff; }
+
+/* Background */
+.background {
+  background: url(../images/background.jpg) no-repeat 50% 100%;
+  bottom: -20px;
+  background-size: cover;
+  position: absolute;
+  width: 110%;
+  left: -5%;
+  top: -5%;
+}
+
+
+
 
 .demo-1 {
 	--color-text: #fff;
@@ -356,9 +365,9 @@ h2 {
 	left: calc(-1 * var(--gap-horizontal));
 	width: calc(100% + var(--gap-horizontal) * 2);
 	height: calc(100% + var(--gap-vertical) * 2);
-	 background: url(../images/background.jpg) no-repeat 50% 100%;
+	 background: url(../images/background.jpg) no-repeat 0 100%;		   
+		    background-size: cover;
 	background-color: var(--blend-color-1);
-	background-size: cover;
 	transform: translate3d(0,0,0);
 	background-blend-mode: var(--blend-mode-1);
 	 

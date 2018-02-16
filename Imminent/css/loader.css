@@ -9,6 +9,11 @@
     z-index: 9999;
     background: #757575;
     text-align: center;
+	-webkit-transform: translateY(-100%);
+            -ms-transform: translateY(-100%);
+                transform: translateY(-100%);
+ 
+        
 }
 .loading {
 	overflow: hidden;
@@ -32,8 +37,9 @@
 	background-color: #000000;
 	-webkit-animation: loader-anim 1s 0s infinite cubic-bezier(0.785, 0.135, 0.15, 0.86);
     -moz-animation: loader-anim 1s 0s infinite cubic-bezier(0.785, 0.135, 0.15, 0.86);
-    animation: loader-anim 1s 0s infinite cubic-bezier(0.785, 0.135, 0.15, 0.86)
-}
+    animation: loader-anim 1s 0s infinite cubic-bezier(0.785, 0.135, 0.15, 0.86);
+	-webkit-transition: all 0.3s 0.6s ease-out; 
+                transition: all 0.3s 0.6s ease-out;}
 
 @-webkit-keyframes loader-anim {
     0% {
