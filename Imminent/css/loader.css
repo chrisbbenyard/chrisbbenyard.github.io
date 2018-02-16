@@ -30,9 +30,6 @@
 	height: 1px;
 	left: -102px;
 	background-color: #000000;
-	-webkit-animation: loader-anim 1s 0s infinite cubic-bezier(0.785, 0.135, 0.15, 0.86);
-    -moz-animation: loader-anim 1s 0s infinite cubic-bezier(0.785, 0.135, 0.15, 0.86);
-    animation: loader-anim 1s 0s infinite cubic-bezier(0.785, 0.135, 0.15, 0.86)
 }
 
 @-webkit-keyframes loader-anim {
