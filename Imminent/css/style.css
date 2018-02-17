@@ -8,7 +8,8 @@ Author URI: http://www.themewagon.com
 
 /* =Common Styles
 -------------------------------------------------------------- */
-
+@import url('https://fonts.googleapis.com/css?family=Orbitron:400,700');
+@import url('https://fonts.googleapis.com/css?family=Geo:400,400i');
 *,
 *:before,
 *:after {
@@ -17,8 +18,20 @@ Author URI: http://www.themewagon.com
   box-sizing: border-box;
 }
 
-html {
-  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+html, body {
+	background: #757575;
+	 height: 100%;
+	margin: 0px;
+	color: #666666;
+	font-family: 'Cutive Mono', monospace;
+	font-weight: normal;
+  font-size: 115%;
+   text-transform:capitalize;
+    text-shadow: 0 1px 1px rgba(0,0,0,.2);
+  text-rendering: optimizeLegibility;
+	-webkit-font-smoothing: antialiased;
+	-webkit-text-size-adjust: 100%;
+  	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
 input,
@@ -36,18 +49,102 @@ img {
   height: auto;
 }
 
-body {
-	background: #fff;
-	color: #666666;
-	font-family: 'Roboto', sans-serif;
-	-webkit-font-smoothing: antialiased;
-	-webkit-text-size-adjust: 100%;
-}
 
 section { overflow: hidden; }
 ::selection { background: #161a1b; color: #fff; }
 ::-moz-selection { background: #161a1b; color: #fff; }
 
+<<<<<<< HEAD
+=======
+.demo-1 {
+	--color-text: #fff;
+	--color-bg: #000;
+	--color-link: #f9d77e;
+	--color-link-hover: #fff;
+	--color-info: #efc453;
+	--glitch-width: 100vw;
+	--glitch-height: 100vh;
+	--gap-horizontal: 10px;
+	--gap-vertical: 5px;
+	--time-anim: 4s;
+	--delay-anim: 2s;
+	--blend-mode-1: none;
+	--blend-mode-2: none;
+	--blend-mode-3: none;
+	--blend-mode-4: none;
+	--blend-mode-5: overlay;
+	--blend-color-1: transparent;
+	--blend-color-2: transparent;
+	--blend-color-3: transparent;
+	--blend-color-4: transparent;
+	--blend-color-5: #af4949;
+}
+
+.fadeIn {
+  animation-name: fadeIn;
+}
+.container {
+  height: 100%;
+  width: 100%;
+  justify-content center;
+  align:-items center;
+  display: flex;
+    }
+
+.text {
+	font-family: 'Geo', sans-serif;
+  font-size: 40px;
+    letter-spacing: 4px;
+    line-height: 60px;
+  color: #888888;
+	z-index: 999;
+    }
+
+.dud {
+  color: #ffffff;
+    }
+
+
+.blink {
+	color: #ff0000;
+	position: absolute;
+    top: 2%;
+    font-size: 40px;
+	z-index: 999;
+  -webkit-animation-name: flash;
+  animation-name: flash;
+}
+
+.txt {
+	font-family:Orbitron;
+	font-size:40px;
+	position:fixed;
+}
+
+.overla-content {
+    position: relative;
+    top: 30%;
+    width: 100%;
+    text-align: center;
+    margin-top: 10px;
+	z-index: 999;
+}
+
+.overla a {
+           display:inline;
+	position:absolute;
+	right:50px;
+	top:35px;
+	z-index:999;
+    font-size: 30px;
+    color: #ffffff;
+     transition: 0.3s;
+}
+
+.overla a:hover, .overlay a:focus {
+    color: #757575;
+}
+>>>>>>> parent of dbe5505... dfgdgdf
 
 /* =Typography
 -------------------------------------------------------------- */
@@ -97,6 +194,253 @@ h2 {
 
 /* =Content Styles
 -------------------------------------------------------------- */
+<<<<<<< HEAD
+=======
+.demo-1 {
+	--color-text: #fff;
+	--color-bg: #000;
+	--color-link: #f9d77e;
+	--color-link-hover: #fff;
+	--color-info: #efc453;
+	--glitch-width: 100vw;
+	--glitch-height: 100vh;
+	--gap-horizontal: 10px;
+	--gap-vertical: 5px;
+	--time-anim: 4s;
+	--delay-anim: 2s;
+	--blend-mode-1: none;
+	--blend-mode-2: none;
+	--blend-mode-3: none;
+	--blend-mode-4: none;
+	--blend-mode-5: overlay;
+	--blend-color-1: transparent;
+	--blend-color-2: transparent;
+	--blend-color-3: transparent;
+	--blend-color-4: transparent;
+	--blend-color-5: #af4949;
+}
+
+.imgloaded .content__title,
+.imgloaded .content__text {
+	animation-name: glitch-anim-text;
+	animation-duration: var(--time-anim);
+	animation-timing-function: linear;
+	animation-iteration-count: infinite;
+}
+
+.content__title {
+	font-size: 12vw;
+	margin: 35vh 0 0 0;
+	position: relative;
+	font-family: 'Orbitron', sans-serif;
+	animation-delay: calc(var(--delay-anim) + var(--time-anim) * 0.2);
+}
+
+.content__text {
+	font-family: 'Orbitron', sans-serif;	 
+    font-size: 80px;	
+	bottom: 0em;
+	right: 10vw;
+	position: absolute;
+	max-width: 500px;
+	text-align: left;
+	font-weight: 700;
+	animation-delay: calc(var(--delay-anim) + var(--time-anim) * 0.25);
+}
+
+/* Glitch styles */
+.glitch {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: var(--glitch-width);
+	height: var(--glitch-height);
+	overflow: hidden;
+}
+
+.glitch__img {
+	position: absolute;
+	top: calc(-1 * var(--gap-vertical));
+	left: calc(-1 * var(--gap-horizontal));
+	width: calc(100% + var(--gap-horizontal) * 2);
+	height: calc(100% + var(--gap-vertical) * 2);
+	 background: url(../images/background.jpg) no-repeat 50% 100%;
+	background-color: var(--blend-color-1);
+	background-size: cover;
+	transform: translate3d(0,0,0);
+	background-blend-mode: var(--blend-mode-1);
+	 
+}
+
+.glitch__img:nth-child(n+2) {
+	opacity: 0;
+}
+
+.imgloaded .glitch__img:nth-child(n+2) {
+	animation-duration: var(--time-anim);
+	animation-delay: var(--delay-anim);
+	animation-timing-function: linear;
+	animation-iteration-count: infinite;
+}
+
+.imgloaded .glitch__img:nth-child(2) {
+	background-color: var(--blend-color-2);
+	background-blend-mode: var(--blend-mode-2);
+	animation-name: glitch-anim-1;
+}
+
+.imgloaded .glitch__img:nth-child(3) {
+	background-color: var(--blend-color-3);
+	background-blend-mode: var(--blend-mode-3);
+	animation-name: glitch-anim-2;
+}
+
+.imgloaded .glitch__img:nth-child(4) {
+	background-color: var(--blend-color-4);
+	background-blend-mode: var(--blend-mode-4);
+	animation-name: glitch-anim-3;
+}
+
+.imgloaded .glitch__img:nth-child(5) {
+	background-color: var(--blend-color-5);
+	background-blend-mode: var(--blend-mode-5);
+	animation-name: glitch-anim-flash;
+}
+
+.glitch--style-1 {
+	--gap-horizontal: 20px;
+	--gap-vertical: 2px;
+	--time-anim: 2.25s;
+	--blend-mode-1: none;
+	--blend-mode-2: none;
+	--blend-mode-3: none;
+	--blend-mode-4: none;
+	--blend-mode-5: none;
+	--blend-color-1: transparent;
+	--blend-color-2: transparent;
+	--blend-color-3: transparent;
+	--blend-color-4: transparent;
+	--blend-color-5: transparent;
+}
+
+.glitch--style-2 {
+	--gap-horizontal: 5px;
+	--gap-vertical: 10px;
+	--time-anim: 2s;
+	--blend-mode-1: none;
+	--blend-mode-2: none;
+	--blend-mode-3: luminosity;
+	--blend-mode-4: none;
+	--blend-mode-5: none;
+	--blend-color-1: transparent;
+	--blend-color-2: transparent;
+	--blend-color-3: #4d8c60;
+	--blend-color-4: transparent;
+	--blend-color-5: #c9b09a;
+}
+
+.glitch--style-3 {
+	--gap-horizontal: 20px;
+	--gap-vertical: 2px;
+	--time-anim: 2.25s;
+	--blend-mode-1: none;
+	--blend-mode-2: none;
+	--blend-mode-3: multiply;
+	--blend-mode-4: none;
+	--blend-mode-5: none;
+	--blend-color-1: transparent;
+	--blend-color-2: transparent;
+	--blend-color-3: #af4563;
+	--blend-color-4: transparent;
+	--blend-color-5: transparent;
+}
+
+.glitch--style-4 {
+	--gap-horizontal: 5px;
+	--gap-vertical: 20px;
+	--time-anim: 5s;
+	--blend-mode-1: none;
+	--blend-mode-2: exclusion;
+	--blend-mode-3: hard-light;
+	--blend-mode-4: overlay;
+	--blend-mode-5: none;
+	--blend-color-1: transparent;
+	--blend-color-2: #52f1cd;
+	--blend-color-3: #525df1;
+	--blend-color-4: #f19b52;
+	--blend-color-5: transparent;
+}
+
+.glitch--style-5 {
+	--gap-horizontal: 50px;
+	--gap-vertical: 100px;
+	--time-anim: 2.25s;
+	--blend-mode-1: none;
+	--blend-mode-2: none;
+	--blend-mode-3: none;
+	--blend-mode-4: overlay;
+	--blend-mode-5: overlay;
+	--blend-color-1: transparent;
+	--blend-color-2: transparent;
+	--blend-color-3: transparent;
+	--blend-color-4: #000;
+	--blend-color-5: #8d16f2;
+}
+
+.glitch--style-6 {
+	--gap-horizontal: 3px;
+	--gap-vertical: 70px;
+	--time-anim: 2.25s;
+	--blend-mode-1: none;
+	--blend-mode-2: none;
+	--blend-mode-3: overlay;
+	--blend-mode-4: none;
+	--blend-mode-5: none;
+	--blend-color-1: transparent;
+	--blend-color-2: transparent;
+	--blend-color-3: rgba(255,255,255,0.2);
+	--blend-color-4: transparent;
+	--blend-color-5: transparent;
+}
+
+.grid {
+	margin: 50vh auto 0;
+    position: relative;
+    padding: 0 1em;
+    width: 100%;
+    display: grid;
+    max-width: 1200px;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.grid__item {
+    margin: 0 0 40vh;
+    position: relative;
+}
+
+.grid__item:nth-child(odd) {
+	margin-top: -40vh;
+}
+
+.grid__item-title {
+	position: absolute;
+	margin: 0;
+	font-size: 6vw;
+	color: var(--color-title);
+	font-family: 'Barlow', sans-serif;
+	font-weight: 800;
+	padding: 30vh 0.5em 0;
+	top: 0;
+	pointer-events: none;
+	line-height: 1;
+}
+
+.grid__item:nth-child(odd) .grid__item-title {
+	right: 0;
+	text-align: right;
+	padding-top: 10vh;
+}
+>>>>>>> parent of dbe5505... dfgdgdf
 
 .wrapper {
   text-align: center;		
