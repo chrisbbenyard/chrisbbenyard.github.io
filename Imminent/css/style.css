@@ -92,16 +92,14 @@ section { overflow: hidden; }
     }
 
 .text {
-	font-family: 'Geo', sans-serif;
   font-size: 40px;
     letter-spacing: 4px;
-    line-height: 60px;
-  color: #888888;
+  color: #ffffff;
 	z-index: 999;
     }
 
 .dud {
-  color: #ffffff;
+  color: #666666;
     }
 
 
@@ -116,7 +114,6 @@ section { overflow: hidden; }
 }
 
 .txt {
-	font-family:Orbitron;
 	font-size:40px;
 	position:fixed;
 }
