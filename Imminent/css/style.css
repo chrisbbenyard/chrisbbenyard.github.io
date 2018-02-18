@@ -8,8 +8,6 @@ Author URI: http://www.themewagon.com
 
 /* =Common Styles
 -------------------------------------------------------------- */
-@import url('https://fonts.googleapis.com/css?family=Orbitron:400,700');
-@import url('https://fonts.googleapis.com/css?family=Geo:400,400i');
 *,
 *:before,
 *:after {
@@ -54,8 +52,6 @@ section { overflow: hidden; }
 ::selection { background: #161a1b; color: #fff; }
 ::-moz-selection { background: #161a1b; color: #fff; }
 
-<<<<<<< HEAD
-=======
 .demo-1 {
 	--color-text: #fff;
 	--color-bg: #000;
@@ -144,7 +140,7 @@ section { overflow: hidden; }
 .overla a:hover, .overlay a:focus {
     color: #757575;
 }
->>>>>>> parent of dbe5505... dfgdgdf
+
 
 /* =Typography
 -------------------------------------------------------------- */
@@ -194,8 +190,6 @@ h2 {
 
 /* =Content Styles
 -------------------------------------------------------------- */
-<<<<<<< HEAD
-=======
 .demo-1 {
 	--color-text: #fff;
 	--color-bg: #000;
@@ -440,7 +434,6 @@ h2 {
 	text-align: right;
 	padding-top: 10vh;
 }
->>>>>>> parent of dbe5505... dfgdgdf
 
 .wrapper {
   text-align: center;		
