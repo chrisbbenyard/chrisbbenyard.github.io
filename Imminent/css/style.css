@@ -90,7 +90,7 @@ section { overflow: hidden; }
 .text {
 
   font-size: 40px;
-    letter-spacing: 4px;
+    letter-spacing: 2px;
     
   color: #888888;
 	z-index: 999;
