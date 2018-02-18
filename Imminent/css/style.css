@@ -91,7 +91,7 @@ section { overflow: hidden; }
 
   font-size: 40px;
     letter-spacing: 2px;
-    
+       text-transform:capitalize;
   color: #888888;
 	z-index: 999;
     }
@@ -113,9 +113,15 @@ section { overflow: hidden; }
 
 .txt {
 
+
 	font-size:40px;
 	position:fixed;
+
+    letter-spacing: 2px;
+       text-transform:capitalize;
+  color: #888888;
 }
+
 
 .overla-content {
     position: relative;
