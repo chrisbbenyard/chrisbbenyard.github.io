@@ -90,7 +90,6 @@ section { overflow: hidden; }
 .text {
 
   font-size: 40px;
-    letter-spacing: 2px;
        text-transform:capitalize;
   color: #888888;
 	z-index: 999;
