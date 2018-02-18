@@ -91,7 +91,7 @@ section { overflow: hidden; }
 
   font-size: 40px;
     letter-spacing: 4px;
-    line-height: 60px;
+    
   color: #888888;
 	z-index: 999;
     }
@@ -159,8 +159,8 @@ h1 {
 }
 
 h2 {
-	font-size: 18px;
-	font-weight: 800;
+	font-size: 24px;
+	font-family: 'Cutive Mono', monospace;
 	line-height: 1em;
 	letter-spacing: 0.2em;
 	text-transform: uppercase;
@@ -488,10 +488,10 @@ h2 {
 
 
 .sphere img{
-	-webkit-transform: scale(0.7);
-	-moz-transform: scale(0.7);
-	-ms-transform: scale(0.7,0.7);
-	transform: scale(0.7);
+	-webkit-transform: scale(0.6);
+	-moz-transform: scale(0.6);
+	-ms-transform: scale(0.6,0.6);
+	transform: scale(0.6);
 }
 
 /* Text */
