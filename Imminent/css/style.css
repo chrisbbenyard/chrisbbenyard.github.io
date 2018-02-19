@@ -112,13 +112,13 @@ section { overflow: hidden; }
 
 .txt {
 
-
-	font-size:40px;
-	position:fixed;
-
-    letter-spacing: 2px;
-       text-transform:capitalize;
-  color: #888888;
+color: #ff0000;
+	position: absolute;
+    top: 2%;
+    font-size: 40px;
+	z-index: 999;
+  
+	
 }
 
 
