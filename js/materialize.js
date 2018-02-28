@@ -9603,7 +9603,7 @@ if (Vel) {
         function click(e) {
           // Disable clicks if carousel was dragged.
           if (dragged) {
-            e.preventDefault();
+          
             e.stopPropagation();
             return false;
           } else if (!options.fullWidth) {
