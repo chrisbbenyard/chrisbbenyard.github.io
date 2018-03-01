@@ -22,7 +22,7 @@
   "start_url": "http://www.fairandglorious.com/home.html",
   "display": "fullscreen",
   "orientation": "landscape",
-  "theme_color": "#333333",
+  "theme_color": "#000000",
   "background_color": "#757575",
   "serviceworker": {
     "src": "sw.js",
