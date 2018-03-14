@@ -1418,7 +1418,7 @@ input, textarea {
   color: {{ theme.primary_text_color }};
 }
 
-.footer {
+.site-footer {
 	background:#ffab62;
   *zoom: 1;
   display: -webkit-flex;
@@ -1427,7 +1427,7 @@ input, textarea {
   -ms-flex-align: center;
   -webkit-align-items: center;
   align-items: center;
-  bottom: 5%;
+  bottom: 0;
   color:#ffab62;
 	height: 100px;
   left: 0;
@@ -1439,8 +1439,15 @@ input, textarea {
   z-index: 3;
 }
 
+.contact {
+	display: block;
+	width: 100%;
+	position: absolute;
+	z-index: 2;
+	text-align: center;}
+	
 
-.footer .icons {
+.contact .icons {
 	margin: 0;
 	padding: 0;
 	margin-bottom: 18px;
@@ -1449,14 +1456,14 @@ input, textarea {
 	list-style-type: none;
 }
 
-.footer .icons li {
+.contact .icons li {
 	display: inline-block;
 	margin-right: 10px;
 }
 
-.footer .icons li:last-of-type { margin-right: 0px; }
+.contact .icons li:last-of-type { margin-right: 0px; }
 
-.footer .icons li a {
+.contact .icons li a {
 	display: block;
 	width: 25px;
 	height: 25px;
@@ -1469,21 +1476,21 @@ input, textarea {
 }
 
 
-.footer .icons li a:hover {
+.contact .icons li a:hover {
 	opacity: 1;
 	-webkit-transition: opacity 0.3s;
 	-moz-transition: opacity 0.3s;
 	transition: opacity 0.3s;
 }
 
-.footer a.mail {
+.contact a.mail {
 	text-decoration: none;
 	color: #161a1b;
 	padding-bottom: 8px;
 	font-size: 15px;
 }
 
-.footer a.mail::after {
+.contact a.mail::after {
 	position: absolute;
 	top: 100%;
 	left: 50%;
@@ -1502,7 +1509,7 @@ input, textarea {
 	transform: translateY(10px);
 }
 
-.footer a.mail:hover::after, .footer a.mail:focus::after {
+.contact a.mail:hover::after, .contact a.mail:focus::after {
 	opacity: 1;
 	-webkit-transform: translateY(0px);
 	-moz-transform: translateY(0px);
@@ -1511,7 +1518,7 @@ input, textarea {
 
 
 
-.footer:after {
+.site-footer:after {
   content: "";
   display: table;
   clear: both;
