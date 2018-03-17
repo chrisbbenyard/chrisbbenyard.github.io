@@ -1,113 +1,14 @@
+/* Custom Stylesheet */
 /**
- * CSSReset.com - How To Keep Footer At Bottom of Page with CSS
- * 
- * Original Tutorial: http://www.cssreset.com/2010/css-tutorials/how-to-keep-footer-at-bottom-of-page-with-css/
- * License: Free - do whatever you like with it! Credit and linkbacks much appreciated.
+ * Use this file to override Materialize files so you can update
+ * the core Materialize files in the future
  *
- * NB: Make sure the value for 'padding-bottom' on #content is equal to or greater than the height of #footer.
+ * Made By MaterializeCSS.com
  */
-html,
-body {
-	margin:0;
-	padding:0;
-	height:100%;	
-background-color: #111111;
-background-image: url("https://www.transparenttextures.com/patterns/slash-it.png");
-	
-}
-#wrapper {
-	min-height:100%;
-	position:relative;
-}
-#header {
-	background:#ededed;
-	padding:10px;
-}
-#content {
-	padding-bottom:100px; /* Height of the footer element */
-}
-#footer {
-	background:#ffab62;
-	width:100%;
-	height:100px;
-	position:absolute;
-	bottom:0;
-	left:0;
-}
-.contact {
-	display: block;
-	width: 100%;
-	position: absolute;
-	z-index: 2;
-	text-align: center;
-	bottom: 5%;
-}
 
-.contact .icons {
-	margin: 0;
-	padding: 0;
-	margin-bottom: 18px;
-	text-align: center;
-	list-style: none;
-	list-style-type: none;
+.icon-block {
+  padding: 0 15px;
 }
-
-.contact .icons li {
-	display: inline-block;
-	margin-right: 10px;
-}
-
-.contact .icons li:last-of-type { margin-right: 0px; }
-
-.contact .icons li a {
-	display: block;
-	width: 25px;
-	height: 25px;
-	opacity: .5;
-	-webkit-transition: opacity 0.3s;
-	-moz-transition: opacity 0.3s;
-	transition: opacity 0.3s;
-	color: black;
-	font-size: 24px;
-}
-
-
-.contact .icons li a:hover {
-	opacity: 1;
-	-webkit-transition: opacity 0.3s;
-	-moz-transition: opacity 0.3s;
-	transition: opacity 0.3s;
-}
-
-.contact a.mail {
-	text-decoration: none;
-	color: #161a1b;
-	padding-bottom: 8px;
-	font-size: 15px;
-}
-
-.contact a.mail::after {
-	position: absolute;
-	top: 100%;
-	left: 50%;
-	width: 125px;
-	margin-left: -60px;
-	margin-top: 10px;
-	height: 1px;
-	background: #666666;
-	content: '';
-	opacity: 0;
-	-webkit-transition: opacity 0.3s, -webkit-transform 0.3s;
-	-moz-transition: opacity 0.3s, -moz-transform 0.3s;
-	transition: opacity 0.3s, transform 0.3s;
-	-webkit-transform: translateY(10px);
-	-moz-transform: translateY(10px);
-	transform: translateY(10px);
-}
-
-.contact a.mail:hover::after, .contact a.mail:focus::after {
-	opacity: 1;
-	-webkit-transform: translateY(0px);
-	-moz-transform: translateY(0px);
-	transform: translateY(0px);
+.icon-block .material-icons {
+	font-size: inherit;
 }
