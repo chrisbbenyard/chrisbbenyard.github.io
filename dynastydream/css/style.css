@@ -12,3 +12,7 @@
 .icon-block .material-icons {
 	font-size: inherit;
 }
+
+.card.small {
+  height: 150px;
+}
