@@ -72,7 +72,7 @@
      <script>
 addToHomescreen();
 </script>
-{{ head_content }}
+
    
 
      
@@ -92,9 +92,12 @@ addToHomescreen();
     });
   </script>   
          
-     
+  {{ head_content }}   
 
   </head>
+
+
+
   <body id="{% if page.permalink == 'products' %}products_page{% else %}{{ page.permalink }}{% endif %}" class="{{ page.category }} {% if page.full_url contains '/category/' %}multi_col{% endif %}">	
   	
     <header id="site_header">
