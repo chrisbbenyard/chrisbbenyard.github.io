@@ -72,9 +72,8 @@
      <script>
 addToHomescreen();
 </script>
-
+{{ head_content }}
    
-  </head>
 
      
 
@@ -93,131 +92,88 @@ addToHomescreen();
     });
   </script>   
          
+     
 
-
-        
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-   
-  <body id="home" class="theme">
-  
-    <section class="slideshow"> 
-
-
-            
-      
-      
-        
-        
-            <ul class="slides-container">
-        <li></li>
-        
-       </ul>
-      
-      
-      
-      <div class="featured_holder">
-      
-      <div class="logo">
-        <br><br>
-           </div>
-        
-	<div class="featured">
-          <div id="image">
-   <center> <img id="preload" onload="fadeIn(this)" src="" style="display:none;"class="responsive-image" onclick="window.location.href='/'" />
-            </center>
+  </head>
+  <body id="{% if page.permalink == 'products' %}products_page{% else %}{{ page.permalink }}{% endif %}" class="{{ page.category }} {% if page.full_url contains '/category/' %}multi_col{% endif %}">	
+  	
+    <header id="site_header">
+      <div id="branding" {% if store.name.size > 22 %}class="wrap"{% endif %}>
+        <h1><a href="/" title="Home">{{ store.name }}</a></h1>
       </div>
-
-           </div> 
-    
       
+      <nav id="cart_nav">
+        <ul>
+        	<li id="menu"><a href="#site_footer">Menu</a></li>
+  		{% if theme.show_search %}
+          <li id="search">
+            <form id="search-form" name="search" action="/products" method="get">
+              <a href="#search-form">Search</a>
+              <input id="search-input" name="search" type="text">
+            </form>
+          </li>
+          {% endif %}       	
+          <li id="cart_info"><a href="/cart" title="Cart">Cart<span>/ {{ cart.item_count | pluralize: 'item', 'items' }}</span></a></li>      
+        </ul>
+      </nav>
+    </header>
+    
+    <div id="site_content" class="canvas {% unless theme.product_list_layout == "stacked" %}grid{% endunless %}">
+      {% if theme.image != blank %}
+      <div id="theme_image">
+        <img src="{{ theme.image.url | constrain: 1000 }}" alt="{{ store.name }}" />
+      </div>
+      {% endif %}
+  
+      <nav id="nav_primary">
+        <ul><li><a href="/products" title="Shop Products">Products</a></li>{% for page in pages.all limit: 3 %}<li>{{ page | link_to }}</li>{% endfor %}<li><a href="/contact" title="Contact Us">Contact</a></li></ul>      
+        <span class="keyline"></span>
+      </nav>    
+  
+      {% if errors != blank %}
+      <ul id="error" class="fade-in">
+        {% for error in errors %}<li>{{ error }}</li>{% endfor %}
+      </ul>    
+      {% endif %}
+     
+      {% if page.category == 'custom' or page.full_url contains '/success' %}
+        <header id="content_header">
+          <h1>{{ page.name }}</h1>
+        </header>
+        <section id="page_body">
+          {{ page_content | paragraphs }}
         </section>
- <script src="http://www.jollyrogertattoo.us/src/addtohomescreen.js"></script>
-<script>
-addToHomescreen({
-    detectHomescreen: true
-});
-</script>
-           <script src="http://www.jollyrogertattoo.us/src/addtohomescreen.js"></script>
-<script>
-var a = addToHomescreen({
-	onAdd: function () {
-		alert('Welcome to the homescreen!');
-	}
-});
-</script>
-</body>  
-</html>      
+      {% else %}
+        {{ page_content }}
+      {% endif %}     
+    </div> 
+    
+    <footer id="site_footer">
+    	<div class="canvas">
+    		<nav>
+  	    	<ul><li><a href="/products" title="Shop Products">Products</a></li>{% for page in pages.all %}<li>{{ page | link_to }}</li>{% endfor %}<li><a href="/contact" title="Contact Us">Contact</a></li>{% if theme.show_search %}<li id="search"><form id="search-form" name="search" action="/products" method="get"><a href="#search-form">Search</a><input id="search-input" name="search" type="text"></form></li>{% endif %}</ul> 
+    		</nav>
+          {% if theme.twitter_url != blank or theme.facebook_url != blank or theme.instagram_url != blank or theme.tumblr_url != blank or store.website != blank %}
+            <ul id="social_links">
+              {% if theme.twitter_url != blank %}
+                <li><a title="Twitter" href="{{ theme.twitter_url }}">Twitter</a></li>
+              {% endif %}
+              {% if theme.facebook_url != blank %}
+                <li><a title="Facebook" href="{{ theme.facebook_url }}">Facebook</a></li>
+              {% endif %}
+              {% if theme.instagram_url != blank %}
+                <li><a title="Instagram" href="{{ theme.instagram_url }}">Instagram</a></li>
+              {% endif %}
+              {% if theme.tumblr_url != blank %}
+                <li><a title="Tumblr" href="{{ theme.tumblr_url }}">Tumblr</a></li>
+              {% endif %}
+              {% if store.website != blank %}
+      		  		<li id="website"><a href="{{ store.website }}">{{ store.website | replace: "http://", "" | replace: "www.", "" }}</a></li>
+      		  	{% endif %}		
+            </ul>
+          {% endif %}		  
+  			<div id="badge">{{ bigcartel_credit }}</div>     
+    	</div>
+    </footer>   
+  </body>
+</html>
