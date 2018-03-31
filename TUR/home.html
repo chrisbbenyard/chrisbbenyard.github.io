@@ -1,182 +1,96 @@
-<html>
+<!doctype html>
+<html lang="en-US">
 <head>
+<html> <head> <title>Turnt Up Rich</title> <!-- Startup configuration --> <link rel="manifest" href="http://chrisbbenyard.github.io/manifest.json"> <!-- Fallback application metadata for legacy browsers --> <meta name="application-name" content="Turnt Up Rich"> <link rel="icon" sizes="16x16 32x32 48x48" href=""> <link rel="icon" sizes="512x512" href="http://chrisbbenyard.github.io/TUR/TURappicon.png"> <meta property="og:image" content="http://chrisbbenyard.github.io/TUR/TURappicon.png" /> <link rel="apple-touch-icon" href="http://chrisbbenyard.github.io/TUR/TURappicon.png" /> <link rel="apple-touch-icon" sizes="76x76" href="http://chrisbbenyard.github.io/TUR/TURappicon.png" /> <link rel="apple-touch-icon" sizes="120x120" href="http://chrisbbenyard.github.io/TUR/TURappicon.png" /> <link rel="apple-touch-icon" sizes="152x152" href="http://chrisbbenyard.github.io/TUR/TURappicon.png" /> <link rel="apple-touch-icon" sizes="256x256" href="http://chrisbbenyard.github.io/TUR/TURappicon.png" /> <link rel="apple-touch-startup-image" href="/launch.png"> <meta name="apple-mobile-web-app-title" content="Turnt Up Rich"> <meta name="mobile-web-app-capable" content="yes"> <meta name="apple-mobile-web-app-capable" content="yes"> <meta name="apple-mobile-web-app-capable" content="yes" /> <meta name="apple-mobile-web-app-status-bar-style" content="black" /> <meta name="description" content="$$$"> <link rel="shortcut icon" href="http://www.iconj.com/ico/1/7/17kbofimez.ico" type="image/x-icon" /> <meta name="viewport" content="user-scalable=no"> <link href="http://chrisbbenyard.github.io/TUR/layout-style.css" media="screen" rel="stylesheet" type="text/css">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 
-       <title>Turnt Up Rich</title>
-      <!-- Startup configuration -->
-         <link rel="manifest" href="http://chrisbbenyard.github.io/manifest.json">
-<!-- Fallback application metadata for legacy browsers -->
-<meta name="application-name" content="Turnt Up Rich">
-<link rel="icon" sizes="16x16 32x32 48x48" href="">
-<link rel="icon" sizes="512x512" href="http://chrisbbenyard.github.io/TUR/TURappicon.png">
-         
-    <meta property="og:image" content="http://chrisbbenyard.github.io/TUR/TURappicon.png" />
-         
-        
-   
-      <link rel="apple-touch-icon" href="http://chrisbbenyard.github.io/TUR/TURappicon.png" /> 
-      <link rel="apple-touch-icon" sizes="76x76" href="http://chrisbbenyard.github.io/TUR/TURappicon.png" /> 
-      <link rel="apple-touch-icon" sizes="120x120" href="http://chrisbbenyard.github.io/TUR/TURappicon.png" />
-      <link rel="apple-touch-icon" sizes="152x152" href="http://chrisbbenyard.github.io/TUR/TURappicon.png" />
-           <link rel="apple-touch-icon" sizes="256x256" href="http://chrisbbenyard.github.io/TUR/TURappicon.png" />
-   
-             
-         
-         
-         <link rel="apple-touch-startup-image" href="/launch.png">      
-         
-    <meta name="apple-mobile-web-app-title" content="Turnt Up Rich">
-         
-            <meta name="mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-capable" content="yes"> 
-   
-        <meta name="apple-mobile-web-app-capable" content="yes" /> 
-         
-         <meta name="apple-mobile-web-app-status-bar-style" content="black" />     
-  
-      <meta name="description" content="$$$">
-     
-     <link rel="shortcut icon" href="http://www.iconj.com/ico/1/7/17kbofimez.ico" type="image/x-icon" />
-  
-    <meta name="viewport" content="user-scalable=no">
-              
-    
-    <link href="http://chrisbbenyard.github.io/TUR/layout-style.css" media="screen" rel="stylesheet" type="text/css">
-
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js" type="text/javascript"></script>
-    <script src="//cache1.bigcartel.com/theme_assets/91/1.0.11/theme.js" type="text/javascript"></script>
-
-   
-     
-
-	  <script>function fadeIn(obj) {
-    $(obj).fadeIn(3000);
-}</script>
-	
-         
-       
-
-  
-      
-      
-    
-
-          
-        <script src="https://js.stripe.com/v3/" async></script>
-         
-         
-           <link rel="stylesheet" type="text/css" href="http://chrisbbenyard.github.io/addtohomescreen.css"> 
-  <script src="http://chrisbbenyard.github.io/addtohomescreen.js"></script> 
-         
-
-
-     <script>
-addToHomescreen();
-</script>
-
-   
-
-     
-
- 
-      
-         
-      <script>
-    $(function() {
-		if ($('.slides-container').length) { 
-			$('.slideshow').superslides({
-				hashchange: false,
-				pagination:false,
-				play: 6000
-			});
-		}
-    });
-  </script>   
-         
-  {{ head_content }}   
-
-  </head>
-
-
-
-  <body id="{% if page.permalink == 'products' %}products_page{% else %}{{ page.permalink }}{% endif %}" class="{{ page.category }} {% if page.full_url contains '/category/' %}multi_col{% endif %}">	
-  	
-    <header id="site_header">
-      <div id="branding" {% if store.name.size > 22 %}class="wrap"{% endif %}>
-        <h1><a href="/" title="Home">{{ store.name }}</a></h1>
-      </div>
-      
-      <nav id="cart_nav">
-        <ul>
-        	<li id="menu"><a href="#site_footer">Menu</a></li>
-  		{% if theme.show_search %}
-          <li id="search">
-            <form id="search-form" name="search" action="/products" method="get">
-              <a href="#search-form">Search</a>
-              <input id="search-input" name="search" type="text">
-            </form>
-          </li>
-          {% endif %}       	
-          <li id="cart_info"><a href="/cart" title="Cart">Cart<span>/ {{ cart.item_count | pluralize: 'item', 'items' }}</span></a></li>      
-        </ul>
-      </nav>
-    </header>
-    
-    <div id="site_content" class="canvas {% unless theme.product_list_layout == "stacked" %}grid{% endunless %}">
-      {% if theme.image != blank %}
-      <div id="theme_image">
-        <img src="{{ theme.image.url | constrain: 1000 }}" alt="{{ store.name }}" />
-      </div>
-      {% endif %}
-  
-      <nav id="nav_primary">
-        <ul><li><a href="/products" title="Shop Products">Products</a></li>{% for page in pages.all limit: 3 %}<li>{{ page | link_to }}</li>{% endfor %}<li><a href="/contact" title="Contact Us">Contact</a></li></ul>      
-        <span class="keyline"></span>
-      </nav>    
-  
-      {% if errors != blank %}
-      <ul id="error" class="fade-in">
-        {% for error in errors %}<li>{{ error }}</li>{% endfor %}
-      </ul>    
-      {% endif %}
-     
-      {% if page.category == 'custom' or page.full_url contains '/success' %}
-        <header id="content_header">
-          <h1>{{ page.name }}</h1>
-        </header>
-        <section id="page_body">
-          {{ page_content | paragraphs }}
-        </section>
-      {% else %}
-        {{ page_content }}
-      {% endif %}     
-    </div> 
-    
-    <footer id="site_footer">
-    	<div class="canvas">
-    		<nav>
-  	    	<ul><li><a href="/products" title="Shop Products">Products</a></li>{% for page in pages.all %}<li>{{ page | link_to }}</li>{% endfor %}<li><a href="/contact" title="Contact Us">Contact</a></li>{% if theme.show_search %}<li id="search"><form id="search-form" name="search" action="/products" method="get"><a href="#search-form">Search</a><input id="search-input" name="search" type="text"></form></li>{% endif %}</ul> 
-    		</nav>
-          {% if theme.twitter_url != blank or theme.facebook_url != blank or theme.instagram_url != blank or theme.tumblr_url != blank or store.website != blank %}
-            <ul id="social_links">
-              {% if theme.twitter_url != blank %}
-                <li><a title="Twitter" href="{{ theme.twitter_url }}">Twitter</a></li>
-              {% endif %}
-              {% if theme.facebook_url != blank %}
-                <li><a title="Facebook" href="{{ theme.facebook_url }}">Facebook</a></li>
-              {% endif %}
-              {% if theme.instagram_url != blank %}
-                <li><a title="Instagram" href="{{ theme.instagram_url }}">Instagram</a></li>
-              {% endif %}
-              {% if theme.tumblr_url != blank %}
-                <li><a title="Tumblr" href="{{ theme.tumblr_url }}">Tumblr</a></li>
-              {% endif %}
-              {% if store.website != blank %}
-      		  		<li id="website"><a href="{{ store.website }}">{{ store.website | replace: "http://", "" | replace: "www.", "" }}</a></li>
-      		  	{% endif %}		
-            </ul>
-          {% endif %}		  
-  			<div id="badge">{{ bigcartel_credit }}</div>     
-    	</div>
-    </footer>   
-  </body>
+<!--The following script tag downloads a font from the Adobe Edge Web Fonts server for use within the web page. We recommend that you do not modify it.-->
+<script>var __adobewebfontsappname__="dreamweaver"</script>
+<script src="http://use.edgefonts.net/source-sans-pro:n2:default.js" type="text/javascript"></script>
+<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+<!-- Main Container -->
+<div class="container"> 
+  <!-- Navigation -->
+  <header> <a href="">
+    <h4 class="logo">LIGHT</h4>
+    </a>
+    <nav>
+      <ul>
+        <li><a href="#hero">HOME</a></li>
+        <li><a href="#about">ABOUT</a></li>
+        <li> <a href="#contact">CONTACT</a></li>
+      </ul>
+    </nav>
+  </header>
+  <!-- Hero Section -->
+  <section class="hero" id="hero">
+    <h2 class="hero_header">HERO <span class="light">LIGHT</span></h2>
+    <p class="tagline">Light is a simple one page website</p>
+  </section>
+  <!-- About Section -->
+  <section class="about" id="about">
+    <h2 class="hidden">About</h2>
+    <p class="text_column">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. </p>
+    <p class="text_column">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. </p>
+    <p class="text_column">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. </p>
+  </section>
+  <!-- Stats Gallery Section -->
+  <div class="gallery">
+    <div class="thumbnail">
+      <h1 class="stats">1500</h1>
+      <h4>TITLE</h4>
+      <p>One line description</p>
+    </div>
+    <div class="thumbnail">
+      <h1 class="stats">2300</h1>
+      <h4>TITLE</h4>
+      <p>One line description</p>
+    </div>
+    <div class="thumbnail">
+      <h1 class="stats">7500</h1>
+      <h4>TITLE</h4>
+      <p>One line description</p>
+    </div>
+    <div class="thumbnail">
+      <h1 class="stats">9870</h1>
+      <h4>TITLE</h4>
+      <p>One line description</p>
+    </div>
+  </div>
+  <!-- Parallax Section -->
+  <section class="banner">
+    <h2 class="parallax">PARALLAX HERO</h2>
+    <p class="parallax_description">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam</p>
+  </section>
+  <!-- More Info Section -->
+  <footer>
+    <article class="footer_column">
+      <h3>ABOUT</h3>
+      <img src="../images/placeholder.jpg" alt="" width="400" height="200" class="cards"/>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla </p>
+    </article>
+    <article class="footer_column">
+      <h3>LOCATION</h3>
+      <img src="../images/placeholder.jpg" alt="" width="400" height="200" class="cards"/>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla </p>
+    </article>
+  </footer>
+  <!-- Footer Section -->
+  <section class="footer_banner" id="contact">
+    <h2 class="hidden">Footer Banner Section </h2>
+    <p class="hero_header">FOR THE LATEST NEWS &amp; UPDATES</p>
+    <div class="button">subscribe</div>
+  </section>
+  <!-- Copyrights Section -->
+  <div class="copyright">&copy;2015 - <strong>Light Theme</strong></div>
+</div>
+<!-- Main Container Ends -->
+</body>
 </html>
