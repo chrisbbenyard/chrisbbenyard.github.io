@@ -4556,7 +4556,7 @@ small {
 }
 
 .card.horizontal {
-min-width:150px;
+min-width:280px;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
