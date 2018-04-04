@@ -4913,7 +4913,7 @@ min-width:280px;
   border: none;
   border-radius: 2px;
   display: inline-block;
-width:250px;
+  width:250px;
   height: 36px;
   line-height: 36px;
   padding: 0 2rem;
@@ -5060,7 +5060,7 @@ button.btn-floating {
   left: 23px;
   bottom: 23px;
   padding-top: 15px;
-  margin-bottom: 0;
+  margin-bottom: 85;
   z-index: 998;
 }
 
