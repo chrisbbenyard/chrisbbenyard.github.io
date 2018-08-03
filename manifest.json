@@ -8,27 +8,27 @@
   "short_name": "Fair & Glorious",
   "icons": [
         {
-            "src": "/android-chrome-192x192.png",
+            "src": "https://chrisbbenyard.github.io/f/android-chrome-192x192.png",
             "sizes": "192x192",
             "type": "image/png"
         },
         {
-            "src": "/android-chrome-256x256.png",
+            "src": "https://chrisbbenyard.github.io/f/android-chrome-256x256.png",
             "sizes": "256x256",
             "type": "image/png"
         },
         {
-            "src": "http://chrisbbenyard.github.io/fngappicon.png",
+            "src": "https://chrisbbenyard.github.io/fngappicon.png",
             "sizes": "64x64",
             "type": "image/png"
          },
          {
-            "src": "http://chrisbbenyard.github.io/fngappicon.png",
+            "src": "https://chrisbbenyard.github.io/fngappicon.png",
             "sizes": "64x64"
             "type": "image/png"
         },
         {
-            "src": "http://chrisbbenyard.github.io/fngappicon.png",
+            "src": "https://chrisbbenyard.github.io/fngappicon.png",
             "sizes": "128x128"
             "type": "image/png"
         }
