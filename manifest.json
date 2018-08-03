@@ -34,8 +34,8 @@
         }
   ],
   "scope": "/racer/",
-  "start_url": "http://www.fairandglorious.com/",
-  "display": "fullscreen",
+  "start_url": "https://www.fairandglorious.com/",
+  "display": "standalone",
   "orientation": "landscape",
   "theme_color": "#757575",
   "background_color": "#757575",
