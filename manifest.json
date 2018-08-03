@@ -1,28 +1,43 @@
+
+
 {
   "lang": "en",
   "dir": "ltr",
   "name": "Fair & Glorious",
   "description": "An Atlanta based street wear brand.",
   "short_name": "Fair & Glorious",
-  "icons": [{
-    "src": "http://chrisbbenyard.github.io/fngappicon.png",
-    "sizes": "64x64",
-    "type": "image/png"
-  },{
-    "src": "http://chrisbbenyard.github.io/fngappicon.png",
-    "sizes": "64x64"
-    "type": "image/png"
-  }, {
-    "src": "http://chrisbbenyard.github.io/fngappicon.png",
-    "sizes": "128x128"
-    "type": "image/png"
-  }
+  "icons": [
+        {
+            "src": "/android-chrome-192x192.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "/android-chrome-256x256.png",
+            "sizes": "256x256",
+            "type": "image/png"
+        },
+        {
+            "src": "http://chrisbbenyard.github.io/fngappicon.png",
+            "sizes": "64x64",
+            "type": "image/png"
+         },
+         {
+            "src": "http://chrisbbenyard.github.io/fngappicon.png",
+            "sizes": "64x64"
+            "type": "image/png"
+        },
+        {
+            "src": "http://chrisbbenyard.github.io/fngappicon.png",
+            "sizes": "128x128"
+            "type": "image/png"
+        }
   ],
   "scope": "/racer/",
-  "start_url": "http://www.fairandglorious.com/home.html",
+  "start_url": "http://www.fairandglorious.com/",
   "display": "fullscreen",
   "orientation": "landscape",
-  "theme_color": "#000000",
+  "theme_color": "#757575",
   "background_color": "#757575",
   "serviceworker": {
     "src": "sw.js",
