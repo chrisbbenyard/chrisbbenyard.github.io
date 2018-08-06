@@ -135,7 +135,7 @@ html, body {
           box-sizing: border-box;
   
   background-color: #757575;
-background-image: url("https://www.transparenttextures.com/patterns/iron-grip.png");
+background-image: url("https://chrisbbenyard.github.io/iron-grip.png");
   }
 
 ::-moz-selection{ background: black; color:#757575; }
@@ -197,7 +197,7 @@ ul:not(.browser-default) > li {
   justify-content center;
   align:-items center;
   display: flex;
-  background-image: url("https://www.transparenttextures.com/patterns/iron-grip.png"); 
+  background-image: url("https://chrisbbenyard.github.io/iron-grip.png"); 
   background-color: #757575;
     }
 
@@ -1372,7 +1372,7 @@ h1, h2, h3, h4, h5, h6,
 body,
 #cart_page #content {
   background-color: #757575;
-background-image: url("https://www.transparenttextures.com/patterns/iron-grip.png");
+background-image: url("https://chrisbbenyard.github.io/iron-grip.png");
   /* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */}
 
 #cart_page #site_header,
@@ -1384,7 +1384,7 @@ background-image: url("https://www.transparenttextures.com/patterns/iron-grip.pn
 .custom #content,
 #cart_summary, {
     background-color: #757575;
-background-image: url("https://www.transparenttextures.com/patterns/iron-grip.png");
+background-image: url("https://chrisbbenyard.github.io/iron-grip.png");
 /* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
  }
 
@@ -2099,7 +2099,7 @@ a:active,
     padding-bottom: px;
     overflow: hidden;
     background-color: #757575;
-background-image: url("https://www.transparenttextures.com/patterns/iron-grip.png");
+background-image: url("https://chrisbbenyard.github.io/iron-grip.png");
     text-transform: uppercase;
 }
 
@@ -2110,7 +2110,7 @@ background-image: url("https://www.transparenttextures.com/patterns/iron-grip.pn
 #cart-form {
   padding: 0 15px;
   
-background-image: url("https://www.transparenttextures.com/patterns/iron-grip.png");
+background-image: url("https://chrisbbenyard.github.io/iron-grip.png");
   }
 
 #cart-form.no_options {
@@ -2122,7 +2122,7 @@ background-image: url("https://www.transparenttextures.com/patterns/iron-grip.pn
   float: left;
   width: 580px;
    background-color: #757575;
-background-image: url("https://www.transparenttextures.com/patterns/iron-grip.png");
+background-image: url("https://chrisbbenyard.github.io/iron-grip.png");
 }
 
 #cart_items {
@@ -2197,7 +2197,7 @@ background-image: url("https://www.transparenttextures.com/patterns/iron-grip.pn
   width: 83%;
   margin: 0 0 3px 0;
    background-color: #757575;
-background-image: url("https://www.transparenttextures.com/patterns/iron-grip.png");
+background-image: url("https://chrisbbenyard.github.io/iron-grip.png");
   }
 
 #cart_items li .item_price {
@@ -2335,7 +2335,7 @@ background-image: url("https://www.transparenttextures.com/patterns/iron-grip.pn
 .section.summary .receipt,
 .section.summary .pay {
    background-color: #757575;
-background-image: url("https://www.transparenttextures.com/patterns/iron-grip.png");
+background-image: url("https://chrisbbenyard.github.io/iron-grip.png");
   padding-left: 0;
   padding-right: 0;
 }
@@ -2343,13 +2343,13 @@ background-image: url("https://www.transparenttextures.com/patterns/iron-grip.pn
 .section.summary.active .receipt li {
  
   background-color: #757575;
-background-image: url("https://www.transparenttextures.com/patterns/iron-grip.png");
+background-image: url("https://chrisbbenyard.github.io/iron-grip.png");
   color: #ffffff;
 }
 
 .section.summary .receipt {
   background-color: #757575;
-background-image: url("https://www.transparenttextures.com/patterns/iron-grip.png");
+background-image: url("https://chrisbbenyard.github.io/iron-grip.png");
   padding-bottom: 30px;
 }
 
@@ -2357,12 +2357,12 @@ background-image: url("https://www.transparenttextures.com/patterns/iron-grip.pn
   border-bottom-color: #ffffff;
   border-bottom-width: 0px;
     background-color: #757575;
-background-image: url("https://www.transparenttextures.com/patterns/iron-grip.png");
+background-image: url("https://chrisbbenyard.github.io/iron-grip.png");
 }
 
 .section.summary .receipt .total {
   background-color: #757575;
-background-image: url("https://www.transparenttextures.com/patterns/iron-grip.png");
+background-image: url("https://chrisbbenyard.github.io/iron-grip.png");
   border-top-color: #ffffff;
   border-top-width: 2px;
 }
@@ -2371,7 +2371,7 @@ background-image: url("https://www.transparenttextures.com/patterns/iron-grip.pn
 .section.summary .receipt {
 
   background-color: #757575;
-background-image: url("https://www.transparenttextures.com/patterns/iron-grip.png");
+background-image: url("https://chrisbbenyard.github.io/iron-grip.png");
   color:#757575;
   font-size: 13px;
 }
@@ -2380,7 +2380,7 @@ background-image: url("https://www.transparenttextures.com/patterns/iron-grip.pn
 .section.summary table td.price,
 .section.summary .pending {
  background-color: #757575;
-background-image: url("https://www.transparenttextures.com/patterns/iron-grip.png");
+background-image: url("https://chrisbbenyard.github.io/iron-grip.png");
   color: #757575;
 }
 
@@ -2388,12 +2388,12 @@ background-image: url("https://www.transparenttextures.com/patterns/iron-grip.pn
   border-top-color: #ffffff;
   border-top-width: 1px;
     background-color: #757575;
-background-image: url("https://www.transparenttextures.com/patterns/iron-grip.png");
+background-image: url("https://chrisbbenyard.github.io/iron-grip.png");
 }
 
 .section.summary .pay {
   background-color: #757575;
-background-image: url("https://www.transparenttextures.com/patterns/iron-grip.png");  border-top-color: rgba(100.00%, 100.00%, 100.00%, 0.25);
+background-image: url("https://chrisbbenyard.github.io/iron-grip.png");  border-top-color: rgba(100.00%, 100.00%, 100.00%, 0.25);
   border-top-style: solid;
   border-top-width: 1px;
   text-align: center;
@@ -2404,18 +2404,18 @@ background-image: url("https://www.transparenttextures.com/patterns/iron-grip.pn
   width: 250px;
   padding-top: 10px;
   background-color: #757575;
-background-image: url("https://www.transparenttextures.com/patterns/iron-grip.png");  }
+background-image: url("https://chrisbbenyard.github.io/iron-grip.png");  }
 
 #cart_summary ul {
   padding: 0 13px;
    background-color: #757575;
-background-image: url("https://www.transparenttextures.com/patterns/iron-grip.png");
+background-image: url("https://chrisbbenyard.github.io/iron-grip.png");
   }
 
 #cart_summary li {
   overflow: hidden;
    background-color: #757575;
-background-image: url("https://www.transparenttextures.com/patterns/iron-grip.png");
+background-image: url("https://chrisbbenyard.github.io/iron-grip.png");
   padding: 12px 0 4px;
   border-bottom: 1px solid #dddddd;
   }
@@ -2434,7 +2434,7 @@ background-image: url("https://www.transparenttextures.com/patterns/iron-grip.pn
 #cart_summary li span span {
   float: none;
       background-color: #757575;
-background-image: url("https://www.transparenttextures.com/patterns/iron-grip.png");
+background-image: url("https://chrisbbenyard.github.io/iron-grip.png");
     text-transform: uppercase;
   }
 
@@ -2446,7 +2446,7 @@ background-image: url("https://www.transparenttextures.com/patterns/iron-grip.pn
   padding-top: 20px;
   border: none;
    background-color: #757575;
-background-image: url("https://www.transparenttextures.com/patterns/iron-grip.png");
+background-image: url("https://chrisbbenyard.github.io/iron-grip.png");
   }
 
 #cart_summary #cart_total h3 {
@@ -2492,7 +2492,7 @@ background-image: url("https://www.transparenttextures.com/patterns/iron-grip.pn
 #success_page #content .canvas {
   text-align: center;
     background-color: #757575;
-background-image: url("https://www.transparenttextures.com/patterns/iron-grip.png");
+background-image: url("https://chrisbbenyard.github.io/iron-grip.png");
   }
 
 #success_page #content .canvas h1 {
@@ -2507,7 +2507,7 @@ background-image: url("https://www.transparenttextures.com/patterns/iron-grip.pn
   font-style: italic;
    text-shadow: 0 1px 2px rgba(0,0,0,.7);
     background-color: #757575;
-background-image: url("https://www.transparenttextures.com/patterns/iron-grip.png");
+background-image: url("https://chrisbbenyard.github.io/iron-grip.png");
   }
 
 #success_page #content .canvas a {
@@ -2525,7 +2525,7 @@ background-image: url("https://www.transparenttextures.com/patterns/iron-grip.pn
   padding: 7px 15px 7px;
   margin: 5px auto 0;
     background-color:#757575;
-background-image: url("https://www.transparenttextures.com/patterns/iron-grip.png");
+background-image: url("https://chrisbbenyard.github.io/iron-grip.png");
   text-align: center;
   border: 0px solid {{ theme.header_text }};
     
@@ -2533,7 +2533,7 @@ background-image: url("https://www.transparenttextures.com/patterns/iron-grip.pn
   
 #checkout_page .canvas {
   background-color:#757575;
-background-image: url("https://www.transparenttextures.com/patterns/iron-grip.png");
+background-image: url("https://chrisbbenyard.github.io/iron-grip.png");
   padding: 12px 15px 12px;
   }  
 
@@ -2541,7 +2541,7 @@ background-image: url("https://www.transparenttextures.com/patterns/iron-grip.pn
   font-size: 22px;
   font-weight: normal;
       background-color: #757575;
-background-image: url("https://www.transparenttextures.com/patterns/iron-grip.png");
+background-image: url("https://chrisbbenyard.github.io/iron-grip.png");
     text-transform: uppercase;
   line-height: 1.3em;
   }
@@ -4358,6 +4358,7 @@ h2 {
 	-moz-transition: all 0.3s;
 	transition: all 0.3s;
 }
+
 
 .button:hover {
 	background: rgb(23,26,28);
