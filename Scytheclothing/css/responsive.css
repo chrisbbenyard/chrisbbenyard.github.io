@@ -16,11 +16,6 @@
 }
 
 
-}
-
-/* Normal desktop :992px. */
-@media (min-width: 992px) and (max-width: 1169px) {
-
 .banner-left {
   padding-right: 30px;
 }
