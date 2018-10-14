@@ -1,26 +1,10 @@
 /* Large Devices, Wide Screens (1400-1920) */
 @media only screen and (min-width : 1400px) {
 
-.slider-style-2 .layer-1 {
-  margin-right: 10%;
-  width: 38%;
-}
-.banner-2 .banner-brief {
-  width: 45%;
-}
 .banner-left {
   width: 29.1%;
-}
-.slider-right {
-  width: 70.9%;
-}
-
-/* Normal desktop :992px. */
-@media (min-width: 420px) and (max-width: 3169px) {
-
-.banner-left {
   padding-right: 30px;
-}
+  }
 .banner-2 {
   margin-top: 28px;
 }
@@ -29,6 +13,7 @@
   right: 10px;
 }
 .banner-2 .banner-brief {
+  width: 45%;
   bottom: 6px;
   padding-right: 10px;
   text-align: right;
@@ -36,7 +21,124 @@
   transform: inherit;
 }
 /* slider */
-.slider-title3 {
+
+.slider-right {
+  width: 70.9%;
+}
+  .slider-title3 {
+  font-size: 18px;
+  line-height: 26px;
+}
+.slider-title1 {
+  font-size: 40px;
+  line-height: 50px;
+}
+.slider-title2 {
+  font-size: 20px;
+  line-height: 30px;
+}
+/* product Arrow */
+.cus-row-30 {
+  margin-left: 0;
+  margin-right: 0;
+}
+.arrow-left-right .slick-arrow {
+  left: 15px;
+}
+.arrow-left-right .slick-next.slick-arrow {
+  right: 15px;
+}
+/* blog */
+.like-share a {
+  margin-right: 15px;
+}
+/* subscribe */
+.subscribe input {
+  width: 65%;
+}
+/* home-2 */
+.like-share a {
+  margin-right: 8px;
+}
+/* Shop */
+.widget-info {
+  padding: 20px;
+}
+.shop-list .product-img {
+  width: 35%;
+}
+.shop-list .product-info {
+  width: 65%;
+}
+.shop-list .product-description p {
+  margin-bottom: 20px;
+}
+/* Single-product */
+.single-pro-info .single-big-photo {
+  width: 40%;
+}
+.shop-list.single-pro-info .product-info {
+  width: 60%;
+}
+.single-pro-info.no-sidebar .single-big-photo {
+  width: 38%;
+}
+.single-pro-info.no-sidebar .product-info {
+  width: 62%;
+}
+/* sidebar-product */
+.sidebar-product .single-product {
+  float: left;
+  margin-bottom: 10px;
+  padding: 0;
+}
+.sidebar-product .post-title, .sidebar-product .pro-price {
+  font-size: 13px;
+}
+/* about */
+.about-brief {
+  margin-left: -200px;
+  margin-top: 22px;
+  min-height: 310px;
+  padding: 10px 30px;
+}
+.about-brief .title-1 {
+  margin-bottom: 15px;
+}
+.widget-title h4 {
+  padding: 0 20px;
+}
+
+
+
+/* Normal desktop :992px. */
+@media (min-width: 420px) and (max-width: 3169px) {
+
+.banner-left {
+  width: 29.1%;
+  padding-right: 30px;
+  }
+.banner-2 {
+  margin-top: 28px;
+}
+.banner-1 .button-one {
+  bottom: 10px;
+  right: 10px;
+}
+.banner-2 .banner-brief {
+  width: 45%;
+  bottom: 6px;
+  padding-right: 10px;
+  text-align: right;
+  top: auto;
+  transform: inherit;
+}
+/* slider */
+
+.slider-right {
+  width: 70.9%;
+}
+  .slider-title3 {
   font-size: 18px;
   line-height: 26px;
 }
