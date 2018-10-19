@@ -121,6 +121,7 @@
   border-bottom: 26px solid transparent;
   border-left: 35px solid #ffffff;
   border-top: 26px solid transparent;
+background-image: url("https://www.transparenttextures.com/patterns/brilliant.png");
   content: "";
   left: 0;
   position: absolute;
@@ -131,6 +132,7 @@
 .nivo-directionNav a:hover::after {
   border-bottom: 26px solid transparent;
   border-left: 35px solid #ffffff;
+background-image: url("https://www.transparenttextures.com/patterns/brilliant.png");
   border-top: 26px solid transparent;
 }
 .nivo-directionNav a.nivo-nextNav::after {
