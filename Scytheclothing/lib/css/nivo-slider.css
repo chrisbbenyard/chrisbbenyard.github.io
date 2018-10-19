@@ -137,7 +137,7 @@
   transform: rotate(180deg);
 }
 .nivo-prevNav {
-	left:0px;
+	left:-5px;
 }
 .nivo-nextNav {
   padding-right: 3px;
