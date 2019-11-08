@@ -1,108 +1,893 @@
-<!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml">
-
 <head>
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-	<title>Responsive Auto-height - fullPage.js</title>
-	<meta name="author" content="Alvaro Trigo Lopez" />
-	<meta name="description" content="fullPage full-screen navigation and sections control menu." />
-	<meta name="keywords"  content="fullpage,jquery,demo,screen,fullscreen,navigation,control arrows, dots" />
-	<meta name="Resource-type" content="Document" />
+
+     <title>Fair & Glorious</title>
+      <!-- Startup configuration -->
+<link rel="manifest" href="../../../chrisbbenyard.github.io/chrisbbenyard.github.io/manifest.json">
+<!-- Fallback application metadata for legacy browsers -->
+<meta name="application-name" content="Fair & Glorious">
+<link rel="icon" sizes="16x16 32x32 48x48" href="http://www.iconj.com/ico/1/7/17kbofimez.ico">
+<link rel="icon" sizes="512x512" href="http://chrisbbenyard.github.io/fngappicon.png">
+         
+    <meta property="og:image" content="http://chrisbbenyard.github.io/fngappicon.png" />
+         
+        
+   
+      <link rel="apple-touch-icon" href="http://chrisbbenyard.github.io/fngappicon.png" /> 
+      <link rel="apple-touch-icon" sizes="76x76" href="http://chrisbbenyard.github.io/fngappicon.png" /> 
+      <link rel="apple-touch-icon" sizes="120x120" href="http://chrisbbenyard.github.io/fngappicon.png" />
+      <link rel="apple-touch-icon" sizes="152x152" href="http://chrisbbenyard.github.io/fngappicon.png" />
+           <link rel="apple-touch-icon" sizes="256x256" href="http://chrisbbenyard.github.io/fngappicon.png" />
+   
+             
+         
+         
+         <link rel="apple-touch-startup-image" href="/launch.png">      
+         
+    <meta name="apple-mobile-web-app-title" content="Fair & Glorious">
+         
+            <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes"> 
+   
+         
+         
+         <meta name="apple-mobile-web-app-status-bar-style" content="black" />     
+  
+      <meta name="description" content="An Atlanta based street wear brand.">
+     
+     <link rel="shortcut icon" href="http://www.iconj.com/ico/1/7/17kbofimez.ico" type="image/x-icon" />
+  
+    <meta name="viewport" content="user-scalable=no">
+              
+<meta name="robots" content="noindex">
+<meta name="googlebot" content="noindex">
+    
+         
+    <link rel="stylesheet" href="{{ theme | theme_css_url }}">
+         
+    <script src="{{ theme | theme_js_url }}" type="text/javascript"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js" type="text/javascript"></script>
+  
+       
+       
+    {{ head_content }}
+  
+    </head> 
+
+<style>
+  
+  /* CSS reset */
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,p,blockquote,th,td { 
+	margin:0;
+	padding:0;
+}
+html,body {
+	margin:0
+
+	padding:0;
+}
+   .overla-content {
+    position: relative;
+    top: 30%;
+    width: 100%;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.overla a {
+           display:inline;
+	position:absolute;
+	right:50px;
+	top:35px;
+	z-index:999;
+    font-size: 30px;
+    color: #ffffff;
+     transition: 0.3s;
+}
+
+.overla a:hover, .overlay a:focus {
+    color: #757575;
+}
 
 
-	<link rel="stylesheet" type="text/css" href="/css/fullpage.css" />
-	<link rel="stylesheet" type="text/css" href="examples.css" />
-	<style>
+.overla .closebtn {
+    position: absolute;
+    top: 3%;
+    right: 45px;
+    font-size: 80px;
+}
+          
+.overla .button2 {
+  padding: 5px 0px;
+  width:auto;
+  cursor: pointer;
+  font-size: 16px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  background: transparent;
+  -webkit-font-smoothing: subpixel-antialiased;
+  -webkit-transition: all 0 ease-in;
+  -moz-transition: all 0 ease-in;
+  -ms-transition: all 0 ease-in;
+  -o-transition: all 0 ease-in;
+  transition: all 0 ease-in;
+    text-shadow: 0 1px 2px rgba(0,0,0,.7);
+  }
+.button2:hover { 
+  color: #757575;
+}
+      .overla    .button2:hover { 
+  color: #757575;
+  }
+    .overla {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: rgb(7,7,7);
+    background-color: rgba(7,7,7, 0.9);
+    overflow-x: hidden;
+    transition: 0.5s;
+}
 
-	/* Style for our header texts
-	* --------------------------------------- */
-	h1{
-		font-size: 5em;
-		font-family: arial,helvetica;
-		color: #fff;
-		margin:0;
+
+
+
+/* --------------------------------------------------------------
+  Site Footer
+-------------------------------------------------------------- */
+
+           
+#footer {	
+  position:absolute;
+   top:100%;
+   width:100%;
+   height:50px; 
+  transform: translate(-50%, -50%);
+   background:transparent;
+
+}
+
+
+@media screen and (max-height: 250px) {
+  .overla a {font-size: 30px}
+  .overla .closebtn {
+    font-size: 40px;
+    top: 15px;
+    right: 35px;
+  }
+}
+ /**
+ * Footer Styles
+ */
+         
+.topsie {
+  
+          position:fixed;
+   top:3%;
+   width:100%;
+   height:50px;   /* Height of the footer */
+   background:transparent;
+}
+ 
+
+          }
+table {
+	border-collapse:collapse;
+	border-spacing:0;
+}
+fieldset,img { 
+	border:0;
+}
+input{
+	border:1px solid #b0b0b0;
+	padding:3px 5px 4px;
+	color:#979797;
+	width:190px;
+}
+address,caption,cite,code,dfn,th,var {
+	font-style:normal;
+	font-weight:normal;
+}
+ol,ul {
+	list-style:none;
+}
+caption,th {
+	text-align:left;
+}
+h1,h2,h3,h4,h5,h6 {
+	font-size:100%;
+	font-weight:normal;
+}
+q:before,q:after {
+	content:'';
+}
+abbr,acronym { border:0;
+}
+/* General Demo Style */
+body{
+  font-family: "helvetica neue", helvetica;
+	background: #000;
+	font-weight: 400;
+	font-size: 15px;
+	color: #aa3e03;
+	overflow-y: scroll;
+	overflow-x: hidden;
+  background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR4nGP6zwAAAgcBApocMXEAAAAASUVORK5CYII=");
+   
+}
+.ie7 body{
+	overflow:hidden;
+}
+a{
+	color: #333;
+	text-decoration: none;
+}
+.container{
+	position: relative;
+	text-align: center;
+}
+.clr{
+	clear: both;
+}
+.container > header{
+	padding: 30px 30px 10px 20px;
+	margin: 0px 20px 10px 20px;
+	position: relative;
+	display: block;
+	text-shadow: 1px 1px 1px rgba(0,0,0,0.2);
+    text-align: left;
+}
+.container > header h1{
+  font-family: "helvetica neue", helvetica;
+	font-size: 35px;
+	line-height: 35px;
+	position: relative;
+	font-weight: 400;
+	color: #fff;
+	text-shadow: 1px 1px 1px rgba(0,0,0,0.3);
+    padding: 0px 0px 5px 0px;
+}
+.container > header h1 span{
+
+}
+.container > header h2, p.info{
+	font-size: 16px;
+	font-style: italic;
+	color: #f8f8f8;
+	text-shadow: 1px 1px 1px rgba(0,0,0,0.6);
+}
+
+.slideshow,
+.slideshow:after {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    left: 0px;
+    z-index: 0;
+  background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR4nGP6zwAAAgcBApocMXEAAAAASUVORK5CYII=");
+   
+}
+
+  
+ 
+.slideshow li span {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    color: transparent;
+   background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR4nGP6zwAAAgcBApocMXEAAAAASUVORK5CYII=");
+    background-size: cover;
+    background-position: 50% 50%;
+    background-repeat: none;
+    opacity: 0;
+    z-index: 0;
+	-webkit-backface-visibility: hidden;
+    -webkit-animation: imageAnimation 36s linear infinite 0s;
+    -moz-animation: imageAnimation 36s linear infinite 0s;
+    -o-animation: imageAnimation 36s linear infinite 0s;
+    -ms-animation: imageAnimation 36s linear infinite 0s;
+    animation: imageAnimation 36s linear infinite 0s;
+}
+.slideshow li div {
+    z-index: 1000;
+    position: absolute;
+    bottom: 30px;
+    left: 0px;
+    width: 100%;
+    text-align: center;
+  background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR4nGP6zwAAAgcBApocMXEAAAAASUVORK5CYII=");
+    opacity: 50;
+    -webkit-animation: titleAnimation 36s linear infinite 0s;
+    -moz-animation: titleAnimation 36s linear infinite 0s;
+    -o-animation: titleAnimation 36s linear infinite 0s;
+    -ms-animation: titleAnimation 36s linear infinite 0s;
+    animation: titleAnimation 36s linear infinite 0s;
+}
+.slideshow li div h3 {
+  font-family: "helvetica neue", helvetica;
+  text-transform: uppercase;
+  font-size: 80px;
+  padding: 0;
+  line-height: 200px;
+	color: rgba(255,255,255, 0.8);
+}
+.slideshow li:nth-child(1) span { background-image: url(http://i65.tinypic.com/2w70ps2.jpg) }
+.slideshow li:nth-child(2) span {
+    background-image: url(http://i64.tinypic.com/281g3m8.jpg);
+    -webkit-animation-delay: 6s;
+    -moz-animation-delay: 6s;
+    -o-animation-delay: 6s;
+    -ms-animation-delay: 6s;
+    animation-delay: 6s;
+}
+.slideshow li:nth-child(3) span {
+    background-image: url('http://i68.tinypic.com/1zn2x76.jpg');
+    -webkit-animation-delay: 12s;
+    -moz-animation-delay: 12s;
+    -o-animation-delay: 12s;
+    -ms-animation-delay: 12s;
+    animation-delay: 12s;
+}
+.slideshow li:nth-child(4) span {
+    background-image: url('http://i65.tinypic.com/6866uv.jpg');
+    -webkit-animation-delay: 18s;
+    -moz-animation-delay: 18s;
+    -o-animation-delay: 18s;
+    -ms-animation-delay: 18s;
+    animation-delay: 18s;
+}
+.slideshow li:nth-child(5) span {
+    background-image: url('http://i65.tinypic.com/16hsocj.jpg');
+    -webkit-animation-delay: 24s;
+    -moz-animation-delay: 24s;
+    -o-animation-delay: 24s;
+    -ms-animation-delay: 24s;
+    animation-delay: 24s;
+}
+.slideshow li:nth-child(6) span {
+    background-image: url('http://i67.tinypic.com/2ry3pc0.jpg');
+    -webkit-animation-delay: 30s;
+    -moz-animation-delay: 30s;
+    -o-animation-delay: 30s;
+    -ms-animation-delay: 30s;
+    animation-delay: 30s;
+}
+.slideshow li:nth-child(2) div {
+    -webkit-animation-delay: 6s;
+    -moz-animation-delay: 6s;
+    -o-animation-delay: 6s;
+    -ms-animation-delay: 6s;
+    animation-delay: 6s;
+}
+.slideshow li:nth-child(3) div {
+    -webkit-animation-delay: 12s;
+    -moz-animation-delay: 12s;
+    -o-animation-delay: 12s;
+    -ms-animation-delay: 12s;
+    animation-delay: 12s;
+}
+.slideshow li:nth-child(4) div {
+    -webkit-animation-delay: 18s;
+    -moz-animation-delay: 18s;
+    -o-animation-delay: 18s;
+    -ms-animation-delay: 18s;
+    animation-delay: 18s;
+}
+.slideshow li:nth-child(5) div {
+    -webkit-animation-delay: 24s;
+    -moz-animation-delay: 24s;
+    -o-animation-delay: 24s;
+    -ms-animation-delay: 24s;
+    animation-delay: 24s;
+}
+.slideshow li:nth-child(6) div {
+    -webkit-animation-delay: 30s;
+    -moz-animation-delay: 30s;
+    -o-animation-delay: 30s;
+    -ms-animation-delay: 30s;
+    animation-delay: 30s;
+}
+/* Animation for the slideshow images */
+@-webkit-keyframes imageAnimation { 
+	0% {
+	    opacity: 0;
+	    -webkit-animation-timing-function: ease-in;
 	}
-	.intro p{
-		color: #fff;
+	8% {
+	    opacity: 1;
+	    -webkit-transform: scale(1.05);
+	    -webkit-animation-timing-function: ease-out;
 	}
-
-	/* Centered texts in each section
-	* --------------------------------------- */
-	.section{
-		text-align:center;
+	17% {
+	    opacity: 1;
+	    -webkit-transform: scale(1.1);
 	}
-
-	/* Bottom menu
-	* --------------------------------------- */
-	#infoMenu li a {
-		color: #fff;
+	25% {
+	    opacity: 0;
+	    -webkit-transform: scale(1.1);
 	}
-	</style>
+	100% { opacity: 0 }
+}
+@-moz-keyframes imageAnimation { 
+	0% {
+	    opacity: 0;
+	    -moz-animation-timing-function: ease-in;
+	}
+	8% {
+	    opacity: 1;
+	    -moz-transform: scale(1.05);
+	    -moz-animation-timing-function: ease-out;
+	}
+	17% {
+	    opacity: 1;
+	    -moz-transform: scale(1.1);
+	}
+	25% {
+	    opacity: 0;
+	    -moz-transform: scale(1.1);
+	}
+	100% { opacity: 0 }
+}
+@-o-keyframes imageAnimation { 
+	0% {
+	    opacity: 0;
+	    -o-animation-timing-function: ease-in;
+	}
+	8% {
+	    opacity: 1;
+	    -o-transform: scale(1.05);
+	    -o-animation-timing-function: ease-out;
+	}
+	17% {
+	    opacity: 1;
+	    -o-transform: scale(1.1);
+	}
+	25% {
+	    opacity: 0;
+	    -o-transform: scale(1.1);
+	}
+	100% { opacity: 0 }
+}
+@-ms-keyframes imageAnimation { 
+	0% {
+	    opacity: 0;
+	    -ms-animation-timing-function: ease-in;
+	}
+	8% {
+	    opacity: 1;
+	    -ms-transform: scale(1.05);
+	    -ms-animation-timing-function: ease-out;
+	}
+	17% {
+	    opacity: 1;
+	    -ms-transform: scale(1.1);
+	}
+	25% {
+	    opacity: 0;
+	    -ms-transform: scale(1.1);
+	}
+	100% { opacity: 0 }
+}
+@keyframes imageAnimation { 
+	0% {
+	    opacity: 0;
+	    animation-timing-function: ease-in;
+	}
+	8% {
+	    opacity: 1;
+	    transform: scale(1.05);
+	    animation-timing-function: ease-out;
+	}
+	17% {
+	    opacity: 1;
+	    transform: scale(1.1);
+	}
+	25% {
+	    opacity: 0;
+	    transform: scale(1.1);
+	}
+	100% { opacity: 0 }
+}
+/* Animation for the title */
+@-webkit-keyframes titleAnimation { 
+	0% {
+	    opacity: 0;
+	    -webkit-transform: translateY(200px);
+	}
+	8% {
+	    opacity: 1;
+	    -webkit-transform: translateY(0px);
+	}
+	17% {
+	    opacity: 1;
+	    -webkit-transform: scale(1);
+	}
+	19% { opacity: 0 }
+	25% {
+	    opacity: 0;
+	    -webkit-transform: scale(10);
+	}
+	100% { opacity: 0 }
+}
+@-moz-keyframes titleAnimation { 
+	0% {
+	    opacity: 0;
+	    -moz-transform: translateY(200px);
+	}
+	8% {
+	    opacity: 1;
+	    -moz-transform: translateY(0px);
+	}
+	17% {
+	    opacity: 1;
+	    -moz-transform: scale(1);
+	}
+	19% { opacity: 0 }
+	25% {
+	    opacity: 0;
+	    -moz-transform: scale(10);
+	}
+	100% { opacity: 0 }
+}
+@-o-keyframes titleAnimation { 
+	0% {
+	    opacity: 0;
+	    -o-transform: translateY(200px);
+	}
+	8% {
+	    opacity: 1;
+	    -o-transform: translateY(0px);
+	}
+	17% {
+	    opacity: 1;
+	    -o-transform: scale(1);
+	}
+	19% { opacity: 0 }
+	25% {
+	    opacity: 0;
+	    -o-transform: scale(10);
+	}
+	100% { opacity: 0 }
+}
+@-ms-keyframes titleAnimation { 
+	0% {
+	    opacity: 0;
+	    -ms-transform: translateY(200px);
+	}
+	8% {
+	    opacity: 1;
+	    -ms-transform: translateY(0px);
+	}
+	17% {
+	    opacity: 1;
+	    -ms-transform: scale(1);
+	}
+	19% { opacity: 0 }
+	25% {
+	    opacity: 0;
+	    -webkit-transform: scale(10);
+	}
+	100% { opacity: 0 }
+}
+@keyframes titleAnimation { 
+	0% {
+	    opacity: 0;
+	    transform: translateY(200px);
+	}
+	8% {
+	    opacity: 1;
+	    transform: translateY(0px);
+	}
+	17% {
+	    opacity: 1;
+	    transform: scale(1);
+	}
+	19% { opacity: 0 }
+	25% {
+	    opacity: 0;
+	    transform: scale(10);
+	}
+	100% { opacity: 0 }
+}
+/* Show at least something when animations not supported */
+.no-cssanimations .slideshow li span{
+	opacity: 1;
+}
+@media screen and (max-width: 1140px) { 
+	.slideshow li div h3 { font-size: 50px }
+}
+@media screen and (max-width: 600px) { 
+	.slideshow li div h3 { font-size: 25px }
+}
+  
+  #footer {	
+   position: relative;
+  right: 0;
+  bottom: -10%;
+  left: 50%;
+  text-align: center;
+  clear: both;
+width:100%;
+  transform: translate(-50%, -50%);
+ 
 
-	<!--[if IE]>
-		<script type="text/javascript">
-			 var console = { log: function() {} };
-		</script>
-	<![endif]-->
-</head>
+}
+#footer footer h3 {
+  display: none;
+    text-shadow: 0 1px 2px rgba(0,0,0,.7);
+  }
+
+#footer ul {
+  border-top: 1px solid #ffffff;
+  clear: both;
+  text-decoration: none;
+    text-shadow: 0 1px 2px rgba(0,0,0,.7);
+  }
+
+#footer2 li {
+  display:inline-block;
+  font-size: 13px;
+  -webkit-font-smoothing: subpixel-antialiased;
+  zoom: 1;
+    text-shadow: 0 1px 2px rgba(0,0,0,.7);
+  }
+
+#footer2 li a {
+  display: inline-block;
+  padding: 0 8px;
+  border: none;
+  zoom: 1;
+  }
+
+#footer2 footer p {
+  font-size: 11px;
+  color: #ffffff;
+  font-style:underline;
+  }
+
+
+
+#site_footer footer {
+	background:#000000;		
+    border-top: 1px solid #ffffff;
+  clear: both;
+width:70%;
+   margin-bottom: 5%;
+ padding-top:-100px;
+  text-align: center;
+  text-shadow: 0 1px 2px rgba(0,0,0,.7);  
+	display: block;
+	 left: 50%;
+  transform: translate(-50%, -50%);
+	height:auto;
+	position:absolute;
+  }
+
+#site_footer footer h3 {
+  display: none;
+    text-shadow: 0 1px 2px rgba(0,0,0,.7);
+  }
+
+#site_footer ul {
+  text-decoration: none;
+  border: none;
+    text-shadow: 0 1px 2px rgba(0,0,0,.7);
+  }
+
+#site_footer li {
+  display: block;
+  font-size: 10px;
+  -webkit-font-smoothing: subpixel-antialiased;
+  zoom: 1;
+    text-shadow: 0 1px 2px rgba(0,0,0,.7);
+  }
+
+#site_footer li a {
+  display: inline-block;
+  padding: 0 8px;
+  border: none;
+  zoom: 1;
+  }
+
+#site_footer footer p {
+  font-size: 11px;
+  color: #999;
+  font-style: italic;
+  }
+
+#site_footer #website {
+  display: block;
+  margin: 30px auto 15px;
+  width: 140px;
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  -webkit-font-smoothing: subpixel-antialiased;
+  border: 0px solid #000;
+  }
+
+#site_footer #website:hover {
+  border-color: #777;
+  }
+
+#site_footer #search form {
+  display: inline-block;
+  zoom: 1;
+  }
+
+#site_footer #search input {
+  display: none;
+  padding: 0;
+  width: auto;
+  border: none;
+  background: transparent;
+  outline: none;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  border-bottom: 0px solid #ddd;
+  font-size: 10px;
+  -webkit-font-smoothing: subpixel-antialiased;
+  }
+
+
+footer.footer .footer_icons {
+  margin: 10px auto;
+    padding: 0!important;
+    list-style-type: none!important;
+    position:absolute;
+    bottom:0;
+    right: 0;
+}
+footer.footer .footer_icons li {
+  display: inline-block;
+  font-size: 0;
+  margin: 0 10px;
+     padding: 0!important;
+    list-style-type: none!important;
+    position:absolute;
+    bottom:0;
+    right: 0;
+}
+footer.footer .footer_icons li a {
+  color: #646464;
+  display: block;
+  font-size: 12px;
+     padding: 0!important;
+    list-style-type: none!important;
+    position:absolute;
+    bottom:0;
+    right: 0;
+}
+footer.footer .footer_icons li a svg {
+  -webkit-transition: 0.2s linear;
+  -moz-transition: 0.2s linear;
+  -o-transition: 0.2s linear;
+  transition: 0.2s linear;
+  fill: #222222;
+  height: 30px;
+  width: 30px;
+   padding: 0!important;
+    list-style-type: none!important;
+    position:absolute;
+    bottom:0;
+    right: 0;
+}
+footer.footer .footer_icons li a:hover svg {
+  opacity: 0.6;
+}
+footer.footer .footer_pages {
+  font-size: 0;
+  margin: 10px auto;
+  max-width: 800px;
+  text-align: center;
+  width: 100%;
+}
+footer.footer .footer_pages li {
+  display: inline-block;
+}
+</style>
 <body>
+<ul class="slideshow">
+  <li><span>Image 01</span><div><h3></h3></div></li>
+  <li><span>Image 02</span></li>
+  <li><span>Image 03</span></li>
+  <li><span>Image 04</span></li>
+  <li><span>Image 05</span></li>
+  <li><span>Image 06</span></li>
+</ul>
+  
+  
+  
+  
+  
+  
+            
+                     
+            
 
 
+            
 
-<div id="fullpage">
-
-		
-
-	<div class="section fp-auto-height-responsive" id="section0">
-		<div class="intro">
-			<h1>Responsive auto-height</h1>
-			<p>On responsive mode, which will fire with less than 900px width as defined in `responsiveWidth`, this section will become bigger than the viewport as I'm using the class `fp-auto-height-responsive` on the section.</p>
-			<br>
-			<br>
-			<br>
-			<p>
-			Eu nec ferri molestie consequat, vel at alia dolore putant. Labore philosophia ut vix. In vis nostrud interesset appellantur, vis et tation feugiat scripserit. Te nec noster suavitate persecuti. Diceret erroribus cu vix, alii omnes ei sit. Sea an corrumpit patrioque, virtute accumsan nominavi et usu, ex mei dolore vocibus incorrupte. Duo ea saperet tacimates. Sed possim prodesset no, per novum putent doctus ea. Eu mea magna aliquip graecis, pri corpora officiis complectitur ei, lorem saepe consetetur his ad. Meis consulatu ei vis, an altera ocurreret interesset qui. Eu ponderum comprehensam his, case antiopam pri te. Mel ne partem consequat instructior. Ad dicunt malorum sea, ex qui omnes invenire gubergren. Ius cu autem aliquando, pri vide ornatus perpetua an, no has epicuri
+       
+      
 
 
-			</p>
-		</div>
-	</div>
-	<div class="section" id="section1">
-	    <div class="slide" id="slide1">
-			<div class="intro">
-				<h1>Ideal for small screens</h1>
-			</div>
-		</div>
+     
+    
+  <div class="container">
+    
+     <span style="font-size:50px;cursor:pointer" class="openbtn" onclick="openNav()"><font color="tansparent"> </font></span>
+     
+    <header>
+    
+             <div id="myNav" class="overla">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <div class="overla-content">
+   
+   <ul> 
+     <li {% if page.full_url contains '/products' or page.full_url contains '/product/' or page.full_url contains '/category/' or page.full_url contains '/artist/' or page.full_url contains '/lookbook' page.full_url contains '/faqs' or page.full_url contains '/network100' %}class="button"{% endif %}>
+               <button type="button" class="button" onclick="window.location.href='/products'">Products</button></li>
+            
+    
+                <button type="button" class="button" onclick="window.location.href='/contact'">Contact</button></li> 
+     
+            <li {% if page.full_url contains '/lookbook' %}class="button"{% endif %}>
+              <button type="button" class="button" onclick="window.location.href='/lookbook'">Lookbook</button></li>           
+    
+                  
+            <li {% if page.full_url contains '/about' %}class="button"{% endif %}>
+              <button type="button" class="button" onclick="window.location.href='/About'">About</button></li> 
+                        
+            <li {% if page.full_url contains '/cart' %}class="button"{% endif %}>
+              <button type="button" class="button" onclick="window.location.href='/cart'">Checkout</button></li>
+    
+       <li {% if page.full_url contains '/privacy-policy' %}class="button"{% endif %}>
+             <button type="button" class="button" onclick="window.location.href='/privacy-policy'">Privacy Policy</button></li>
+          
+            <li {% if page.full_url contains '/terms-and-conditions' %}class="button"{% endif %}>
+              <button type="button" class="button" onclick="window.location.href='/terms-and-conditions'">Terms & Conditions</button></li> 
+                       
+              </ul>
+     
 
-	    <div class="slide" id="slide2">
-			<h1>This example uses responsiveWidth: 900</h1>
-		</div>
-
-	</div>
-	<div class="section" id="section2">
-		<div class="intro">
-			<h1>Keep it simple!</h1>
-		</div>
-	</div>
+ <br><br><br>
+   <div id="site_footer">
+     <center>
+     <font face="courier" color="#ffffff">©2017 Fair & Glorious, All Rights Reserved.</font> 
+</center>
+    </footer> 
+</div>
+      <div id="badge"><img src="http://i.imgur.com/mXamSNS.png" onclick="window.location.href='/'"/></div>  
+             </div>
+</div>
+            </div>
+  </header>
 </div>
 
-<script type="text/javascript" src="/js/fullpage.js"></script>
-<script type="text/javascript" src="examples.js"></script>
 
-<script type="text/javascript">
-    var myFullpage = new fullpage('#fullpage', {
-        anchors: ['firstPage', 'secondPage', '3rdPage'],
-        sectionsColor: ['#C63D0F', '#1BBC9B', '#7E8F7C'],
-        navigation: true,
-        navigationPosition: 'right',
-        navigationTooltips: ['First page', 'Second page', 'Third and last page'],
-        responsiveWidth: 900,
-        afterResponsive: function(isResponsive){
 
-        }
+         
 
-    });
+                                  <div class="topsie"><span style="font-size:50px;cursor:pointer" class="openbtn" onclick="openNav()"><font color="#ffffff"> &#9776;</font></span></div>
+       
+        
+
+
+        
+        
+<script>
+function openNav() {
+    document.getElementById("myNav").style.width = "100%";
+}
+
+function closeNav() {
+    document.getElementById("myNav").style.width = "0%";
+}
 </script>
-
 </body>
 </html>

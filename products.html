@@ -1,34 +1,2081 @@
-  
    
-  
+   <head>
 
-
+     <title>Fair & Glorious</title>
+      <!-- Startup configuration -->
+<link rel="manifest" href="https://chrisbbenyard.github.io/manifest.json">
+<!-- Fallback application metadata for legacy browsers -->
+<meta name="application-name" content="Fair & Glorious">
+<link rel="icon" sizes="16x16 32x32 48x48" href="http://www.iconj.com/ico/1/7/17kbofimez.ico">
+<link rel="icon" sizes="512x512" href="http://chrisbbenyard.github.io/fngappicon.png">
+         
+    <meta property="og:image" content="http://chrisbbenyard.github.io/fngappicon.png" />
+         
    
-  
+      <link rel="apple-touch-icon" href="http://chrisbbenyard.github.io/fngappicon.png" /> 
+      <link rel="apple-touch-icon" sizes="76x76" href="http://chrisbbenyard.github.io/fngappicon.png" /> 
+      <link rel="apple-touch-icon" sizes="120x120" href="http://chrisbbenyard.github.io/fngappicon.png" />
+      <link rel="apple-touch-icon" sizes="152x152" href="http://chrisbbenyard.github.io/fngappicon.png" />
+           <link rel="apple-touch-icon" sizes="256x256" href="http://chrisbbenyard.github.io/fngappicon.png" />
+   
              
+         
+         
+         <link rel="apple-touch-startup-image" href="/launch.png">      
+         
+    <meta name="apple-mobile-web-app-title" content="Fair & Glorious">
+         
+            <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes"> 
    
+         
+         
+         <meta name="apple-mobile-web-app-status-bar-style" content="black" />     
   
-
-
-   
-  
-               
+      <meta name="description" content="An Atlanta based street wear brand.">
      
-      
-           
-
-
-
-
-
-
+     <link rel="shortcut icon" href="http://www.iconj.com/ico/1/7/17kbofimez.ico" type="image/x-icon" />
+  
+    <meta name="viewport" content="user-scalable=no">
+              
+<meta name="robots" content="noindex">
+<meta name="googlebot" content="noindex">
     
-     
+         
+    <link rel="stylesheet" href="/theme.css">
+         
+    <script src="{{ theme | theme_js_url }}" type="text/javascript"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js" type="text/javascript"></script>
+  
+       
+       
+   
+  
+    </head> 
+    
+   <style type="text/css">
+     /*
+ * jQuery FlexSlider v2.2.0
+ * http://www.woothemes.com/flexslider/
+ *
+ * Copyright 2012 WooThemes
+ * Free to use under the GPLv2 license.
+ * http://www.gnu.org/licenses/gpl-2.0.html
+ *
+ * Contributing author: Tyler Smith (@mbmufffin)
+ */
+
+
+
+/* -------------------------------------------------------------- 
+  CSS Reset [ Resets default browser styles ]
+-------------------------------------------------------------- */
+
+/* http://meyerweb.com/eric/tools/css/reset/  v2.0 | 20110126   License: none (public domain) */
+
+
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{border:0;font-size:90%;font:inherit;vertical-align:baseline;margin:0;padding:0;}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block;}body{line-height:1;}ol,ul{list-style:none;}blockquote,q{quotes:none;}blockquote:before,blockquote:after,q:before,q:after{content:none;}table{border-collapse:collapse;border-spacing:0;}
+ /* --------------------------------------------------------------
+   Luna
+   by Singlenaut
+   http://singlenaut.com
+   office@singlenaut.com
+-------------------------------------------------------------- */
+
+/* --------------------------------------------------------------
+  Base styles
+-------------------------------------------------------------- */
+
+
+
+input[type=button], input[type=submit], input[type=reset] {
+    background-color: #000000;
+    border-radius: 0px;
+    color: white;
+    padding: 8px 16px;
+    text-decoration: none;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+
+html, body {
+  min-width: 350px;
+  height:100%;
+  width:100%;
+}
+
+#wrapper {
+  width:350px;
+	height:auto;
+	position:relative;
+}
+
+#content {
+  
+	padding-bottom:10px; /* Height of the footer element */
+}
+#footer {	
+   position: relative;
+  right: 0;
+  bottom: -10%;
+  left: 50%;
+  text-align: center;
+  clear: both;
+width:100%;
+  transform: translate(-50%, -50%);
+ 
+
+}
+#footer footer h3 {
+  display: none;
+    text-shadow: 0 1px 2px rgba(0,0,0,.7);
+  }
+
+#footer ul {
+  border-top: 1px solid #ffffff;
+  clear: both;
+  text-decoration: none;
+    text-shadow: 0 1px 2px rgba(0,0,0,.7);
+  }
+
+#footer2 li {
+  display:inline-block;
+  font-size: 13px;
+  -webkit-font-smoothing: subpixel-antialiased;
+  zoom: 1;
+    text-shadow: 0 1px 2px rgba(0,0,0,.7);
+  }
+
+#footer2 li a {
+  display: inline-block;
+  padding: 0 8px;
+  border: none;
+  zoom: 1;
+  }
+
+#footer2 footer p {
+  font-size: 11px;
+  color: #ffffff;
+  font-style:underline;
+  }
+
+
+body {
+  font-weight: normal;
+  font-size: 115%;
+   text-transform: uppercase;
+    text-shadow: 0 1px 1px rgba(0,0,0,.2);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  background-color: #757575;
+background-image: url("https://www.transparenttextures.com/patterns/iron-grip.png");
+/* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
+  }
+
+::-moz-selection{ background: yellow; color:#757575; }
+::selection { background: yellow; color:#757575; }
+
+p, blockquote, ul, ol, dl {
+  font-size: 20px;
+   text-transform: uppercase;
+  text-shadow: 0 1px 2px rgba(0,0,0,.2);
+  margin-bottom: 1.2em;
+  line-height: 1.3em;
+  }
+
+strong, b { font-weight: bold;
+  font-size: 120%;
+  font-color:#000000; 
+   text-transform: uppercase;
+    text-shadow: 0 1px 1px rgba(0,0,0,.2);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;}
+
+em, i { font-style: italic;
+  font-size: 120%;
+   text-transform: uppercase;
+    text-shadow: 0 1px 1px rgba(0,0,0,.2);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  font-color:#000000; }
+
+a,
+a:link,
+a:visited {
+  position: relative;
+  text-decoration: none;
+  outline: 0;
+  cursor: pointer;
+  border-bottom: none;
+  -webkit-transition: color .6s ease-in;
+  -moz-transition: color .6s ease-in;
+  -ms-transition: color .6s ease-in;
+  -o-transition: color .6s ease-in;
+  transition: color .6s ease-in;
+    text-shadow: 0 1px 2px rgba(0,0,0,.7);
+  }
+
+
+a:hover,
+a:active {
+  color:#ffffff;
+  outline: 0;
+    border: none;
+  -webkit-transition: color 0 ease-in;
+  -moz-transition: color 0 ease-in;
+  -ms-transition: color 0 ease-in;
+  -o-transition: color 0 ease-in;
+  transition: color 0 ease-in;
+    text-shadow: 0 1px 2px rgba(0,0,0,.2);
+  }
+
+a img {
+  display: block;
+  text-decoration: none;
+  border: none;
+  }
+
+img {
+  border: none;
+  -ms-interpolation-mode: bicubic;
+  }
+
+img,
+embed,
+object,
+video {
+  max-width: 100%;
+  }
+
+
+/* --------------------------------------------------------------
+  Elements / Shared
+-------------------------------------------------------------- */
+
+     .responsive-image4{
+        height:auto;
+        width:55%;
+    } 
+.responsive-image8{
+        height:auto;
+        width:80%;
+    }
+.responsive-image9{
+        height:auto;
+        width:63%;
+    }
+     .responsive-image5{
+        height:auto;
+        width:55%;
+    } 
+a {
+   outline: 0;
+    text-shadow: 0 1px 2px rgba(0,0,0,.7);
+}
+
+a,
+a:link,
+a:active,
+a:visited {
+  position: relative;
+  text-decoration: none;
+  outline: 0;
+  cursor: pointer;
+  color:#ffffff;
+border: none;
+  -webkit-transition: color .6s ease-in;
+  -moz-transition: color .6s ease-in;
+  -ms-transition: color .6s ease-in;
+  -o-transition: color .6s ease-in;
+  transition: color .6s ease-in;
+    text-shadow: 0 1px 2px rgba(0,0,0,.7);
+  }
+
+.button {
+  padding: 5px 0px;
+  width:auto;
+  cursor: pointer;
+  font-size: 16px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  background: none;
+  -webkit-font-smoothing: subpixel-antialiased;
+  -webkit-transition: all 0 ease-in;
+  -moz-transition: all 0 ease-in;
+  -ms-transition: all 0 ease-in;
+  -o-transition: all 0 ease-in;
+  transition: all 0 ease-in;
+    text-shadow: 0 1px 2px rgba(0,0,0,.7);
+  }
+
+
+
+
+
+@-input:focus,
+textarea:focus {
+  border: 2px solid #333333;
+  background: #ffffff;
+  -webkit-box-shadow: inset 1px 1px 3px rgba(0,0,0,.2);
+  box-shadow: inset 1px 1px 3px rgba(0,0,0,.2);
+  outline: none;
+  }
+
+label {
+  display: block;
+  float: left;
+  width: 170px;
+  padding-right: 30px;
+  margin-top: 10px;
+  text-align: right;
+  font-size: 15px;
+    text-shadow: 0 1px 2px rgba(0,0,0,.7);
+  }webkit-keyframes reset { from { opacity: 0; } to { opacity: 0; } }
+@-webkit-keyframes fade-in { from { opacity:0; } to { opacity:1; } }
+@-moz-keyframes reset { from { opacity: 0; } to { opacity: 0; } }
+@-moz-keyframes fade-in { from { opacity:0; } to { opacity:1; } }
+@-o-keyframes reset { from { opacity: 0; } to { opacity: 0; } }
+@-o-keyframes fade-in { from { opacity:0; } to { opacity:1; } }
+@-ms-keyframes reset { from { opacity: 0; } to { opacity: 0; } }
+@-ms-keyframes fade-in { from { opacity:0; } to { opacity:1; } }
+@keyframes reset { from { opacity: 0; } to { opacity: 0; } }
+@keyframes fade-in { from { opacity:0; } to { opacity:1; } }
+
+.fade_in{
+  -webkit-animation-name: reset, fade-in;
+  -webkit-animation-duration: .7s;
+  -webkit-animation-timing-function: ease-in;
+  -webkit-animation-iteration-count: 1;
+  -moz-animation-name: reset, fade-in;
+  -moz-animation-duration: .7s;
+  -moz-animation-timing-function: ease-in;
+  -moz-animation-iteration-count: 1;
+  -o-animation-name: reset, fade-in;
+  -o-animation-duration: .7s;
+  -o-animation-timing-function: ease-in;
+  -o-animation-iteration-count: 1;
+  -ms-animation-name: reset, fade-in;
+  -ms-animation-duration: .7s;
+  -ms-animation-timing-function: ease-in;
+  -ms-animation-iteration-count: 1;
+  animation-name: reset, fade-in;
+  animation-duration: .7s;
+  animation-timing-function: ease-in;
+  animation-iteration-count: 1;
+  }
+
+#error {
+  margin-top: 0px;
+  margin-bottom: 40px;
+  }
+
+#error li {
+  opacity: 0.5;
+  filter: alpha(opacity=0.5); /* IE6-IE8 */
+  width: 690px;
+  margin: 0 auto;
+  padding: 6px 0 3px;
+  font-size: 14px;
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 0px;
+  border-radius: 0px;
+  background: #000000;
+  -webkit-box-shadow: 0 1px 2px rgba(0,0,0, .4);
+  box-shadow: 0 1px 2px rgba(0,0,0, .4);
+  font-weight: Normal;
+  -moz-background-clip: padding; -webkit-background-clip: padding-box; background-clip: padding-box;
+  }
+
+/* Big Cartel Badge
+------------------------------------------------------------*/
+
+#badge {
+  width: 100%;
+  margin-top: 10px;
+  }
+
+#website + #badge {
+  margin-top: 0px;
+  }
+
+#badge a {
+  display: block;
+  margin: 0 auto;
+  width: 79px;
+  height: 23px;
+  border: none;
+  text-indent: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  background: url("{{ 'bc_badge.png' | theme_image_url }}") no-repeat;
+  }
+
+
+/* --------------------------------------------------------------
+  Structure
+-------------------------------------------------------------- */
+
+
+.canvas {
+  width: 1000px;
+  position: relative;
+  margin: 0 auto;
+  clear: both;
+  }
+
+#content {
+  padding: 10px 10px;
+    margin:0 auto;
+  }
+section p {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 10px 0;
+}
+#page_body {
+  width: 77.7%;
+  padding-top:1.5%;
+  margin:0 auto;
+  }
+
+#site_content {
+  position: relative;
+  padding: 0;
+    margin:0 auto;
+}
+
+
+.strip {
+overflow:hidden;
+  background: transparent;
+  }
+
+/*-------------------------------------------------------------
+  Site Header
+-------------------------------------------------------------- */
+
+#site_header header {
+margin-top: 20px;
+  position:fixed;
+  }
+
+#site_header header #store_name {
+  width: 100%;
+  margin: 30px auto 30px;
+  font-size: 42px;
+  text-transform: uppercase;
+  letter-spacing: 7px;
+  padding-right: x;
+  text-align: center;
+  white-space: normal;
+  }
+
+#site_header header #store_name a {
+  border: none;
+  }
+
+#site_header #branding {
+  text-align: center;
+  padding: 40px 0 55px;
+  }
+
+#site_header #branding a img {
+  margin: 0 auto;
+  }
+
+#site_header #branding a h2 {
+  display: none;
+  }
+
+
+/* --------------------------------------------------------------
+  Site Footer
+-------------------------------------------------------------- */
+
+
+#site_footer footer {
+	background:#000000;		
+    border-top: 1px solid #ffffff;
+  clear: both;
+width:70%;
+   margin-bottom: 5%;
+ padding-top:-100px;
+  text-align: center;
+  text-shadow: 0 1px 2px rgba(0,0,0,.7);  
+	display: block;
+	 left: 50%;
+  transform: translate(-50%, -50%);
+	height:auto;
+	position:absolute;
+  }
+
+#site_footer footer h3 {
+  display: none;
+    text-shadow: 0 1px 2px rgba(0,0,0,.7);
+  }
+
+#site_footer ul {
+  text-decoration: none;
+  border: none;
+    text-shadow: 0 1px 2px rgba(0,0,0,.7);
+  }
+
+#site_footer li {
+  display: block;
+  font-size: 10px;
+  -webkit-font-smoothing: subpixel-antialiased;
+  zoom: 1;
+    text-shadow: 0 1px 2px rgba(0,0,0,.7);
+  }
+
+#site_footer li a {
+  display: inline-block;
+  padding: 0 8px;
+  border: none;
+  zoom: 1;
+  }
+
+#site_footer footer p {
+  font-size: 11px;
+  color: #999;
+  font-style: italic;
+  }
+
+#site_footer #website {
+  display: block;
+  margin: 30px auto 15px;
+  width: 140px;
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  -webkit-font-smoothing: subpixel-antialiased;
+  border: 0px solid #000;
+  }
+
+#site_footer #website:hover {
+  border-color: #777;
+  }
+
+#site_footer #search form {
+  display: inline-block;
+  zoom: 1;
+  }
+
+#site_footer #search input {
+  display: none;
+  padding: 0;
+  width: auto;
+  border: none;
+  background: transparent;
+  outline: none;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  border-bottom: 0px solid #ddd;
+  font-size: 10px;
+  -webkit-font-smoothing: subpixel-antialiased;
+  }
+
+
+/* --------------------------------------------------------------
+  Main Nav
+-------------------------------------------------------------- */
+
+#main_nav {
+  width: 70%;
+  overflow: hidden;
+  margin: 0px auto;
+  text-align: center;
+    border-top: 1px solid #ffffff;
+}
+
+#main_nav ul {
+  margin: 0;
+  }
+
+#main_nav li {
+  display: inline-block;
+  font-size: 30px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  -webkit-font-smoothing: subpixel-antialiased;
+   border-top: 1px solid #ffffff;
+  }
+
+#main_nav li a {
+  display: block;
+  padding: 20px 17px 13px;
+   border-bottom: 1px solid #ffffff;
+  }
+
+#mobile_nav {
+  display: none;
+  }
+
+.button {
+  padding: 5px 7px;
+  width:auto;
+  cursor: pointer;
+  font-size: 30px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  background: #transparent;
+  outline: 0;
+    border: none;
+  -webkit-font-smoothing: subpixel-antialiased;
+  -webkit-transition: all 0 ease-in;
+  -moz-transition: all 0 ease-in;
+  -ms-transition: all 0 ease-in;
+  -o-transition: all 0 ease-in;
+  transition: all 0 ease-in;
+  }
+}
+footer.footer .footer_icons {
+  margin: 10px auto;
+    padding: 0!important;
+    list-style-type: none!important;
+    position:absolute;
+    bottom:0;
+    right: 0;
+}
+footer.footer .footer_icons li {
+  display: inline-block;
+  font-size: 0;
+  margin: 0 10px;
+     padding: 0!important;
+    list-style-type: none!important;
+    position:absolute;
+    bottom:0;
+    right: 0;
+}
+footer.footer .footer_icons li a {
+  color: #646464;
+  display: block;
+  font-size: 12px;
+     padding: 0!important;
+    list-style-type: none!important;
+    position:absolute;
+    bottom:0;
+    right: 0;
+}
+footer.footer .footer_icons li a svg {
+  -webkit-transition: 0.2s linear;
+  -moz-transition: 0.2s linear;
+  -o-transition: 0.2s linear;
+  transition: 0.2s linear;
+  fill: #222222;
+  height: 30px;
+  width: 30px;
+   padding: 0!important;
+    list-style-type: none!important;
+    position:absolute;
+    bottom:0;
+    right: 0;
+}
+footer.footer .footer_icons li a:hover svg {
+  opacity: 0.6;
+}
+footer.footer .footer_pages {
+  font-size: 0;
+  margin: 10px auto;
+  max-width: 800px;
+  text-align: center;
+  width: 100%;
+}
+footer.footer .footer_pages li {
+  display: inline-block;
+}
+/*============================================================
+  Basic Styles - used for the simple controls
+============================================================*/
+
+/* Body Font */
+body,
+.product_header h3,
+.product_header h5,
+#product_inventory li h5,
+#cart_items li .item_option,
+#cart_summary li h3,
+#social_links li h4,
+.standalone .canvas p
+{text-transform: uppercase;
+  font-family: {{ theme.body_font | font_family }}; 
+}
+
+
+/* Header Font */
+h1, h2, h3, h4, h5, h6,
+.button,
+#error li,
+#site_footer ul,
+#site_footer #search input,
+#main_nav li,
+#cart_items li dt,
+#cart_items li dd,
+#cart_options #cart_discount p,
+#cart_summary li span,
+.standalone .canvas h1, input,
+#cart_items li .quantity_input input
+{   text-shadow: 0 1px 2px rgba(0,0,0,.7);
+   text-transform: uppercase;
+  font-family: {{ theme.header_font | font_family }};
+}
+
+/* Background */
+body,
+#cart_page #content {
+  background-color: #757575;
+background-image: url("https://www.transparenttextures.com/patterns/iron-grip.png");
+  /* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */}
+
+#cart_page #site_header,
+#checkout_page #content,
+#contact_page #content,
+#maintenance_page #content,
+#product_page #content,
+#success_page #content,
+.custom #content,
+#cart_summary, {
+    background-color: #757575;
+background-image: url("https://www.transparenttextures.com/patterns/iron-grip.png");
+/* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
+ }
+
+
+/* Text */
+body,
+p, blockquote, ul, ol, dl,
+#error li,
+#cart_items li .quantity_input input,
+#main_nav li a:hover,
+#main_nav li.selected a
+{ color: {{ theme.text }};} 
+
+/* Text - Secondary  */
+#site_footer footer p,
+.alert-noproducts,
+#cart_page #cart_empty p,
+#success_page #content .canvas p,
+.standalone .canvas p,
+#product_description h3,
+#product_inventory h3,
+#cart_items li .item_quantity,
+#cart_items li .item_option,
+#social_links li h4,
+#main_nav li a
+{ color: {{ theme.text_secondary }} }
+
+
+/* Text - Tertiary */
+.page_header .product_header h5,
+.custom #page_body p:first-child,
+#contact_page #page_body p:first-child,
+#site_footer #search input
+{ 
+    text-shadow: 0 1px 1px rgba(0,0,0,.2);
+  color: {{ theme.text_tertiary }}
+}
+
+/* Links */
+a,
+a:link,
+a:visited
+{ color: {{ theme.links }}; }
+
+
+/* Links rollover */
+a:hover,
+a:active,
+#site_header header #store_name a:hover
+{ color: {{ theme.links_rollover }}; }
+
+
+/* Header text */
+#site_header header h1 a,
+#site_header header h1 a:hover,
+.product_header.page_header h1,
+.product_header.page_header h3,
+.standalone .canvas h1,
+#site_header header #store_name a,
+#site_footer footer h3
+{ text-shadow: 0 1px 2px rgba(0,0,0,.7);
+    color: {{ theme.header_text }}; }
+
+.page_header h1 .product_header .dash 
+{ text-shadow: 0 1px 2px rgba(0,0,0,.7);
+  background: {{ theme.header_text }};
+  }
+
+
+/* Products background */
+.product a:hover { 
+	background-color: {{ theme.products_background }}; }
+
+{% if theme.products_background == 'transparent' %}
+.product a:hover,
+#product_images li img {
+  box-shadow: none !important;
+  -webkit-transition: none;
+  -moz-transition: none;
+  -ms-transition: none;
+  -o-transition: none;
+  transition: none;
+  }
+
+.product a:hover .product_header * {
+  color: {{ theme.header_text }} !important;
+  text-shadow: none !important;
+  }
+
+.product a:hover .product_header .dash {
+  background: {{ theme.header_text }};
+  }
+
+.product a:hover .product_thumb img {
+  opacity: .6 !important;
+  }
+{% endif %}
+
+
+
+
+
+
+
+
+
+
+
+.product a:hover { 
+	background-color: {{ theme.products_background }}; }
+
+{% if theme.products_background == 'transparent' %}
+.product a:hover,
+#product_images li img {
+  box-shadow: none !important;
+  -webkit-transition: none;
+  -moz-transition: none;
+  -ms-transition: none;
+  -o-transition: none;
+  transition: none;
+  }
+
+.product a:hover .product_header * {
+  color: {{ theme.header_text }} !important;
+  text-shadow: none !important;
+  }
+
+.product a:hover .product_header .dash {
+  background: {{ theme.header_text }};
+  }
+
+.product a:hover .product_thumb img {
+  opacity: .0 !important;
+  }
+{% endif %}
+
+
+/* Border color */
+#main_nav li,
+.category_nav,
+#product_inventory,
+#social_links,
+#social_links li,
+#more_products,
+#more_products nav,
+#contact_page #page_body p:first-child,
+#contact_links,
+#cart_items,
+#cart_items li,
+#cart_options,
+#cart_summary,
+#cart_summary li,
+#cart_page #cart_empty,
+#cart_page #site_footer,
+#contact_links.no_intro,
+#site_footer ul,
+#site_footer ul li {
+  border: none; 
+  }
+
+{% capture same_background %}{{ theme.background_secondary }}{% endcapture %}
+
+{% if theme.background == same_background %}
+#product_page #content,
+#contact_page #content,
+.custom #content {
+  border-top: 0px solid {{ theme.borders }};
+  border-bottom: 0px solid {{ theme.borders }};
+  }
+
+#cart_summary,
+#cart_page #content {
+  border-top: 0px solid {{ theme.borders }};
+  }
+{% endif %}
+
+
+/* Button Border/Color */
+.button {
+  border-color:{{ theme.button_border }};
+  color:{{ theme.button_border }};
+  }
+
+.button:hover { 
+  border-color: {{ theme.button_border_hover }}; 
+  color: #ffffff;
+  }
+
+
+/* Inventory Bars */
+#product_inventory .bar { background: {{ theme.borders }}; }
+#product_inventory .bar span { background: {{ theme.inventory_bars }} }
+/* --------------------------------------------------------------
+  Home Page / Products Page / Products List
+-------------------------------------------------------------- */
+
+#home_page #content,
+#products_page #content {
+  margin-top: 0px;
+  padding: 0px 0;
+  background: transparent;
+  }
+
+#products_page #content {
+  margin-top: 0.5%;
+  }
+
+#products_page #products {
+  margin-bottom: 0px;
+  }
+
+#products {
+  float: left;
+  clear: both;
+  margin: 0 0 0 15px;
+  line-height: 0;
+  }
+
+
+#products.single_product,
+#products.double_product {
+
+  float:  none;
+  margin: 0 auto;
+  overflow: ;
+  }
+
+#products.single_product {
+  width: 210px;
+  }
+
+#products.single_product .product {
+  margin-left: 0;
+  }
+
+#products.double_product {
+  left: -15px;
+  position: relative;
+  width: 60%;
+  }
+
+#products.single_product {
+  float:  none;
+  margin: 0 auto;
+  width: 210px;
+  }
+
+#products.single_product .product {
+  margin-left: 0;
+  }
+
+.product, 
+.product_header { 
+  -webkit-transition: all .45s ease-out;
+  -moz-transition: all .45s ease-out;
+  -ms-transition: all .45s ease-out;
+  -o-transition: all .45s ease-out;
+  transition:  all .45s ease-out;
+   text-shadow: 0 1px 2px rgba(0,0,0,.7);
+  }
+
+.no_transition .product,
+.no_transition .product_header {
+  -webkit-transition: none;
+  -moz-transition: none;
+  -ms-transition: none;
+  -o-transition: none;
+  transition:  none;
+   text-shadow: 0 1px 2px rgba(0,0,0,.7);
+  }
+
+.product {
+  position: relative;
+  float: left;
+  width: 320px;
+  height:auto;
+  margin: 0 0 10px 0px;
+  background: transparent;
+  }
+
+ .product a {
+  position: static;
+  display: block;
+  overflow: ;
+  width: 100%;
+  height: 100%;
+  font-size: 12px;
+  color: #fff !important;
+  border-radius: 0px;
+  background: transparent;
+  border: none;
+  }
+
+
+ .product a:hover {
+  color: #fff !important;
+  }
+
+.product .product_header {
+  position: absolute;
+  z-index: 1;
+  opacity: 0;
+  filter: alpha(opacity=0); /* IE6-IE8 */
+  width: 100%;
+  margin: 20px auto 0;
+   text-shadow: 0 1px 2px rgba(0,0,0,.7);
+  }
+
+.product_header h1{
+  margin: 0;
+  font-size: 27px;
+  font-color:#ffffff;
+  line-height: 1.3em;
+  font-weight: normal;
+  text-align: center;
+  text-shadow: 0 1px 2px rgba(0,0,0,.7);
+  }
+
+.product_header h2 {
+  width: 80%;
+  margin: 0 auto;
+  font-size: 19px;
+   font-color:#ffffff;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  text-shadow: 0 1px 2px rgba(0,0,0,.7);
+  }
+
+.product_header h3 {
+  margin-left: -1px;
+  font-size: 21px;
+  background-color: #000000;
+  font-color:#ffffff;
+   text-shadow: 0 1px 2px rgba(0,0,0,.7);
+  }
+
+.product_header h3 span {
+  position: relative;
+  top: -3px;
+  background-color: #000000;
+  font-color:#ffffff;
+  font-size: 21px;
+  text-shadow: 0 1px 2px rgba(0,0,0,.7);
+  }
+
+.product_header h4 {
+   margin: 0;
+  font-size: 18px;
+  font-color:#00000;
+  line-height: 1.3em;
+  text-transform: uppercase;
+  text-align: center;
+  text-shadow: 0 1px 2px rgba(0,0,0,.7);
+}
+
+.product_header .dash {
+  display: block;
+  width: 24px;
+  height: 1px;
+  margin: 6px auto 10px;
+  background: #fff;
+  text-shadow: 0 1px 2px rgba(0,0,0,.7);
+  }
+
+.product_header h5 {
+  position: absolute;
+  top: -13px;
+  left: 0;
+  width: 100%;
+  font-size: 11px;
+  font-style: italic;
+  color: #ddd;
+  text-align: center;
+  text-shadow: 0 1px 2px rgba(0,0,0,.7);
+  }
+
+.product_thumb {
+  margin: 0;
+  }
+
+.product_thumb img {
+  width: 320px;
+  border-radius: 0px;
+  }
+
+.product:hover {
+ background: transparent;
+  }
+
+.product a:hover {
+  overflow: ;
+  -webkit-box-shadow: 0 1px 8px rgba(0,0,0,.4);
+  box-shadow: 0 1px 8px rgba(0,0,0,.4);
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+  }
+
+.product a:hover .product_header {
+  opacity: .9;
+  filter: alpha(opacity=90); /* IE6-IE8 */
+  margin-top: 40%;
+  }
+
+.product a:hover .product_thumb {
+  opacity: .4;
+  filter: alpha(opacity=40); /* IE6-IE8 */
+  }
+
+.product a:hover .product_thumb img {
+  border-radius: 0;
+  }
+
+#pagination {
+  float: left;
+  width: 100%;
+  margin: 2px 0 56px;
+  text-align: center;
+  font-size: 13px;
+  }
+
+#pagination span,
+#pagination a {
+  padding: 8px 4px;
+  border: none;
+  }
+
+#pagination .disabled,
+#pagination .next,
+#pagination .previous {
+  display: none;
+  }
+
+#pagination .current {
+  text-decoration: underline;
+  }
+
+.category_nav {
+  clear: both;
+  padding: 28px 0 10px;
+  float: left;
+  width: 100%;
+  text-align: center;
+  border-top: 1px solid #e5e5e5;
+  border-bottom: 1px solid #e5e5e5;
+  }
+
+.category_nav:first-child {
+  position: relative;
+  z-index: 4;
+  margin-top: 0;
+  margin-bottom: 45px;
+  }
+
+.category_nav nav {
+  text-align: center;
+  width: 100%;
+  margin: 0;
+  }
+
+.category_nav.double nav.categories,
+.category_nav.double nav.artists {
+  width: 44%;
+  display: inline-block;
+  }
+
+.category_nav.double nav.categories {
+  text-align: right;
+  margin-right: 40px;
+  }
+
+.category_nav.double nav.artists {
+  text-align: left;
+  margin-left: 40px;
+  }
+
+.category_nav h3 {
+  display: inline-block;
+  padding: 0 8px 0 0;
+  font-size: 13px;
+  -webkit-font-smoothing: subpixel-antialiased;
+  }
+
+.category_nav ul {
+  display: inline-block;
+  }
+
+.category_nav li {
+  display: inline-block;
+  font-size: 13px;
+  }
+
+.category_nav li:before {
+  content:"/";
+  padding: 0 4px 0 0;
+  }
+
+.category_nav li a {
+  border: none;
+  }
+
+.category_nav li.selected a {
+  text-decoration: underline;
+  }
+
+.category_nav li:first-child:before {
+  content: "\00a0";
+  }
+
+.alert-noproducts {
+  text-align: center;
+  font-size: 20px;
+  font-style: italic;
+  color: #ffffff;
+  }
+/* --------------------------------------------------------------
+  Product Page
+-------------------------------------------------------------- */
+
+#product_page #content .product_header {
+  position: relative;
+  width: 100%;
+  margin-top: 0px;
+  margin-bottom: 0;
+  }
+
+#product_info {
+  text-transform: uppercase;
+  clear: left;
+  width: 66.6%;
+      text-shadow: 0 1px 1px rgba(0,0,0,.2);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  padding:0px 0px 0px 0px;
+  margin-top: 10px;
+  text-shadow: 0 1px 2px rgba(0,0,0,.3);
+  font-size: 20px;
+  font-color:#ffffff;
+  }
+#product_description h1{
+  margin: 0 0 .5em 0;
+  text-transform: uppercase;
+  font-size: 27px;
+  text-shadow: 0 1px 2px rgba(0,0,0,.3);
+  font-color:#000000;
+  }
+#product_description h2{
+  margin: 0 0 .5em 0;
+  text-transform: uppercase;
+  font-size: 19px;
+  text-shadow: 0 1px 2px rgba(0,0,0,.3);
+  font-color:#ffffff;
+  }
+
+#product_description h3{
+  margin: 0 0 .5em 0;
+  text-transform: uppercase;
+  font-size: 21px;
+  text-shadow: 0 1px 2px rgba(0,0,0,.3);
+  font-color:#ffffff;
+  background-color:#000000;
+  }
+#product_description h4{
+  margin: 0 0 .5em 0;
+  text-transform: uppercase;
+  font-size: 18px;
+  text-shadow: 0 1px 2px rgba(0,0,0,.3);
+  font-color:#000000;
+  }
+#product_info h1 {
+  font-size: 27px;
+  text-transform: uppercase;
+   text-shadow: 0 1px 2px rgba(0,0,0,.3);
+  font-color:#ffffff;
+  }
+#product_info h2 {
+  font-size: 19px;
+  text-transform: uppercase;
+   text-shadow: 0 1px 2px rgba(0,0,0,.3);
+  font-color:#ffffff;
+  }
+#product_info h3 {
+  font-size: 21px;
+  text-transform: uppercase;
+   text-shadow: 0 1px 2px rgba(0,0,0,.3);
+  font-color:#ffffff;
+  }
+#product_info h4 {
+  font-size: 18px;
+  text-transform: uppercase;
+   text-shadow: 0 1px 2px rgba(0,0,0,.3);
+  font-color:#000000;
+  }
+
+#product_description ul,
+#product_description ol {
+  list-style-type: circle;
+  list-style-position: inside;
+  width: 50%;
+  }
+
+#product_images {
+  max-width: 350px;
+  margin-top: 12px;
+  margin-left:0px;
+  }
+
+#product_images li {
+  margin-bottom: 12x;
+  line-height: 0;
+  }
+
+#product_images .slides li:last-child { margin-bottom: 0; }
+
+#product_images li img {
+  border-radius: 4px;
+  -webkit-box-shadow: 0 1px 8px rgba(0,0,0,.4);
+  box-shadow: 0 1px 8px rgba(0,0,0,.4);
+  -moz-background-clip: padding; -webkit-background-clip: padding-box; background-clip: padding-box;
+  }
+
+#product_form {
+  margin-top: 30px;
+    font-size: 18px;
+    border: 0px solid #ffffff;
+    width: 325px;
+  text-align: center;
+  }
+
+#product_form select {
+  width: 325px;
+    font-size: 17px;
+  margin-bottom: 5px;
+    border: 0px solid #ffffff;
+   text-align: center;
+  }
+
+#product_info .button.disabled {
+  margin-top: 10px;
+    border: 0px solid #ffffff;
+    width: 325px;
+    font-size: 15px;
+  }
+.probutton {
+  padding: 5px 3px;
+  width:auto;
+  cursor: pointer;
+  color:#ffffff;
+  font-size: 16px;
+  border: 3px solid #000000;
+  letter-spacing: 0px;
+  text-transform: uppercase;
+  background: #000000;
+  -webkit-font-smoothing: subpixel-antialiased;
+  -webkit-transition: all 0 ease-in;
+  -moz-transition: all 0 ease-in;
+  -ms-transition: all 0 ease-in;
+  -o-transition: all 0 ease-in;
+  transition: all 0 ease-in;
+    text-shadow: 0 1px 2px rgba(0,0,0,.7);
+  }
+
+/* -------------------------------------------------------------- 
+  Contact
+-------------------------------------------------------------- */   
+
+
+#contact_page #page_body p:first-child {
+  padding-bottom: 40px;
+  border-bottom: 1px solid #e5e5e5;
+  }
+  
+#contact_page #page_body p#thank_you {
+  padding-bottom: 0 !important;
+  border: none !important;
+  text-align: center;
+  }    
+
+#contact_links {
+  padding-bottom: 15px;
+  margin-top: -10px;
+  text-align: center;
+  border-bottom: 1px solid #e5e5e5;
+  }
+
+#contact_links.no_intro {
+  margin-top: 40px;
+  padding-top: 14px;
+  border-top: 1px solid #e5e5e5;
+  }
+
+#contact_links li {
+  display: inline-block;
+  font-size: 13px;
+  }   
+  
+#contact_links li:after {
+  content:"/";
+  padding: 0 0 0 4px;
+  }
+  
+#contact_links li:last-child:after {
+  content:"";
+  }    
+
+#contact_links li a {
+  border: none;
+  }  
+  
+#contact_form {
+  width: 100%;
+  }
+
+#contact_form ul {
+  margin-bottom: 40px;
+  }
+
+#contact_form li {
+  padding: 4px 0;
+  }
+
+#contact_form label {
+  width: 100%;
+  float: none;
+  margin-bottom: 5px;
+  text-align: left;
+   text-transform: uppercase;
+  }
+
+#contact_form input,
+#contact_form textarea {
+  width: 510px;
+  margin: 0;  
+  } 
+  
+#contact_form textarea {
+  height: 180px;
+  }   
+
+#captcha_img {
+  overflow: hidden;
+  }
+
+#captcha_img #captcha_phrase {
+  float: right;
+  } 
+  
+#captcha_img input {
+  float: left;
+  width: 365px;
+  padding: 17px 8px;
+  margin-right: 20px;
+  }  
+  
+#captcha_img img {
+  -webkit-box-shadow: 1px 1px 1px #ccc;
+  box-shadow: 1px 1px 1px #ccc;
+  border-radius: 4px;
+  -moz-background-clip: padding; -webkit-background-clip: padding-box; background-clip: padding-box;
+  }
+  
+#contact_page #contact_button {
+ text-transform: uppercase;
+   border: 2px solid #ffffff;
+   font-size: 15px;
+   line-height: 20px;
+    padding: 16px 15px 13px 15px;
+  width: 200px;
+   text-shadow: 0 1px 2px rgba(0,0,0,.7);
+  }
+/* --------------------------------------------------------------
+  Cart
+-------------------------------------------------------------- */
+#.cart_form .cart_details li {
+    border-bottom: 0px solid;
+    display: block;
+    height: auto;
+    margin-bottom: 0px;
+    padding-bottom: px;
+    overflow: hidden;
+    background-color: #757575;
+background-image: url("https://www.transparenttextures.com/patterns/iron-grip.png");
+    text-transform: uppercase;
+}
+
+#cart_page #site_footer footer {
+  margin-top: 0;
+  }
+
+#cart-form {
+  padding: 0 15px;
+  
+background-image: url("https://www.transparenttextures.com/patterns/iron-grip.png");
+  }
+
+#cart-form.no_options {
+  overflow: hidden;
+  margin-bottom: 80px;
+  }
+
+#cart_description {
+  float: left;
+  width: 580px;
+   background-color: #757575;
+background-image: url("https://www.transparenttextures.com/patterns/iron-grip.png");
+}
+
+#cart_items {
+  float: left;
+  width: 580px;
+  margin: 0;
+  border-bottom: 1px solid #e5e5e5;
+  }
+
+#cart_items ul {
+  margin-bottom: 0;
+  }
+
+#cart_items li {
+  position: relative;
+  overflow: hidden;
+  padding: 0 0 0 0;
+  margin: 0;
+  line-height: 0;
+  border-top: 1px solid #e5e5e5;
+  }
+
+#cart_items .item_image {
+  float: left;
+  margin: 20px 40px 20px 100px;
+  text-align: center;
+  width: 60%;
+  height: auto;
+  /* vertically center image within */
+  display:-webkit-box;
+  -webkit-box-pack:center;
+  -webkit-box-align:center;
+  display:-moz-box;
+  -moz-box-pack:center;
+  -moz-box-align:center;
+  display:box;
+  box-pack:center;
+  box-align:center;
+  }
+
+#cart_items .item_image img {
+  max-height: auto;
+  max-width: 30%;
+  -webkit-box-flex:1;
+  -moz-box-flex:1;
+  box-flex:1;
+  margin: 0 auto;
+  }
+
+#cart_items li dl {
+  margin: 0;
+  line-height: 0;
+  margin: 31px 0 18px;
+  }
+
+#cart_items li.with_option dl {
+  margin-top: 21px;
+  }
+
+#cart_items li dt,
+#cart_items li dd {
+  line-height: 1.3em;
+  font-size: 16px;
+  }
+
+#cart_items li dt a {
+  border: none;
+  
+  }
+
+#cart_items li dt {
+  width: 83%;
+  margin: 0 0 3px 0;
+   background-color: #757575;
+background-image: url("https://www.transparenttextures.com/patterns/iron-grip.png");
+  }
+
+#cart_items li .item_price {
+  font-size: 16px;
+  }
+
+#cart_items li .item_option {
+  margin-top: 3px;
+  font-size: 13px;
+  font-style: italic;
+  }
+
+#cart_items li .item_quantity  {
+  position: relative;
+  top: -1px;
+  left: 2px;
+  font-size: 16px;
+  }
+
+#cart_items li .quantity_input {
+  position: absolute;
+  top: 50%;
+  right: 33px;
+  margin-top: -20px;
+  }
+
+#cart_items li .quantity_input input {
+  width: 20px;
+  height: 35px;
+  padding-top: 0;
+  padding-bottom: 0;
+  font-size: 13px;
+  text-align: center;
+  border-radius: 0;
+  filter: alpha(opacity=40); /* IE6-IE8 */
+  }
+
+#cart_items li .quantity_input input:focus {
+  color: black;
+  }
+
+#cart_items li .item_quantity  {
+  position: relative;
+  top: -1px;
+  left: 2px;
+  font-size: 13px;
+  }
+
+#cart_items li .remove_item {
+  opacity: .5;
+  filter: alpha(opacity=50); /* IE6-IE8 */
+  position: absolute;
+  z-index: 5;
+  left: 40px;
+  top: 50%;
+  margin-top: -12px;
+  width: 26px;
+  height: 26px;
+  text-indent: -9999px;
+  border: none;
+  -webkit-transition: opacity .6s ease-in;
+  -moz-transition: opacity .6s ease-in;
+  -ms-transition: opacity .6s ease-in;
+  -o-transition: opacity .6s ease-in;
+  transition: opacity .6s ease-in;
+  background: url({{ 'remove_item_2x.png' | theme_image_url }}) no-repeat;
+  background-size: 26px;
+  }
+
+
+#cart_items li .remove_item:hover {
+  opacity: 1;
+  -webkit-transition: opacity 0 ease-in;
+  -moz-transition: opacity 0 ease-in;
+  -ms-transition: opacity 0 ease-in;
+  -o-transition: opacity 0 ease-in;
+  transition: opacity 0 ease-in;
+  }
+
+#cart_options {
+  float: left;
+  width: 580px;
+  padding-bottom: 0px;
+  margin: 0px 0 0 0;
+  border-bottom: 1px solid #e5e5e5;
+  }
+
+#cart_options.solo_update {
+  margin-top: 40px;
+  border: none;
+  }
+
+#cart_options li {
+  margin-bottom: 5px;
+  }
+
+#cart_options h3 {
+  }
+
+#cart_options label {
+  margin-left: 27px;
+  }
+
+#cart_options select {
+  margin-top: 11px;
+  width: 215px;
+  }
+
+#cart_options .no_shipping {
+  display: block;
+  margin-left: 227px;
+  font-size: 13px;
+  margin-top: 5px;
+  color: red;
+  }
+
+#cart_options #cart_discount p {
+  font-size: 12px;
+  padding: 13px 0;
+  }
+
+.cart-update {
+  margin-left: 227px;
+  margin-bottom: 10px;
+  }
+
+.cart-update .button {
+  font-size: 12px;
+  padding: 0px 0;
+  width: 213px;
+  border: 3px solid #000000;
+  background-color: #000000;
+  }
+.section.summary .cart,
+.section.summary .receipt,
+.section.summary .pay {
+   background-color: #757575;
+background-image: url("https://www.transparenttextures.com/patterns/iron-grip.png");
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.section.summary.active .receipt li {
+ 
+  background-color: #757575;
+background-image: url("https://www.transparenttextures.com/patterns/iron-grip.png");
+  color: #ffffff;
+}
+
+.section.summary .receipt {
+  background-color: #757575;
+background-image: url("https://www.transparenttextures.com/patterns/iron-grip.png");
+  padding-bottom: 30px;
+}
+
+.section.summary table tr {
+  border-bottom-color: #ffffff;
+  border-bottom-width: 0px;
+    background-color: #757575;
+background-image: url("https://www.transparenttextures.com/patterns/iron-grip.png");
+}
+
+.section.summary .receipt .total {
+  background-color: #757575;
+background-image: url("https://www.transparenttextures.com/patterns/iron-grip.png");
+  border-top-color: #ffffff;
+  border-top-width: 2px;
+}
+
+.section.summary table td,
+.section.summary .receipt {
+
+  background-color: #757575;
+background-image: url("https://www.transparenttextures.com/patterns/iron-grip.png");
+  color:#757575;
+  font-size: 13px;
+}
+
+.section.summary table td i,
+.section.summary table td.price,
+.section.summary .pending {
+ background-color: #757575;
+background-image: url("https://www.transparenttextures.com/patterns/iron-grip.png");
+  color: #757575;
+}
+
+.section.summary .note {
+  border-top-color: #ffffff;
+  border-top-width: 1px;
+    background-color: #757575;
+background-image: url("https://www.transparenttextures.com/patterns/iron-grip.png");
+}
+
+.section.summary .pay {
+  background-color: #757575;
+background-image: url("https://www.transparenttextures.com/patterns/iron-grip.png");  border-top-color: rgba(100.00%, 100.00%, 100.00%, 0.25);
+  border-top-style: solid;
+  border-top-width: 1px;
+  text-align: center;
+}
+
+#cart_summary {
+  float: right;
+  width: 250px;
+  padding-top: 10px;
+  background-color: #757575;
+background-image: url("https://www.transparenttextures.com/patterns/iron-grip.png");  }
+
+#cart_summary ul {
+  padding: 0 13px;
+   background-color: #757575;
+background-image: url("https://www.transparenttextures.com/patterns/iron-grip.png");
+  }
+
+#cart_summary li {
+  overflow: hidden;
+   background-color: #757575;
+background-image: url("https://www.transparenttextures.com/patterns/iron-grip.png");
+  padding: 12px 0 4px;
+  border-bottom: 1px solid #dddddd;
+  }
+
+#cart_summary li h3 {
+  float: left;
+  font-size: 13px;
+  }
+
+#cart_summary li span {
+  float: right;
+  font-size: 13px;
+  line-height: 20px;
+  }
+
+#cart_summary li span span {
+  float: none;
+      background-color: #757575;
+background-image: url("https://www.transparenttextures.com/patterns/iron-grip.png");
+    text-transform: uppercase;
+  }
+
+#cart_summary li#cart-shipping-tax.not_set span {
+  font-size: 12px;
+  }
+
+#cart_summary #cart_total {
+  padding-top: 20px;
+  border: none;
+   background-color: #757575;
+background-image: url("https://www.transparenttextures.com/patterns/iron-grip.png");
+  }
+
+#cart_summary #cart_total h3 {
+  font-style: italic;
+  line-height: 26px;
+  }
+
+#cart_summary #cart_total h2 {
+  float: right;
+  font-size: 20px;
+  }
+
+#cart_summary #cart_total span {
+  float: none;
+  position: relative;
+  top: -6px;
+  font-size: 12px;
+  }
+
+#cart_summary button {
+   background-color: #000000;
+  width: 230px;
+  margin: 0 0 10px 10px;
+  }
+
+#cart_page #cart_empty {
+  padding-bottom: 60px;
+  border-bottom: 1px solid #E5E5E5;
+  margin-bottom: -50px;
+  }
+
+#cart_page #cart_empty p {
+  margin-top: 50% auto;
+  font-size: 20px;
+  font-style: italic;
+  text-align: center;
+  }
+
+/*============================================================
+  Success Page
+============================================================*/ 
+
+#success_page #content .canvas {
+  text-align: center;
+    background-color: #757575;
+background-image: url("https://www.transparenttextures.com/patterns/iron-grip.png");
+  }
+
+#success_page #content .canvas h1 {
+  font-size: 22px;
+  line-height: 1.3em;
+   text-shadow: 0 1px 2px rgba(0,0,0,.7);
+  }
+
+#success_page #content .canvas p {
+  width: 400px;
+  margin: 15px auto 1.5em;
+  font-style: italic;
+   text-shadow: 0 1px 2px rgba(0,0,0,.7);
+    background-color: #757575;
+background-image: url("https://www.transparenttextures.com/patterns/iron-grip.png");
+  }
+
+#success_page #content .canvas a {
+  font-size: 15px;
+   text-shadow: 0 1px 2px rgba(0,0,0,.7);
+  }
+/*============================================================
+  Standalone Pages (Maintenance / Checkout)
+============================================================*/
+ 
+
+.standalone .canvas {
+  width: 100%;
+  min-width: 800px;
+  padding: 7px 15px 7px;
+  margin: 5px auto 0;
+    background-color:#757575;
+background-image: url("https://www.transparenttextures.com/patterns/iron-grip.png");
+  text-align: center;
+  border: 1px solid {{ theme.header_text }};
+    
+}
+  
+#checkout_page .canvas {
+  background-color:#757575;
+background-image: url("https://www.transparenttextures.com/patterns/iron-grip.png");
+  padding: 12px 15px 12px;
+  }  
+
+.standalone .canvas h1 {
+  font-size: 18px;
+  font-weight: normal;
+      background-color: #757575;
+background-image: url("https://www.transparenttextures.com/patterns/iron-grip.png");
+    text-transform: uppercase;
+  line-height: 1.3em;
+  }
+
+.standalone .canvas p {
+  margin-top: 10px;
+  font-style: italic;
+  } 
+  
+/*============================================================
+  IE Hacks
+============================================================*/
+
+
+.ie #social_links li h4 {
+  display: none;
+  }
+
+.ie #social_links .social_action {
+  display: block;
+  }
+
+.ie #cart_items li .quantity_input input {
+  line-height: 1em;
+  height: auto;
+  padding: 12px 8px 8px;
+  }  
+  
+.ie .flex-direction-nav .flex-prev, .ie .flex-direction-nav .flex-next {
+    display:none;
+  }
+
+/* ------------------------------------------------------------------------------------------------
+ *
+ * This is where all of the CSS code is handled for your theme.
+ *
+ * We recommend you break your CSS into multiple files and put them in a separate
+ * directory. We've used a "stylesheets" directory in our example below. After that we'll use
+ * Sprockets (getsprockets.org) to package them into one file. Sprockets also allows you to
+ * use Sass/SCSS (sass-lang.com) by ending your file name with .sass or .scss, and you can also
+ * use LESS (lesscss.org) by ending your file with .less.
+ *
+ * However, if you don't have much CSS, or you're just a glutton for punishment,
+ * you could simply put all of your CSS in this file. It's up to you.
+ *
+ * ------------------------------------------------------------------------------------------------
+ */
+
+
+/* 
+k
+ */
+
+ /*============================================================
+  Colors + Custom Styles - add and override styles below
+============================================================*//* CSS Document */
+
+    </style>
+    
+<body>
+    <center>
       
-           
+   {% paginate products from products.current by theme.products_per_page %}
+
+
+{% if products != blank %}
+
+
+{% for product in products %}
+  {% if forloop.first %}
+    <ul id="products" class="{% if forloop.length == 1 %}single_product{% endif %}{% if forloop.length == 2 %}double_product{% endif %}">
+  {% endif %}
+  <li id="product_{{ product.id }}" class="product">
+   
+    
+   <button type="button" class="button" onclick="window.location.href='{{ product.url }}'">
+      
+      <div class="product_header">
+        <h2>{{ product.name }}</h2>
+        <span class="dash"></span>            
+        <h3>{{ product.default_price | money_with_sign }}</h3>
+        {% case product.status %}
+        {% when 'active' %}
+          {% if product.on_sale %}<h5>On Sale</h5>{% endif %}
+        {% when 'sold-out' %}
+      		<h5>Sold Out</h5>
+        {% when 'coming-soon' %}
+      		<h5>Coming Soon</h5>
+        {% endcase %}
+      </div>
+      
+      <div class="product_thumb">
+        <img src="{{ product.image | product_image_url | constrain: '560' }}" class="product" alt="Image of {{ product.name | escape }}">
+     </div>
+      </a></button>
+    
+      
+  </li>
+  {% if forloop.last %}
+    </ul>
+  {% endif %}
+{% endfor %}
+
+{% if paginate.previous.is_link or paginate.next.is_link %}
+{{ paginate | default_pagination }}
+{% endif %}
 
 
 
+{% else %}
+<p class="alert-noproducts">No products found.</p>
+{% endif %}
 
-
-
+{% endpaginate %}
+</body>
+</html>

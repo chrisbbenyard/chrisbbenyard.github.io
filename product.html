@@ -1,107 +1,80 @@
-<html>
-    <head>
  
  
-  <meta name="robots" content="noindex">
-<meta name="googlebot" content="noindex">
-
-
- <link rel="stylesheet" href="/theme.css">
- 
-    <script src="/theme.js" type="text/javascript"></script>
-</head>
-
-<body>
-
- <div id="container2" class="container2">
-
- <div id="row">
    
-   <div class="column1">
-   <div class="swiper-container">
-    <div class="swiper-wrapper">    
-      <div class="swiper-slide">
-        <img src="{{ product.image | product_image_url: 'fullsize' }}" class="resproductimage" />
-      </div>
-      <div class="swiper-slide">
-        <img src="{{ product.images[1] | product_image_url: 'fullsize' }}" class="resproductimage" />
-      </div>
-    </div>
-    <!-- Add Arrows -->
-    <div class="swiper-button-next swiper-button-black"></div>
-    <div class="swiper-button-prev swiper-button-black"></div>
-  </div>
-   </div>
+<ul class="slides">
+    {% for image in product.images %}
+     <li id="image_{{ forloop.index }}">
+       <center>  <img src="{{ image | product_image_url: "fullsize" }}" class="responsive-image9" alt="Image of {{ product.name | escape }}"></center>
+     </li>
+    {% endfor %}         
+  </ul>     
+  <center> <div id="product_info">  
+ {% case product.status %}
   
-  <div class="column2">
-    
-    
-  <div id="product_info">
-    <h2>{{ product.name }}</h2>
- 
-    {% if product.description != blank %} 
-  
-     
-      <br><h3>  {{ product.description }}</h3>
-    
-    
-   
-
-  
-    
-    {% case product.status %}
-    
   {% when 'active' %}
+    <center><h1>{{ product.name }}</h1></center>
     
-  <h2> <i class="fa fa-tag"> {{ product.default_price | money_with_sign }} </i></h2>
-    </br> 
-    
-   <center> <section id="product_form">    
-      
-      
-      <form method="post" action="/cart" accept-charset="utf8"> 
+  
+        {% if product.description != blank %}
+  <center>
+    <h2><font color="#ffffff">{{ product.description | paragraphs }}</font></h2></center>
+     <span class="dash"></span>
+          {% endif %}
+  
+    <center><b>{{ product.default_price | money_with_sign }}</b></center>
+  
+      <center>
+      <section id="product_form">
+  <form method="post" action="/cart" accept-charset="utf8">
         <input type="hidden" name="utf8" value='✓'>
         {% if product.has_default_option %}
-    {{ product.option | hidden_option_input }} 
+    <center> {{ product.option | hidden_option_input }} </center>
         {% else %}
-         {{ product.options_in_stock | options_select }} 
-        {% endif %}        
-    </br> 
-     <center><button id="product-addtocart" name="submit" type="submit" class="probutton"><span>Add to cart</span></button></center>
-     </form>
-     
-    
-    </section></center>
-    {% when 'sold-out' %}
-            
-       <h2> Sold Out </h2>
-               
-  {% when 'coming-soon' %} 
-        
-       <h2> Coming Soon </h2>
-        
-     
+             <center>  {{ product.options_in_stock | options_select }} </center>
+        {% endif %}   
+    <br><button id="product-addtocart" name="submit" type="submit" class="probutton"><span><h3>Add to cart</h3></span></button> 
+    </form> 
+   </section> 
+    </center> 
+  
+  
+  {% when 'sold-out' %}
+  <center>  
+ <h1>{{ product.name }}</h1>
+  </center> 
+  {% if product.description != blank %}
+  
+    <center><h2><font color="#ffffff">{{ product.description | paragraphs }}</font></h2></center>
+        <span class="dash"></span>
+        {% endif %}
+  
+  <center><h3>Sold Out</h3></center>
+  
+
+
+          
+
+  {% when 'coming-soon' %}
+  
+
+<center>  
+ <h1>{{ product.name }}</h1>
+  </center> 
+  {% if product.description != blank %}
+  
+    <center> <h2><font color="#ffffff">{{ product.description | paragraphs }}</font></h2> </center>
+        <span class="dash"></span>
+        {% endif %}
+  
+  <center><h3>Coming Soon</h3></center>
+  
   {% endcase %}
-            {% endif %}   
-         
-      
-   </div>
-</div>
-
   
   
+  
+  </br></br> 
+  <center>
+<button type="button" class="button" onclick="window.location.href='/products'"><h3>Continue Shopping</h3></button></center>
 </div>
-   </div>
-
-<script src="https://chrisbbenyard.github.io/swiper.js"></script>
-  <!-- Initialize Swiper -->
-  <script>
-    var swiper = new Swiper('.swiper-container', {
-      navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
-      },
-    });
-  </script>
-   </body>
-   </html>
+</center>
+   
