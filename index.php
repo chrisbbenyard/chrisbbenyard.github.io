@@ -1,63 +1,41 @@
-<html lang="en-US">
-    <!--<![endif]-->
-
-    <head>
-        <meta charset="utf-8">
-      
-      
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
 <title>Fair & Glorious</title>
       <!-- Startup configuration -->
-<!-- Fallback application metadata for legacy browsers -->
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="194x194" href="/favicon-194x194.png">
-<link rel="icon" type="image/png" sizes="192x192" href="/android-chrome-192x192.png">
-<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-  
-<link rel="manifest" href="/site.webmanifest">
 
-<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#757575">
+ <meta name="viewport"  content="width=device-width, initial-scale=0.6, user-scalable=no">
+<link rel="manifest" href="manifest.webmanifest">
+
+<!-- Fallback application metadata for legacy browsers -->
+
+
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes"> 
+
 <meta name="apple-mobile-web-app-title" content="Fair & Glorious">
 <meta name="application-name" content="Fair & Glorious">
+
+<meta name="description" content="An Atlanta based street wear brand.">
+          
+<link rel="icon" type="image/png" sizes="32x32" href="/fngappicon.png">
+<link rel="icon" type="image/png" sizes="194x194" href="/fngappicon.png">
+<link rel="icon" type="image/png" sizes="192x192" href="/fngappicon.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/fngappicon.png">
+<link rel="icon" type="image/png" sizes="16x16 32x32 48x48 180x180 512x512" href="/fngappicon.png">
+<link rel="apple-touch-icon" sizes="76x76 120x120 152x152 256x256" href="/fngappicon.png"> 
+
+<link rel="shortcut icon" href="https://www.iconj.com/ico/1/7/17kbofimez.ico" type="image/x-icon" />
+  
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#757575">
 <meta name="msapplication-TileColor" content="#757575">
 <meta name="theme-color" content="#757575">
-      
-      
-      
-
-<link rel="icon" sizes="16x16 32x32 48x48 180x180 512x512" href="https://chrisbbenyard.github.io/fngappicon.png">
-
-         
-    <meta property="og:image" content="https://chrisbbenyard.github.io/fngappicon.png" />
-         
-
-   
-      <link rel="apple-touch-icon" href="https://chrisbbenyard.github.io/fngappicon.png" /> 
-      <link rel="apple-touch-icon" sizes="76x76 120x120 152x152 256x256" href="https://chrisbbenyard.github.io/fngappicon.png" /> 
-   <meta name="viewport"  content="width=device-width, initial-scale=0.6, user-scalable=no">
-
-             
-         <link rel="apple-touch-startup-image" href="/launch.png">      
-         
-    <meta name="apple-mobile-web-app-title" content="Fair & Glorious">
-         
-            <meta name="mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-capable" content="yes"> 
-   
-         
-         
-         <meta name="apple-mobile-web-app-status-bar-style" content="black" />     
   
-      <meta name="description" content="An Atlanta based street wear brand.">
-     
-     <link rel="shortcut icon" href="https://www.iconj.com/ico/1/7/17kbofimez.ico" type="image/x-icon" />
-  
+    
             
-  <meta name=”apple-mobile-web-app-capable” content=”yes”>
-<link rel="stylesheet" type="text/css" href="https://chrisbbenyard.github.io/addtohomescreen.css">
-  
-  <script src="https://chrisbbenyard.github.io/addtohomescreen.js"></script> 
-
-
+<link rel="stylesheet" type="text/css" href="/addtohomescreen.css">
+<script src="/addtohomescreen.js"></script> 
 
 
         <!--[if lt IE 9]>
@@ -104,6 +82,10 @@
  
     <script src="/theme.js" type="text/javascript"></script>
        <script src="https://chrisbbenyard.github.io/Imminent/js/jquery.js"></script>
+       
+       
+       
+       
        
        
        
@@ -539,25 +521,26 @@ function checkTime(i) {
   
  <div id="toops">
 <div class="carousel carousel-slider center" data-indicators="true">
-    
+   
+  
    <div class="carousel-item">
-<img src="/images/blackLetterman.png" onclick="window.location.href='/product/letterman-black.html'">
+<img src="/images/blackLetterman.png" onclick="window.location.href='/product/letterman-black'">
 </div>
   
   <div class="carousel-item">
-<img src="/images/killtimeblackfront.png" onclick="window.location.href='/product/killtime-black.html'">
+<img src="/images/killtimeblackfront.png" onclick="window.location.href='/product/killtime-black'">
 </div>
   
   <div class="carousel-item">
-<img src="/images/evillsfrontblack.png" onclick="window.location.href='/product/live-evil-black.html'">
+<img src="/images/evillsfrontblack.png" onclick="window.location.href='/product/live-evil-black'">
 </div>
   
 <div class="carousel-item">
-<img src="/images/HomeSafe_Black_.png" onclick="window.location.href='/product/fg-black.html'">
+<img src="/images/HomeSafe_Black_.png" onclick="window.location.href='/product/fg-black'">
 </div> 
 
   <div class="carousel-item">
-<img src="/images/energeblack.png" onclick="window.location.href='/product/ideas-black.html'">
+<img src="/images/energeblack.png" onclick="window.location.href='/product/ideas-black'">
 </div> 
        
   
@@ -565,23 +548,23 @@ function checkTime(i) {
   
   
   <div class="carousel-item">
-<img src="/images/redLetterman.png" onclick="window.location.href='/product/letterman-red.html'">
+<img src="/images/redLetterman.png" onclick="window.location.href='/product/letterman-red'">
 </div>
   
   <div class="carousel-item">
-<img src="/images/killtimeredfront.png" onclick="window.location.href='/product/killtime-red.html'">
+<img src="/images/killtimeredfront.png" onclick="window.location.href='/product/killtime-red'">
 </div>
   
 <div class="carousel-item">
-<img src="/images/evillsfrontred.png" onclick="window.location.href='/product/live-evil-red.html'">
+<img src="/images/evillsfrontred.png" onclick="window.location.href='/product/live-evil-red'">
 </div>
   
 <div class="carousel-item">
-<img src="/images/HomeSafeRed.png" onclick="window.location.href='/product/fg-red.html'">
+<img src="/images/HomeSafeRed.png" onclick="window.location.href='/product/fg-red'">
 </div>
   
   <div class="carousel-item">           
-<img src="/images/energered.png" onclick="window.location.href='/product/ideas-red.html'">
+<img src="/images/energered.png" onclick="window.location.href='/product/ideas-red'">
 </div>
   
                       
@@ -916,3 +899,4 @@ addToHomescreen({
   
 </body>
 </html>
+

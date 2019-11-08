@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:g="http://base.google.com/ns/1.0">
+  <channel>
+    <title>Fair &amp; Glorious</title>
+    <link>http://fairandglorious.bigcartel.com</link>
+    <description>An Atlanta based street wear brand.</description>
+    <item>
+      <g:id>48844801</g:id>
+      <g:title>Kill Time - Black</g:title>
+      <g:description>A time to be born and a time to die,&lt;br&gt;
+A time to plant and a time to uproot,&lt;br&gt;
+A time to kill and a time to heal,&lt;br&gt;
+A time to tear down and a time to build.
+
+&lt;center&gt;
+&lt;img src="http://i.imgur.com/OnscQ9G.png" class="responsive-colorbutton" onclick="window.location.href='http://www.fairandglorious.com/product/killtime-red'"/&gt;
+&lt;img src="http://i.imgur.com/x94wTCP.png" class="responsive-colorbutton" onclick="window.location.href='http://www.fairandglorious.com/product/killtime-blue'"/&gt;
+&lt;/center&gt;</g:description>
+      <g:price>45.00 USD</g:price>
+      <g:link>http://fairandglorious.bigcartel.com/product/killtime-black</g:link>
+      <g:image_link>https://assets.bigcartel.com/product_images/221218243/killtimeblackfront.png</g:image_link>
+      <g:additional_image_link></g:additional_image_link>
+      <g:mpn>48844801</g:mpn>
+      <g:condition>new</g:condition>
+      <g:availability>in stock</g:availability>
+    </item>
+    <item>
+      <g:id>36255388</g:id>
+      <g:title>Ideas - Black</g:title>
+      <g:description>For good ideas and true innovation, you need human interaction, conflict, argument, debate.      
+&lt;center&gt;
+&lt;img src="http://i.imgur.com/OnscQ9G.png" class="responsive-colorbutton" onclick="window.location.href='http://www.fairandglorious.com/product/ideas-red'"/&gt;
+&lt;img src="http://i.imgur.com/x94wTCP.png" class="responsive-colorbutton" onclick="window.location.href='http://www.fairandglorious.com/product/ideas-blue'"/&gt;
+
+&lt;/center&gt;</g:description>
+      <g:price>25.00 USD</g:price>
+      <g:link>http://fairandglorious.bigcartel.com/product/ideas-black</g:link>
+      <g:image_link>https://assets.bigcartel.com/product_images/221218711/energeblack.png</g:image_link>
+      <g:additional_image_link></g:additional_image_link>
+      <g:mpn>36255388</g:mpn>
+      <g:condition>new</g:condition>
+      <g:availability>in stock</g:availability>
+    </item>
+    <item>
+      <g:id>29332678</g:id>
+      <g:title>Live / Evil - Black</g:title>
+      <g:description>
+The world can be dangerous place to live, not because of the people who are evil, but because of the people who don't do anything about it and between the two evils, pick the you’ve never tried before.
+&lt;center&gt;
+
+
+&lt;img src="http://i.imgur.com/OnscQ9G.png" class="responsive-colorbutton" onclick="window.location.href='http://www.fairandglorious.com/product/live-evil-red'"/&gt;
+&lt;img src="http://i.imgur.com/x94wTCP.png" class="responsive-colorbutton" onclick="window.location.href='http://www.fairandglorious.com/product/live-evil-blue'"/&gt;
+&lt;/center&gt;</g:description>
+      <g:price>40.00 USD</g:price>
+      <g:link>http://fairandglorious.bigcartel.com/product/live-evil-black</g:link>
+      <g:image_link>https://assets.bigcartel.com/product_images/221055250/evillsfrontblack.png</g:image_link>
+      <g:additional_image_link></g:additional_image_link>
+      <g:mpn>29332678</g:mpn>
+      <g:condition>new</g:condition>
+      <g:availability>in stock</g:availability>
+    </item>
+    <item>
+      <g:id>27659023</g:id>
+      <g:title>Home Safe - Black</g:title>
+      <g:description>Every accident is a notice that something is wrong with men, methods,  or materials. Investigate, then act.
+
+&lt;img src="http://i.imgur.com/OnscQ9G.png" class="responsive-colorbutton" onclick="window.location.href='http://www.fairandglorious.com/product/homesafe-red'"/&gt;
+&lt;img src="http://i.imgur.com/x94wTCP.png" class="responsive-colorbutton" onclick="window.location.href='http://www.fairandglorious.com/product/homesafe-blue'"/&gt;</g:description>
+      <g:price>30.00 USD</g:price>
+      <g:link>http://fairandglorious.bigcartel.com/product/homesafe-black</g:link>
+      <g:image_link>https://assets.bigcartel.com/product_images/221055403/HomeSafe_Black_.png</g:image_link>
+      <g:additional_image_link></g:additional_image_link>
+      <g:mpn>27659023</g:mpn>
+      <g:condition>new</g:condition>
+      <g:availability>in stock</g:availability>
+    </item>
+  </channel>
+</rss>

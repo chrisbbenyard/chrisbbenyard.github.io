@@ -59,7 +59,7 @@ ath.intl = {
 	},
 
 	en_us: {
-		ios: ' <strong>To add this web app to the home screen: tap %icon and then Add to Home Screen.</strong>',
+		ios: '<small>To add this web app to the home screen: tap  <img class="action" src="/images/Navigation_Action.png">  and then "Add to Home Screen <img class="add" src="/images/QuickActions_Add.png">".</small>',
 		android: 'To add this web app to the home screen open the browser option menu and tap on <strong>Add to homescreen</strong>. <small>The menu can be accessed by pressing the menu hardware button if your device has one, or by tapping the top right menu icon %icon.</small>'
 	},
 
@@ -167,7 +167,7 @@ for ( var lang in ath.intl ) {
 // default options
 ath.defaults = {
 	appID: 'org.cubiq.addtohome',		// local storage name (no need to change)
-	fontSize: 12,				// base font size, used to properly resize the popup based on viewport scale factor
+	fontSize: 15,				// base font size, used to properly resize the popup based on viewport scale factor
 	debug: false,				// override browser checks
 	logging: false,				// log reasons for showing or not showing to js console; defaults to true when debug is true
 	modal: false,				// prevent further actions until the message is closed
@@ -510,7 +510,7 @@ ath.Class.prototype = {
 
 		// add the action icon
 		message = '<p>' + message.replace(/%icon(?:\[([^\]]+)\])?/gi, function(matches, group1) {
-			return '<span class="/ath-action-icon">' + (!!group1 ? group1 : 'icon') + '</span>';
+			return '<span class="ath-action-icon">' + (!!group1 ? group1 : 'icon') + '</span>';
 		}) + '</p>';
 
 		// create the message container

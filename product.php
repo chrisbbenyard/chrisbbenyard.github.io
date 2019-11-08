@@ -1,17 +1,10 @@
-<html>
-    <head>
- 
- 
-  <meta name="robots" content="noindex">
+<meta name="robots" content="noindex">
 <meta name="googlebot" content="noindex">
 
 
- <link rel="stylesheet" href="/theme.css">
- 
-    <script src="/theme.js" type="text/javascript"></script>
-</head>
 
-<body>
+
+
 
  <div id="container2" class="container2">
 
@@ -103,5 +96,4 @@
       },
     });
   </script>
-   </body>
-   </html>
+   
