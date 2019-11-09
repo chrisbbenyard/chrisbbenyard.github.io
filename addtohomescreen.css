@@ -1,4 +1,4 @@
-.ath-viewport * {
+m.ath-viewport * {
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
 	box-sizing: border-box;
@@ -133,16 +133,16 @@ font-size: 1.3px;
 .ath-ios8 .ath-action-icon,
 .ath-ios9 .ath-action-icon,
 .ath-ios10 .ath-action-icon{
-	width: 13%;
- 	height: 13%;
+	width: 1.3em;
+ 	height: 1.3em;
  	background-image:url('https://chrisbbenyard.github.io/images/action-icon.svg');
  	margin-top: -0.3em;
  	background-size: auto 100%;
  }
 
  .ath-ios6 .ath-action-icon {
- 	width: 15%;
- 	height: 15%;
+ 	width: 1.5em;
+ 	height: 1.5em;
  background-image:url('https://chrisbbenyard.github.io/images/action-icon-ios6.svg');
  		margin-bottom: 0.4em;
 
@@ -150,8 +150,8 @@ font-size: 1.3px;
  }
 
  .ath-android .ath-action-icon {
- 	width: 0.4em;
- 	height: 0.5em;
+ 	width: 1.4em;
+ 	height: 1.5em;
  background-image:url('https://chrisbbenyard.github.io/images/action-icon-android.svg');
  	background-size: 100% auto;
  }
