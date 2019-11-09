@@ -153,8 +153,8 @@ font-size: 1.0em;
 .ath-ios8 .ath-action-icon,
 .ath-ios9 .ath-action-icon,
 .ath-ios10 .ath-action-icon{
-	width: 1.6em;
-	height: 1.6em;
+	width: 1.0em;
+	height: 1.0em;
 	background-image:url('https://chrisbbenyard.github.io/action-icon.png');
 	margin-top: -0.1em;
 	background-size: auto 100%;
