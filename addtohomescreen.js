@@ -59,8 +59,8 @@ ath.intl = {
 	},
 
 	en_us: {
-		ios: '<small>To add this web app to the home screen: tap  <img class="action" src="https://chrisbbenyard.github.io/images/action-icon.svg">  and then "Add to Home Screen <img class="add" src="https://chrisbbenyard.github.io/images/action-icon-add.svg">".</small>',
-		android: 'To add this web app to the home screen open the browser option menu and tap on <strong>Add to homescreen</strong>. <small>The menu can be accessed by pressing the menu hardware button if your device has one, or by tapping the top right menu icon  <img class="action" src="https://chrisbbenyard.github.io/images/action-icon-android.svg">.</small>'
+		ios: '<small>To add this web app to the home screen: tap  <img class="action" src="https://chrisbbenyard.github.io/images/action-icon.png">  and then "Add to Home Screen <img class="add" src="https://chrisbbenyard.github.io/images/action-icon-add.png">".</small>',
+		android: 'To add this web app to the home screen open the browser option menu and tap on <strong>Add to homescreen</strong>. <small>The menu can be accessed by pressing the menu hardware button if your device has one, or by tapping the top right menu icon  <img class="action" src="https://chrisbbenyard.github.io/images/action-icon-android.png">.</small>'
 	},
 
 	es_es: {
