@@ -326,7 +326,7 @@ ath.Class = function (options) {
 	if ( this.getItem('addToHome') ) {
 		this.optOut();
 	}
-
+	
 	// critical errors:
 	if ( this.session.optedout ) {
 		this.doLog("Add to homescreen: not displaying callout because user opted out");
