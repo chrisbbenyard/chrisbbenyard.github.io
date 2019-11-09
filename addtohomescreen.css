@@ -159,24 +159,24 @@ font-size: 1.3px;
 .ath-ios8 .ath-action-icon,
 .ath-ios9 .ath-action-icon,
 .ath-ios10 .ath-action-icon{
-	width: 1.6em;
-	height: 1.6em;
+	width: 0.6em;
+	height: 0.6em;
 	background-image:url('https://chrisbbenyard.github.io/images/action-icon.svg');
 	margin-top: -0.3em;
 	background-size: auto 100%;
 }
 
 .ath-ios6 .ath-action-icon {
-	width: 1.8em;
-	height: 1.8em;
+	width: 0.8em;
+	height: 0.8em;
 background-image:url('https://chrisbbenyard.github.io/images/action-icon-ios6.svg');
 		margin-bottom: 0.4em;
 	background-size: 100% auto;
 }
 
 .ath-android .ath-action-icon {
-	width: 1.4em;
-	height: 1.5em;
+	width: 0.4em;
+	height: 0.5em;
 background-image:url('https://chrisbbenyard.github.io/images/action-icon-android.svg');
 		background-size: 100% auto;
 }
