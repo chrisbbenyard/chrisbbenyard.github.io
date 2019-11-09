@@ -163,7 +163,6 @@ font-size: 1.3px;
 	height: 13%;
 	background-image:url('https://chrisbbenyard.github.io/images/action-icon.svg');
 	margin-top: -0.3em;
-	background-size: auto 100%;
 }
 
 .ath-ios6 .ath-action-icon {
@@ -171,14 +170,13 @@ font-size: 1.3px;
 	height: 15%;
 background-image:url('https://chrisbbenyard.github.io/images/action-icon-ios6.svg');
 		margin-bottom: 0.4em;
-	background-size: 100% auto;
+	
 }
 
 .ath-android .ath-action-icon {
 	width: 0.4em;
 	height: 0.5em;
 background-image:url('https://chrisbbenyard.github.io/images/action-icon-android.svg');
-		background-size: 100% auto;
 }
 
 .ath-container p {
