@@ -1,103 +1,69 @@
-jQuery(document).ready(function(){
-	var productCustomization = $('.cd-customization'),
-		cart = $('.cd-cart'),
-		animating = false;
-	
-	initCustomization(productCustomization);
+$(window).load(function(){
+     $('.preloader').fadeOut('slow');
+});
 
-	$('body').on('click', function(event){
-		//if user clicks outside the .cd-gallery list items - remove the .hover class and close the open ul.size/ul.color list elements
-		if( $(event.target).is('body') || $(event.target).is('.cd-gallery') ) {
-			deactivateCustomization();
-		}
-	});
 
-	function initCustomization(items) {
-		items.each(function(){
-			var actual = $(this),
-				selectOptions = actual.find('[data-type="select"]'),
-				addToCartBtn = actual.find('.add-to-cart'),
-				touchSettings = actual.next('.cd-customization-trigger');
+/* =Main INIT Function
+-------------------------------------------------------------- */
+function initializeSite() {
 
-			//detect click on ul.size/ul.color list elements 
-			selectOptions.on('click', function(event) { 
-				var selected = $(this);
-				//open/close options list
-				selected.toggleClass('is-open');
-				resetCustomization(selected);
-				
-				if($(event.target).is('li')) {
-					// update selected option
-					var activeItem = $(event.target),
-						index = activeItem.index() + 1;
-					
-					activeItem.addClass('active').siblings().removeClass('active');
-					selected.removeClass('selected-1 selected-2 selected-3').addClass('selected-'+index);
-					// if color has been changed, update the visible product image 
-					selected.hasClass('color') && updateSlider(selected, index-1);
-				}
+	"use strict";
+
+	//OUTLINE DIMENSION AND CENTER
+	(function() {
+	    function centerInit(){
+
+			var sphereContent = $('.sphere'),
+				sphereHeight = sphereContent.height(),
+				parentHeight = $(window).height(),
+				topMargin = (parentHeight - sphereHeight) / 2;
+
+			sphereContent.css({
+				"margin-top" : topMargin+"px"
 			});
 
-			//detect click on the add-to-cart button
-			addToCartBtn.on('click', function() {	
-				if(!animating) {
-					//animate if not already animating
-					animating =  true;
-					resetCustomization(addToCartBtn);
+			var heroContent = $('.hero'),
+				heroHeight = heroContent.height(),
+				heroTopMargin = (parentHeight - heroHeight) / 2;
 
-					addToCartBtn.addClass('is-added').find('path').eq(0).animate({
-						//draw the check icon
-						'stroke-dashoffset':0
-					}, 300, function(){
-						setTimeout(function(){
-							updateCart();
-							addToCartBtn.removeClass('is-added').find('em').on('webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend', function(){
-								//wait for the end of the transition to reset the check icon
-								addToCartBtn.find('path').eq(0).css('stroke-dashoffset', '19.79');
-								animating =  false;
-							});
-
-							if( $('.no-csstransitions').length > 0 ) {
-								// check if browser doesn't support css transitions
-								addToCartBtn.find('path').eq(0).css('stroke-dashoffset', '19.79');
-								animating =  false;
-							}
-						}, 600);
-					});	
-				}
+			heroContent.css({
+				"margin-top" : heroTopMargin+"px"
 			});
 
-			//detect click on the settings icon - touch devices only
-			touchSettings.on('click', function(event){
-				event.preventDefault();
-				resetCustomization(addToCartBtn);
-			});
-		});
-	}
+	    }
 
-	function updateSlider(actual, index) {
-		var slider = actual.parent('.cd-customization').prev('a').children('.cd-slider-wrapper'),
-			slides = slider.children('li');
+	    $(document).ready(centerInit);
+		$(window).resize(centerInit);
+	})();
 
-		slides.eq(index).removeClass('move-left').addClass('selected').prevAll().removeClass('selected').addClass('move-left').end().nextAll().removeClass('selected move-left');
-	}
+	// Init effect 
+	$('#scene').parallax();
 
-	function resetCustomization(selectOptions) {
-		//close ul.clor/ul.size if they were left open and user is not interacting with them anymore
-		//remove the .hover class from items if user is interacting with a different one
-		selectOptions.siblings('[data-type="select"]').removeClass('is-open').end().parents('.cd-single-item').addClass('hover').parent('li').siblings('li').find('.cd-single-item').removeClass('hover').end().find('[data-type="select"]').removeClass('is-open');
-	}
+};
+/* END ------------------------------------------------------- */
 
-	function deactivateCustomization() {
-		productCustomization.parent('.cd-single-item').removeClass('hover').end().find('[data-type="select"]').removeClass('is-open');
-	}
+/* =Document Ready Trigger
+-------------------------------------------------------------- */
+$(window).load(function(){
 
-	function updateCart() {
-		//show counter if this is the first item added to the cart
-		( !cart.hasClass('items-added') ) && cart.addClass('items-added'); 
+	initializeSite();
+	(function() {
+		setTimeout(function(){window.scrollTo(0,0);},0);
+	})();
 
-		var cartItems = cart.find('span'),
-			text = parseInt(cartItems.text()) + 1;
-		cartItems.text(text);
+});
+/* END ------------------------------------------------------- */
+
+
+$('#countdown').countdown({
+	date: "March 22, 2018 00:12:00",
+	render: function(data) {
+	  var el = $(this.el);
+	  el.empty()
+	    //.append("<div>" + this.leadingZeros(data.years, 4) + "<span>years</span></div>")
+	    .append("<div>" + this.leadingZeros(data.days, 2) + " <span>days</span></div>")
+	    .append("<div>" + this.leadingZeros(data.hours, 2) + " <span>hrs</span></div>")
+	    .append("<div>" + this.leadingZeros(data.min, 2) + " <span>min</span></div>")
+	    .append("<div>" + this.leadingZeros(data.sec, 2) + " <span>sec</span></div>");
 	}
 });
