@@ -9,7 +9,7 @@
   "dependencies": {
     "hammerjs": "^2.0.4",
     "jquery": "^2.1.4",
-    "node-archiver": "^0.2.0"
+    "node-archiver": "^0.3.0"
   },
   "devDependencies": {
     "autoprefixer": "^6.1.0",
